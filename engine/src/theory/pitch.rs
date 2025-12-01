@@ -1,5 +1,7 @@
 //! A module for the [`Pitch`] enum.
 
+use crate::core::Frequency;
+
 /**
    MIT License
 
@@ -117,8 +119,8 @@ pub enum Pitch {
 
 // Pitch impls.
 
-impl HasBaseFrequency for Pitch {
-    fn base_frequency(&self) -> f32 {
+impl Pitch {
+    pub fn base_frequency(&self) -> Frequency {
         match self {
             Pitch::C => 16.35,
             Pitch::DFlat => 17.32,
@@ -135,6 +137,25 @@ impl HasBaseFrequency for Pitch {
         }
     }
 }
+
+// impl HasBaseFrequency for Pitch {
+//     fn base_frequency(&self) -> f32 {
+//         match self {
+//             Pitch::C => 16.35,
+//             Pitch::DFlat => 17.32,
+//             Pitch::D => 18.35,
+//             Pitch::EFlat => 19.45,
+//             Pitch::E => 20.60,
+//             Pitch::F => 21.83,
+//             Pitch::GFlat => 23.12,
+//             Pitch::G => 24.50,
+//             Pitch::AFlat => 25.96,
+//             Pitch::A => 27.50,
+//             Pitch::BFlat => 29.14,
+//             Pitch::B => 30.87,
+//         }
+//     }
+// }
 
 impl HasPitch for Pitch {
     fn pitch(&self) -> Pitch {

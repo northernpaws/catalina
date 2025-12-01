@@ -1,3 +1,5 @@
+pub mod oscillator;
+
 pub struct Buffer<'a, T> {
     data: &'a mut [T],
 }

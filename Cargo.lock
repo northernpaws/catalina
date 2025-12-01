@@ -3,5 +3,23 @@
 version = 4
 
 [[package]]
+name = "libm"
+version = "0.2.15"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f9fbbcab51052fe104eb5e5d351cf728d30a5be1fe14d9be8a3b097481fb97de"
+
+[[package]]
+name = "measurements"
+version = "0.11.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f72b38901c571007811f0483e64a7e215ac9e6e3688e9f83705a717621d81513"
+dependencies = [
+ "libm",
+]
+
+[[package]]
 name = "rythm"
 version = "0.0.1"
+dependencies = [
+ "measurements",
+]

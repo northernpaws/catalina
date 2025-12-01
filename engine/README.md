@@ -1,10 +1,12 @@
 # `rythm-engine`
 
-The engine crate is the core of the entire Rythm ecosystem. It provides the concrete music theory types, audio processing framework, transport and sequencing logic, and instrument systems that create the composable Rythm framework. 
+The engine crate is the core of the entire ecosystem that provides the audio processing framework, transport and sequencing logic, and instrument system that create the composable Rythm framework. 
 
 ## Modules
 
  * `theory` - Music theory concepts as concrete types, such as enums for common octaves and pitches.
+ * `audio` - Audio processing, DSP, and effects pipeline.
+ * `instrument` - The playable instrument system.
  * `sequence` - Elektron-style step sequencing framework.
 
 ## Generics

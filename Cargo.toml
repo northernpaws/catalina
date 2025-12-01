@@ -5,6 +5,7 @@ edition = "2024"
 
 
 [dependencies]
+measurements = "0.11.1"
 
 [features]
 default = []

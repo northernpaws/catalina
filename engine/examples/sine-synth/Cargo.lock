@@ -104,6 +104,7 @@ dependencies = [
 name = "sine-synth"
 version = "0.1.0"
 dependencies = [
+ "heapless",
  "rythm-engine",
 ]
 
