@@ -3,4 +3,10 @@ name = "rythm"
 version = "0.0.1"
 edition = "2024"
 
+
 [dependencies]
+
+[features]
+default = []
+std = []
+alloc = []
