@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "engine/examples/sine-synth"
+		},
+		{
+			"path": "engine/examples/render-wave-sine"
 		}
 	],
 	"settings": {}

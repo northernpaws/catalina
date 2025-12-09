@@ -17,6 +17,7 @@ pub use self::core::cell::{Cell, RefCell};
 pub use self::core::clone::{self, Clone};
 pub use self::core::convert::{self, From, Into};
 pub use self::core::default::{self, Default};
+pub use self::core::f32::consts::PI;
 pub use self::core::fmt::{self, Debug, Display};
 pub use self::core::future::{self, Future};
 pub use self::core::marker::{self, PhantomData, Send};

@@ -26,12 +26,13 @@ impl SineInstrument {
 impl<T: Sample> AudioSource<T> for SineInstrument {
     fn render(&mut self, buffer: &'_ mut Buffer<T>) {
         for i in 0..buffer.frames() {
-            let mut frame: [T; 8] = [T; 8];
+            let mut frame: [f32; 8] = [0_f32; 8];
 
             // Loop through each active voice and sum it to the output buffer.
             let mut j = 0;
             for (_, voice) in self.voices.iter() {
-                frame[j] = voice.render();
+                // TODO: need to feed proper sample time base
+                frame[j] = voice.render(i);
                 j += 1;
             }
         }
@@ -46,14 +47,15 @@ impl<T: Sample> Instrument<T> for SineInstrument {
         let freq = note.frequency();
 
         // Feed the note frequency to a sine oscillator.
-        let osc = SineOscillator::new(freq);
+        // TODO: make sample rate configurable
+        let osc = SineOscillator::new(freq, 44100);
 
         // Attempt to add a voice.
         //
         // .insert() will return an error if the voices map is full.
         self.voices
             .insert(note, osc)
-            .map_err(|_| NoteError::NoVoices);
+            .map_err(|_| NoteError::NoVoices)?;
 
         Ok(())
     }
