@@ -10,6 +10,11 @@ use crate::{
 ///
 /// ref: https://blog.paramako.com/rust-audio-programming-oscillator-build-a-sine-wave-part-1
 pub struct SineOscillator {
+    /// Specifies the amplitude of the sine wave.
+    ///
+    /// This sets the maximum value of the peaks of the generated waveform.
+    ///
+    /// Defaults to i16::MAX for i16 encoded samples.
     amplitude: f32,
 
     /// The frequncy of the sine wave.
@@ -31,6 +36,10 @@ impl SineOscillator {
             frequency,
             sample_rate,
         }
+    }
+
+    pub fn set_amplitude(&mut self, amplitude: f32) {
+        self.amplitude = amplitude
     }
 }
 

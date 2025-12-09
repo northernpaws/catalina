@@ -7,10 +7,16 @@
 			"path": "engine"
 		},
 		{
-			"path": "engine/examples/sine-synth"
+			"path": "engine/examples/std/play-wave-sine"
 		},
 		{
-			"path": "engine/examples/render-wave-sine"
+			"path": "engine/examples/std/render-wave-sine"
+		},
+		{
+			"path": "engine/examples/std/sine-synth"
+		},
+		{
+			"path": "engine/examples/std/terminal-sequencer"
 		}
 	],
 	"settings": {}

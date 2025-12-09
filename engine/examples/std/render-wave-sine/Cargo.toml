@@ -5,4 +5,4 @@ edition = "2024"
 
 [dependencies]
 hound = "3.5.1"
-rythm-engine = { path = "../../", features = ["std"] }
+rythm-engine = { path = "../../../", features = ["std"] }
