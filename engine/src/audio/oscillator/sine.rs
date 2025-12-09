@@ -1,8 +1,6 @@
-use crate::{
-    audio::{AudioSource, Sample},
-    core::Frequency,
-    prelude::*,
-};
+use dasp_sample::{FromSample, Sample};
+
+use crate::{audio::AudioSource, core::Frequency, prelude::*};
 
 // TODO: add feature to work off a lookup table like https://github.com/tversteeg/usfx/blob/eb407eb200ea71e88a192f06b424b5f408635a7e/src/oscillator.rs#L46
 
@@ -44,15 +42,15 @@ impl SineOscillator {
 }
 
 impl SineOscillator {
-    pub fn render<T: From<f32>>(&self, index: usize) -> T {
+    pub fn render<T: Sample + FromSample<f32>>(&self, index: usize) -> T {
         let time = index as f32 / self.sample_rate as f32;
-        (self.amplitude * (2.0 * PI * self.frequency * time).sin()).into()
+        (self.amplitude * (2.0 * PI * self.frequency * time).sin()).to_sample()
     }
 }
 
 /// Implementing [`AudioSource`] for the oscillator allows the
 /// oscillator to be used directly as a source in an audio chain.
-impl<T: Sample> AudioSource<T> for SineOscillator {
+impl<T: Sample + FromSample<f32>> AudioSource<T> for SineOscillator {
     fn render(&mut self, buffer: &'_ mut crate::audio::Buffer<T>) {
         todo!()
     }

@@ -1,3 +1,5 @@
+pub use dasp_sample::{FromSample, Sample};
+
 pub mod oscillator;
 
 #[repr(u8)]
@@ -6,7 +8,9 @@ pub enum Channels {
     Stereo = 2,
 }
 
-pub trait Sample: From<f32> {}
+/// dasp-sample already provides a robust set of types for sample
+/// managment, so we wrap those in a local crate trait.
+// pub trait Sample: dasp_sample::Sample + dasp_sample::FromSample<f32> {}
 
 pub struct Buffer<'a, T: Sample> {
     data: &'a mut [T],
@@ -35,7 +39,7 @@ impl<'a, T: Sample> Buffer<'a, T> {
     }
 }
 
-pub trait AudioSource<T: Sample> {
+pub trait AudioSource<T: Sample + FromSample<f32>> {
     /// Render a buffered block of audio from the audio source.
     fn render(&mut self, buffer: &'_ mut Buffer<T>);
 }
