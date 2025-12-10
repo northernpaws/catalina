@@ -56,7 +56,6 @@ Plus:
   * Eurorack x CV outputs
   * Eurorack Sync In/Out
 
-
 ## Kits
 
 Rythm's hardware ecosystem will also include several soldering kits that are currently in various stages of development:
