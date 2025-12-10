@@ -25,6 +25,12 @@ Our goal is to make the usage of the engine as seamless as possible across both 
 
 ## Modules
 
+> ⚠️ The modules and their associated boards are a large work-in-progress! Several designs are only half-complete or still in the planning stages.
+
+The modules provides a set of small STM32-based boards that can be embedded into custom PCB designs, or used with a set of associated carrier boards. These carrier boards include basic breadboard header breakouts, some module-integrated protoboard designs, and some options for carriers with a selection of [Molex PicoBlade Connectors](https://www.molex.com/en-us/products/connectors/wire-to-board-connectors/picoblade-connectors) for modular plug-and-play prototyping.
+
+See the kits section below for more types of carrier boards that are designed as self-assembled soldering kits that let you quickly get started creating guitar/effects pedals, and small synths and sequencers using the Rythm toolkit.
+
 ### Mini
 
   * 480MHz ARM Cortex-M processor
