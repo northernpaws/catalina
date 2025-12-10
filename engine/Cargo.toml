@@ -11,13 +11,13 @@ pretty_assertions = "1.4.1"
 
 # (De)serialization
 serde = { version = "1", features = ["derive"], optional = true }
-# Traits for representing audio samples.
-dasp_sample = { version = "0.11.0", default-features = false }
+# Traits for representing audio samples, frames, etc.
+dasp = { version = "0.11.0", default-features = false }
 
 [features]
 default = ["serde"]
 
-std = ["alloc", "dasp_sample/std"]
+std = ["alloc", "dasp/std"]
 alloc = []
 
 serde = ["dep:serde"]

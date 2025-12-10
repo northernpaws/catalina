@@ -1,4 +1,4 @@
-use dasp_sample::FromSample;
+use dasp::sample::FromSample;
 
 use crate::{
     audio::{AudioSource, Sample},

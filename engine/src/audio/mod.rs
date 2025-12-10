@@ -1,4 +1,4 @@
-pub use dasp_sample::{FromSample, Sample};
+pub use dasp::sample::{FromSample, Sample};
 
 pub mod oscillator;
 
@@ -10,7 +10,7 @@ pub enum Channels {
 
 /// dasp-sample already provides a robust set of types for sample
 /// managment, so we wrap those in a local crate trait.
-// pub trait Sample: dasp_sample::Sample + dasp_sample::FromSample<f32> {}
+// pub trait Sample: dasp::sample::Sample + dasp::sample::FromSample<f32> {}
 
 pub struct Buffer<'a, T: Sample> {
     data: &'a mut [T],

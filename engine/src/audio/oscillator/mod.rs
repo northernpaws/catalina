@@ -1,6 +1,16 @@
-//! Module implementing various common oscillators for use in audio chains.
+//! Module implementing a base set of oscillator types for use in audio chains.
+//!
+//! Use [`RuntimeOscillator`] on devices where you have low memory constraints
+//! and calculating the waveform samples on the fly at runtime is an acceptable
+//! tradeoff.
+//!
+//! Use [`LookupOscillator`] with an oscillator pool on devices where you have
+//! lots of available memory for oscillator lookup tables. Using an appropriate
+//! oscillator pool allocator means the lookup tables can be shared across
+//! oscillators of the same parameters to avoid memory duplication.
 
-use dasp_sample::{FromSample, Sample, ToSample};
+use dasp::sample::{FromSample, Sample};
+
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};
 
@@ -123,9 +133,9 @@ impl OscillatorType {
 
 /// Base trait for implementing oscillator methods with different
 /// functionality (i.e. lookup-table based vs runtime).
-pub trait Oscillator {
+pub trait Oscillator<S: Sample + FromSample<f32>> {
     /// Samples the oscillator for the provided sample index.
-    fn sample<S: Sample + FromSample<f32>>(&self, index: usize) -> S;
+    fn sample(&self, index: usize) -> S;
 }
 
 /// Provides an oscillator that oscillates in a sine, saw, triangle,
@@ -158,9 +168,9 @@ impl RuntimeOscillator {
     }
 }
 
-impl Oscillator for RuntimeOscillator {
+impl<S: Sample + FromSample<f32>> Oscillator<S> for RuntimeOscillator {
     /// Sample from the oscillator at the provided sample index.
-    fn sample<S: Sample + FromSample<f32>>(&self, index: usize) -> S {
+    fn sample(&self, index: usize) -> S {
         self.osc_type
             .sample(index, self.sample_rate, self.frequency, self.duty_cycle)
     }
@@ -174,27 +184,29 @@ impl Oscillator for RuntimeOscillator {
 ///  duplicating memory.
 // TODO: ideally the table sample type would be typed so the table could be
 //  cached in a different/lower sample type without requiring conversion.
-pub struct LookupOscillator<'a> {
+pub struct LookupOscillator<'a, LookupSample: Sample + FromSample<f32>> {
     /// The table is implemented as a reference to allow a shared oscillator
     /// allocator to handle a pool of waveform lookup tables.
     ///
-    /// This allows oscillators with the same parameters (type, freq, sample rate)
-    /// to share
-    table: &'a [f32],
+    /// This allows oscillators with the same parameters (type, freq, sample
+    /// rate) to share the same lookup table to avoid duplicating memory.
+    table: &'a [LookupSample],
 }
 
-impl<'a> LookupOscillator<'a> {
+impl<'a, LookupSample: Sample + FromSample<f32>> LookupOscillator<'a, LookupSample> {
     /// Constructs a new lookup table-based oscillator from the provided table.
-    pub fn new_from_table(table: &'a [f32]) -> Self {
+    pub fn new_from_table(table: &'a [LookupSample]) -> Self {
         Self { table }
     }
 }
 
-impl<'a> Oscillator for LookupOscillator<'a> {
+impl<'a, LookupSample: Sample + FromSample<f32>> Oscillator<LookupSample>
+    for LookupOscillator<'a, LookupSample>
+{
     /// Take a sample at the specified sample index from the oscillator.
-    fn sample<S: Sample + FromSample<f32>>(&self, index: usize) -> S {
+    fn sample(&self, index: usize) -> LookupSample {
         // Modulo ensures that the sample index is wrapped
         // within the sample rate of the oscillator table.
-        self.table[index % self.table.len()].to_sample()
+        self.table[index % self.table.len()]
     }
 }

@@ -24,7 +24,7 @@ fn main() {
     let total_samples = (sample_rate * duration_secs) as usize;
 
     for t in 0..total_samples {
-        let sample = osc.sample::<f32>(t);
+        let sample: f32 = osc.sample(t);
         writer.write_sample(sample).unwrap();
     }
 
