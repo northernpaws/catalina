@@ -1,4 +1,4 @@
-use rythm_engine::audio::oscillator;
+use rythm_engine::audio::oscillator::{self, Oscillator};
 
 fn main() {
     // Set the specification for the wave file we're going to create.
@@ -13,17 +13,18 @@ fn main() {
     let mut writer = hound::WavWriter::create("sine.wav", spec).expect("Failed to create WAV file");
 
     // Create a sine oscillator with a frequency of 261.63 (middle C)
-    let mut osc = oscillator::SineOscillator::new(261.63, spec.sample_rate as usize);
-
-    // 1.0 for float-based sample formats.
-    osc.set_amplitude(1.0);
+    let osc = oscillator::RuntimeOscillator::new(
+        oscillator::OscillatorType::Triangle,
+        spec.sample_rate as usize,
+        261.63,
+    );
 
     let duration_secs = 2.0; // 2 seconds
     let sample_rate = spec.sample_rate as f32;
     let total_samples = (sample_rate * duration_secs) as usize;
 
     for t in 0..total_samples {
-        let sample = osc.render::<f32>(t);
+        let sample = osc.sample::<f32>(t);
         writer.write_sample(sample).unwrap();
     }
 

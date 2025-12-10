@@ -3,7 +3,7 @@ use cpal::{
     traits::{DeviceTrait, HostTrait, StreamTrait},
 };
 
-use rythm_engine::audio::oscillator;
+use rythm_engine::audio::oscillator::{self, Oscillator};
 
 fn main() -> anyhow::Result<()> {
     // Retrieve the default audio engine host for the target compilation platform.
@@ -58,10 +58,8 @@ where
     let channels = config.channels as usize;
 
     // Create a sine oscillator with a frequency of 261.63 (middle C)
-    let mut osc = oscillator::SineOscillator::new(261.63, sample_rate);
-
-    // Float sample types use an amplitude of 1.0.
-    osc.set_amplitude(1.0);
+    let osc =
+        oscillator::RuntimeOscillator::new(oscillator::OscillatorType::Sine, sample_rate, 261.63);
 
     // Clock to track which sample we're currently rendering from the oscillator.
     let mut sample_clock = 0;
@@ -72,7 +70,7 @@ where
         config,
         move |data: &mut [T], _: &cpal::OutputCallbackInfo| {
             for frame in data.chunks_mut(channels) {
-                let sample = osc.render(sample_clock);
+                let sample = osc.sample(sample_clock);
                 let value: T = T::from_sample(sample);
                 sample_clock = (sample_clock + 1) % sample_rate;
                 // println!("{}, {:?}", sample_clock, sample);
