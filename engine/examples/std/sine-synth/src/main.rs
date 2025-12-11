@@ -70,15 +70,45 @@ where
     let mut inst = SineInstrument::new(sample_rate);
 
     // TODO: This syntax is terrible.. need to rethink some of the typing
-    inst.note_on(note::CFour, 255).unwrap();
-    inst.note_on(note::DFour, 255).unwrap();
-    inst.note_on(note::GFour, 255).unwrap();
+    // inst.note_on(note::CFour, 255).unwrap();
+    // inst.note_on(note::DFour, 255).unwrap();
+    // inst.note_on(note::GFour, 255).unwrap();
 
     let err_fn = |err| eprintln!("an error occurred on stream: {err}");
+
+    let time_at_start = std::time::Instant::now();
+    println!("Time at start: {time_at_start:?}");
+    let mut step = 0;
 
     let stream = device.build_output_stream(
         config,
         move |data: &mut [T], _: &cpal::OutputCallbackInfo| {
+            // Use the time since start to automatically change notes.
+            let time_since_start = std::time::Instant::now()
+                .duration_since(time_at_start)
+                .as_secs_f32();
+
+            // Simulate some note on and off events for now.
+            if step < 1 {
+                inst.note_on(note::CFour, 255).unwrap();
+                step = 1;
+            } else if time_since_start > 1.0 && step < 2 {
+                inst.note_on(note::DFour, 255).unwrap();
+                step = 2;
+            } else if time_since_start > 2.0 && step < 3 {
+                inst.note_on(note::GFour, 255).unwrap();
+                step = 3;
+            } else if time_since_start > 3.0 && step < 4 {
+                inst.note_off(note::CFour);
+                step = 4;
+            } else if time_since_start > 4.0 && step < 5 {
+                inst.note_off(note::DFour);
+                step = 5;
+            } else if time_since_start > 5.0 && step < 6 {
+                inst.note_off(note::GFour);
+                step = 6;
+            }
+
             for frame in data.chunks_mut(channels) {
                 // Render a single sample from the instrument.
                 //
@@ -100,25 +130,7 @@ where
 
     stream.play()?;
 
-    std::thread::sleep(std::time::Duration::from_millis(1000));
-
-    // <SineInstrument as Instrument<T>>::note_on(&mut inst, note::CFour, 255);
-
-    // std::thread::sleep(std::time::Duration::from_millis(250));
-
-    // <SineInstrument as Instrument<T>>::note_off(&mut inst, note::CFour);
-    // <SineInstrument as Instrument<T>>::note_on(&mut inst, note::CThree, 255);
-
-    // std::thread::sleep(std::time::Duration::from_millis(250));
-
-    // <SineInstrument as Instrument<T>>::note_off(&mut inst, note::CThree);
-    // <SineInstrument as Instrument<T>>::note_on(&mut inst, note::CTwo, 255);
-
-    // std::thread::sleep(std::time::Duration::from_millis(250));
-
-    // <SineInstrument as Instrument<T>>::note_off(&mut inst, note::CTwo);
-
-    // std::thread::sleep(std::time::Duration::from_millis(1000));
+    std::thread::sleep(std::time::Duration::from_millis(5000));
 
     Ok(())
 }

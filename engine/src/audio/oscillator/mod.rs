@@ -9,6 +9,9 @@
 //! oscillator pool allocator means the lookup tables can be shared across
 //! oscillators of the same parameters to avoid memory duplication.
 
+// TODO: cpal has an interesting oscillator algo that we might be able to adapt..
+//  https://github.com/RustAudio/cpal/blob/da923a2d5a01dd7f841f648ec26aeb6c1eabfa3e/examples/synth_tones.rs#L59
+
 use core::array;
 
 use heapless::index_map::FnvIndexMap;
