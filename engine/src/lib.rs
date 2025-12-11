@@ -9,7 +9,7 @@ mod fmt;
 pub mod prelude;
 
 pub mod core;
-pub mod theory;
+pub mod music;
 
 pub mod audio;
 pub mod instrument;

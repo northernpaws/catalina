@@ -217,7 +217,7 @@ pub static ALL_OCTAVES: [Octave; 16] = [
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::theory::octave::HasOctave;
+    use crate::music::octave::HasOctave;
     use pretty_assertions::assert_eq;
 
     #[test]

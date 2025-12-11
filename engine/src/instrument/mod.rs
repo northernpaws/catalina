@@ -1,6 +1,6 @@
 use dasp::Frame;
 
-use crate::{audio::AudioSource, theory::note::Note};
+use crate::{audio::AudioSource, music::note::Note};
 
 #[derive(Debug)]
 pub enum NoteError {

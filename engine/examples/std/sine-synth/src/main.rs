@@ -5,7 +5,7 @@ use cpal::{
 use rythm_engine::{
     audio::{AudioSource, Frame, Mono, slice},
     instrument::Instrument,
-    theory::note,
+    music::note,
 };
 
 use crate::instrument::SineInstrument;
@@ -71,6 +71,8 @@ where
 
     // TODO: This syntax is terrible.. need to rethink some of the typing
     inst.note_on(note::CFour, 255).unwrap();
+    inst.note_on(note::GFour, 255).unwrap();
+    inst.note_on(note::DFour, 255).unwrap();
 
     let err_fn = |err| eprintln!("an error occurred on stream: {err}");
 

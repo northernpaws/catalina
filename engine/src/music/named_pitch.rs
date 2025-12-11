@@ -463,7 +463,7 @@ static ALL_PITCHES: [NamedPitch; 49] = [
 mod tests {
     use super::NamedPitch::C;
     use super::*;
-    use crate::theory::note::*;
+    use crate::music::note::*;
     use pretty_assertions::assert_eq;
 
     #[test]

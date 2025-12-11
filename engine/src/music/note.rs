@@ -24,7 +24,7 @@
 */
 use crate::{
     core::Frequency,
-    theory::{
+    music::{
         named_pitch::NamedPitch,
         octave::ALL_OCTAVES,
         pitch::{ALL_PITCHES, HasPitch, Pitch},

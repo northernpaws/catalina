@@ -1,14 +1,12 @@
-use std::{array, fmt::Debug};
-
 use heapless::index_map::FnvIndexMap;
 
 use rythm_engine::{
     audio::{
-        AudioSource, Frame, FromSample, Mono, Sample, frame,
-        oscillator::{Oscillator, RuntimeOscillator},
+        AudioSource, FromSample, Sample,
+        oscillator::{Oscillator, OscillatorType, RuntimeOscillator},
     },
     instrument::{Instrument, NoteError},
-    theory::note::Note,
+    music::note::Note,
 };
 
 /// A voice is one of multiple simultaneous sounds in a polyphonic synthesizer.
@@ -94,7 +92,7 @@ impl Instrument for SineInstrument {
             .insert(
                 note,
                 Voice::new(RuntimeOscillator::new(
-                    rythm_engine::audio::oscillator::OscillatorType::Sine,
+                    OscillatorType::Sine,
                     self.sample_rate,
                     freq,
                 )),
