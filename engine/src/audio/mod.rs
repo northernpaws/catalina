@@ -1,45 +1,28 @@
-pub use dasp::sample::{FromSample, Sample};
-
 pub mod oscillator;
 
-#[repr(u8)]
-pub enum Channels {
-    Mono = 1,
-    Stereo = 2,
-}
+pub use dasp::{Frame, Sample, sample::FromSample};
 
 /// dasp-sample already provides a robust set of types for sample
 /// managment, so we wrap those in a local crate trait.
 // pub trait Sample: dasp::sample::Sample + dasp::sample::FromSample<f32> {}
 
-pub struct Buffer<'a, T: Sample> {
-    data: &'a mut [T],
+pub struct Buffer<'a, F: Frame> {
+    data: &'a mut [F],
 }
 
-impl<'a, T: Sample> Buffer<'a, T> {
+impl<'a, F: Frame> Buffer<'a, F> {
     /// Returns how many channels are in the buffer.
-    pub fn channels(&self) -> Channels {
-        Channels::Stereo
+    pub fn channels(&self) -> usize {
+        F::CHANNELS
     }
 
-    /// Returns the length of the buffer.
-    pub fn frames(&self) -> usize {
-        match self.channels() {
-            Channels::Mono => self.data.len(),
-            Channels::Stereo => self.data.len() / 2,
-        }
-    }
-
-    /// Writes a sample to all audio channels at the specified frame index.
-    pub fn write_mono(&mut self, frame: usize, sample: T) {
-        match self.channels() {
-            Channels::Mono => todo!(),
-            Channels::Stereo => todo!(),
-        }
+    /// Returns the count of frames in the buffer.
+    pub fn len(&self) -> usize {
+        self.data.len()
     }
 }
 
-pub trait AudioSource<T: Sample + FromSample<f32>> {
+pub trait AudioSource<F: Frame> {
     /// Render a buffered block of audio from the audio source.
-    fn render(&mut self, buffer: &'_ mut Buffer<T>);
+    fn render(&mut self, buffer: &'_ mut Buffer<F>);
 }

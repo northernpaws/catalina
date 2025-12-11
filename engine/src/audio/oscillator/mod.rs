@@ -263,6 +263,11 @@ impl RuntimeOscillator {
             duty_cycle: DutyCycle::Half,
         }
     }
+
+    #[inline]
+    pub const fn get_sample_rate(&self) -> usize {
+        self.sample_rate
+    }
 }
 
 impl<S: Sample + FromSample<f32>> Oscillator<S> for RuntimeOscillator {
