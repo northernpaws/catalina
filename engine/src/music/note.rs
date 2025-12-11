@@ -83,7 +83,8 @@ impl Note {
             _ => {}
         }
 
-        base_frequency * 2.0_f32.powf(octave as u8 as f32)
+        // Not sure why we need the +1.0 on the end, but without it all the tuning was 1 octave off.
+        base_frequency * 2.0_f32.powf(octave as u8 as f32 + 1.0)
     }
 }
 

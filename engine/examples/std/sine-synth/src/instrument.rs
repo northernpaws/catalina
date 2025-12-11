@@ -72,7 +72,9 @@ impl AudioSource for SineInstrument {
                 sample = Sample::add_amp(sample, voice.next_sample());
             }
 
-            buffer[i] = sample;
+            // The divition by the active voices scaled back
+            // the resulting sample to prevent clipping.
+            buffer[i] = sample / self.voices.len() as f32;
         }
     }
 }
@@ -84,6 +86,11 @@ impl Instrument for SineInstrument {
     fn note_on(&mut self, note: Note, _velocity: u8) -> Result<(), NoteError> {
         // Get the frequency of the note in hertz.
         let freq = note.frequency();
+
+        println!(
+            "adding note {:?} freq={} sample_rate={}",
+            note, freq.0, self.sample_rate
+        );
 
         // Attempt to add a voice.
         //
