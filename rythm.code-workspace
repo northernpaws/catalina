@@ -7,10 +7,10 @@
 			"path": "engine"
 		},
 		{
-			"path": "crates/engine/examples/std/play-wave-sine"
+			"path": "crates/engine/examples/std/play-sine"
 		},
 		{
-			"path": "crates/engine/examples/std/render-wave-sine"
+			"path": "crates/engine/examples/std/render-sine"
 		},
 		{
 			"path": "crates/engine/examples/std/sine-synth"
