@@ -272,6 +272,19 @@ impl RuntimeOscillator {
     pub const fn get_sample_rate(&self) -> usize {
         self.sample_rate
     }
+
+    /// Sample from the oscillator at the provided sample index/phase, with the provided frequency.
+    ///
+    /// This is unique to the RuntimeOscillator, because it calcualates the
+    /// samples on-the-fly we can specify a different frequency each time.
+    pub fn sample_with_frequency<S: Sample + FromSample<f32>>(
+        &self,
+        phase: usize,
+        freq: Frequency,
+    ) -> S {
+        self.osc_type
+            .sample(phase, self.sample_rate, freq, self.duty_cycle)
+    }
 }
 
 impl<S: Sample + FromSample<f32>> Oscillator<S> for RuntimeOscillator {

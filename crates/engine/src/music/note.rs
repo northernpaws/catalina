@@ -53,7 +53,7 @@ pub struct Note {
 
 impl Note {
     /// Returns the octave of the note.
-    pub fn octave(&self) -> Octave {
+    pub const fn octave(&self) -> Octave {
         self.octave
     }
 

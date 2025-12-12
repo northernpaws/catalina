@@ -4,7 +4,10 @@
 			"path": "."
 		},
 		{
-			"path": "engine"
+			"path": "crates/engine"
+		},
+		{
+			"path": "crates/instruments"
 		},
 		{
 			"path": "crates/engine/examples/std/play-sine"

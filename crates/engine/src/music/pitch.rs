@@ -120,7 +120,7 @@ pub enum Pitch {
 // Pitch impls.
 
 impl Pitch {
-    pub fn base_frequency(&self) -> Frequency {
+    pub const fn base_frequency(&self) -> Frequency {
         Frequency(match self {
             Pitch::C => 16.35,
             Pitch::DFlat => 17.32,
