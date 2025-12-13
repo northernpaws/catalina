@@ -20,6 +20,9 @@
 		},
 		{
 			"path": "crates/engine/examples/std/terminal-sequencer"
+		},
+		{
+			"path": "crates/engine/examples/embedded/stm32l433"
 		}
 	],
 	"settings": {}
