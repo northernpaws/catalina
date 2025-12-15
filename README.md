@@ -13,6 +13,12 @@ The Rythm ecosystem is comprised of:
    * Breadboard-compatible carrier with headers.
    * Protoboard-style carrier with an integrated module.
 
+## TODO
+
+  * [ ] Finish Mini module revision 1.
+  * [ ] Finish Card module revision 2.
+  * [ ] Stable minor release of `engine`, with audio and synth basic building blocks.
+
 ## Engine
 
 `rythm-engine` is an embedded-first DSP and audio engine crate that can be quickly integrated into embedded projects as a dependency, or used standalone with the std library for audio application.
@@ -32,6 +38,11 @@ The modules provides a set of small STM32-based boards that can be embedded into
 See the kits section below for more types of carrier boards that are designed as self-assembled soldering kits that let you quickly get started creating guitar/effects pedals, and small synths and sequencers using the Rythm toolkit.
 
 ### Mini
+
+| ![Front](assets/images/mini/front.png) | ![Back](assets/images/mini/back.png) |
+|:---:|:---:|
+
+![Layout](assets/images/mini/layout.png) 
 
   * 480MHz ARM Cortex-M processor
   * 64MB of SDRAM
