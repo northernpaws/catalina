@@ -19,7 +19,7 @@ The Rythm ecosystem is comprised of:
   * [ ] Finish Card module revision 2.
   * [ ] Stable minor release of `engine`, with audio and synth basic building blocks.
 
-## Engine
+# Engine
 
 `rythm-engine` is an embedded-first DSP and audio engine crate that can be quickly integrated into embedded projects as a dependency, or used standalone with the std library for audio application.
 
@@ -29,7 +29,7 @@ The engine supports both the `core` embedded and `std` runtimes, including suppo
 
 Our goal is to make the usage of the engine as seamless as possible across both embedded and non-embedded platforms, making prototyping designs on PC and in simulators, and then later transferring them to embedded device runtimes as easy as possible.
 
-## Modules
+# Modules
 
 > ⚠️ The modules and their associated boards are a large work-in-progress! Several designs are only half-complete or still in the planning stages.
 
@@ -37,25 +37,26 @@ The modules provides a set of small STM32-based boards that can be embedded into
 
 See the kits section below for more types of carrier boards that are designed as self-assembled soldering kits that let you quickly get started creating guitar/effects pedals, and small synths and sequencers using the Rythm toolkit.
 
-### Mini
+## Mini
 
 | ![Layout](assets/images/mini/layout.png)  | ![Front](assets/images/mini/front.png) | ![Back](assets/images/mini/back.png) |
 |:---:|:---:|:---:|
 
+**[Schematic Viewer](https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2Fnorthernpaws%2Frythm%2Ftree%2Fmain%2Fhardware%2Fboards%2Fmini%2Fv0.2)**
 
-
-  * 480MHz ARM Cortex-M processor
-  * 64MB of SDRAM
-  * QSPI Flash
-  * Stereo Audio Codec
+  * 480MHz ARM Cortex-M processor (STM32H750XBHx)
+  * 64MB of 16-bit SDRAM for audio buffers
+  * 16MB QSPI Flash for programs and settings
+  * 24-bit Stereo Audio Codec with internal mixer
   * SDMMC 4-bit interface
-  * Stereo Audio Codec (2 in, 2 out)
 
-#### Notes
+
+
+### Notes
 
  * Mini was originally designed with the BGA201 package, but the pitch was too fine for economic fabrication capabilities. Upgraded to BGA265 in revision 2 to fix routing constraints. 
 
-### Card
+## Card
 
 Everything from the Mini:
 
@@ -73,7 +74,7 @@ Plus:
   * Eurorack x CV outputs
   * Eurorack Sync In/Out
 
-## Kits
+# Kits
 
 Rythm's hardware ecosystem will also include several soldering kits that are currently in various stages of development:
  * **Rythm Mini**
