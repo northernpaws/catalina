@@ -64,8 +64,9 @@ The mini is ideal for applications that don't need a large amount of audio RAM a
 
 ### TODO
 
-  * [ ] In Revision 3, see if we can switch to SDMMC2 to enable both QSPI 1 and 2 simultaneously to expose one over the connector.
-  * [ ] *Or connect PG6 (`QUADSPI_BK1_NCS`) to connector, connect QUADSPI1 to connector, and provide a bootloader toggle that allows the carrier to indicate it should use carrier select pin.*
+  * ~~[ ] In Revision 3, see if we can switch to SDMMC2 to enable both QSPI 1 and 2 simultaneously to expose one over the connector.~~
+  * [x] *Or connect PG6 (`QUADSPI_BK1_NCS`) to connector, connect QUADSPI1 to connector, and provide a bootloader toggle that allows the carrier to indicate it should use carrier select pin.*
+
 ### Notes
 
  * Mini was originally designed with the BGA201 package, but the pitch was too fine for economic fabrication capabilities. Upgraded to BGA265 in revision 2 to fix routing constraints. 

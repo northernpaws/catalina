@@ -89839,6 +89839,16 @@
 	)
 	(wire
 		(pts
+			(xy 10.16 227.33) (xy 12.7 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65a03485-acda-4125-a05f-3e036ede7a1f")
+	)
+	(wire
+		(pts
 			(xy 237.49 33.02) (xy 250.19 33.02)
 		)
 		(stroke
@@ -93617,6 +93627,16 @@
 		)
 		(uuid "0149b37a-3ff5-41b4-ace7-7d5fbaa7cbef")
 	)
+	(label "QSPI_CS_EXP"
+		(at 12.7 227.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0177e00f-97e8-4b6f-9fec-364aeedfa60e")
+	)
 	(label "SPKR"
 		(at 394.97 149.86 0)
 		(effects
@@ -93667,6 +93687,16 @@
 			(justify right bottom)
 		)
 		(uuid "06a3fad3-be87-42f4-ad88-2c873a8abeda")
+	)
+	(label "QSPI_IO2"
+		(at 471.17 147.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "06d8d40c-9b8f-4b02-b900-460ea5ebe5ac")
 	)
 	(label "FMC_D4"
 		(at 104.14 113.03 0)
@@ -94423,6 +94453,16 @@
 		)
 		(uuid "4b7e6ab2-e484-4b2b-970d-a26c0886ee69")
 	)
+	(label "QSPI_IO0"
+		(at 471.17 142.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4df170d7-e9dd-417f-af19-ddc74f1ef0ea")
+	)
 	(label "PA8"
 		(at 53.34 64.77 0)
 		(effects
@@ -94512,6 +94552,16 @@
 			(justify left bottom)
 		)
 		(uuid "59550fba-3349-4593-b0ad-004b72023862")
+	)
+	(label "QSPI_IO1"
+		(at 471.17 144.78 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5b95cd21-0dd6-4afa-b2ce-750c5d4aa206")
 	)
 	(label "PH7"
 		(at 12.7 278.13 0)
@@ -94794,6 +94844,16 @@
 			(justify left bottom)
 		)
 		(uuid "79dbb775-47fd-4176-aca9-60357aaea293")
+	)
+	(label "QSPI_CLK"
+		(at 471.17 139.7 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7aace788-9348-44bc-bca4-42c860c58c02")
 	)
 	(label "SAI1_FS"
 		(at 104.14 105.41 0)
@@ -95498,6 +95558,16 @@
 		)
 		(uuid "bbfcb963-5333-4399-be6e-b1c202a0bb4f")
 	)
+	(label "QSPI_CS_EXP"
+		(at 463.55 135.89 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bcb076ac-14d0-4e1e-a224-59f5e895ea11")
+	)
 	(label "SPKL"
 		(at 394.97 144.78 0)
 		(effects
@@ -95538,6 +95608,16 @@
 			(justify left bottom)
 		)
 		(uuid "c03c0770-53a9-4e6f-8a94-0a7f2ab13ae3")
+	)
+	(label "QSPI_IO3"
+		(at 471.17 149.86 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c06e56f6-a860-4085-8edf-06901d2e2b19")
 	)
 	(label "SDMMC1_CMD"
 		(at 104.14 44.45 0)
