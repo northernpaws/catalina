@@ -51,7 +51,7 @@ See the kits section below for more types of carrier boards that are designed as
 
 **[Schematic Viewer](https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2Fnorthernpaws%2Frythm%2Ftree%2Fmain%2Fhardware%2Fboards%2Fmini%2Fv0.2)**
 
-  * 480MHz ARM Cortex-M processor (STM32H750XBHx)
+  * 480MHz ARM Cortex-M7 processor (STM32H750XBHx)
   * 32MB of 16-bit SDRAM for audio buffers
   * 16MB QSPI Flash for programs and settings
   * 24-bit Stereo Audio Codec with internal mixer
@@ -78,7 +78,7 @@ The mini is ideal for applications that don't need a large amount of audio RAM a
 
 Everything from the Mini:
 
-  * 480MHz ARM Cortex-M processor
+  * 480MHz ARM Cortex-M7 processor
   * QSPI Flash
   * Stereo Audio Codec
   * SDMMC 4-bit interface
@@ -111,7 +111,7 @@ Some of the planned carriers are:
   * "Proto" line that has a protoboard layout with a socket for the module in the center, making it easy to not only prototype more stable circuits directly with the module, but also to unsocket and swap the module between multiple proto boards so you don't need to buy several for different projects.
 
 And a couple other ideas that need to be planned out:
-  * A carrier that breaks out the audio and MIDI lines as 3.5mm sockets, and IO on [Molex PicoBlade connectors](https://www.google.com/search?client=safari&rls=en&q=picoblade+connector&ie=UTF-8&oe=UTF-8) for rapid modular prototying (maybe use the "Discovery" name for this one instead?). 
+  * A carrier that breaks out the audio and MIDI lines as 3.5mm sockets, and IO on [Molex PicoBlade connectors](https://www.google.com/search?client=safari&rls=en&q=picoblade+connector&ie=UTF-8&oe=UTF-8) for rapid modular prototyping (maybe use the "Discovery" name for this one instead?). 
 
 # Kits
 
