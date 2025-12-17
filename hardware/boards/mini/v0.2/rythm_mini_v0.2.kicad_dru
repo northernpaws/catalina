@@ -42,63 +42,8 @@
   (constraint hole_clearance (min 0.127mm))
 )
 
-(rule "ulpi-skew"
-	(condition  "A.NetClass == 'ULPI'")
-	(constraint length (min 50mm) (max 70mm))
-	(constraint skew (opt 10mm))
-)
-
 (rule "sdcard-skew"
 	(condition  "A.NetClass == 'SDCARD' && A.NetName != '/SDCARD.DET")
-	(constraint length (min 34mm) (max 35mm))
+	(constraint length (min 8mm) (max 11mm))
 	(constraint skew (opt 0.5mm))
-)
-
-### SCSI PHY ###
-
-(rule "scsi-phy-back"
-	(condition "A.NetClass == 'SCSI' && (A.NetName == '/PHY.DB12' || A.NetName == '/PHY.DB14' || A.NetName == '/PHY.DP1' || A.NetName == '/PHY.DB1' || A.NetName == '/PHY.DB3' || A.NetName == '/PHY.DB5' || A.NetName == '/PHY.DB7' || A.NetName == '/PHY.BSY*' || A.NetName == '/PHY.SEL*' || A.NetName == '/PHY.RST*' || A.NetName == '/PHY.REQ' || A.NetName == '/PHY.DB8' || A.NetName == '/PHY.DB10')")
-	(constraint length (min 26.3254mm) (max 26.3256mm))
-	(constraint skew (max 0.01mm))
-)
-
-(rule "scsi-phy-front"
-	(condition "A.NetClass == 'SCSI' && (A.NetName == '/PHY.DB13' || A.NetName == '/PHY.DB15' || A.NetName == '/PHY.DB0' || A.NetName == '/PHY.DB2' || A.NetName == '/PHY.DB4' || A.NetName == '/PHY.DB6' || A.NetName == '/PHY.DP0' || A.NetName == '/PHY.ATN' || A.NetName == '/PHY.ACK' || A.NetName == '/PHY.MSG' || A.NetName == '/PHY.C{slash}D' || A.NetName == '/PHY.I{slash}O' || A.NetName == '/PHY.DB9' || A.NetName == '/PHY.DB11' || A.NetName == '/PHY.DBH_DIR' || A.NetName == '/PHY.DBL_DIR' || A.NetName == '/PHY.TRGT_DIR' || A.NetName == '/PHY.INIT_DIR')")
-	(constraint length (min 21.9254mm) (max 21.9256mm))
-	(constraint skew (max 0.01mm))
-)
-
-(rule "scsi-phy-inner-width"
-	(layer "In2.Cu")
-	(condition "A.NetClass == 'SCSI'")
-	(constraint track_width (opt 0.177mm))
-	(constraint clearance (min 0.275mm))
-)
-
-### HyperRAM ###
-
-(rule "hyperram-odd-skew"
-	(condition "A.NetClass == 'HyperRAM' && (A.NetName == '/RAM.DQO*' || A.NetName == '/RAM.CLK1*' || A.NetName == '/RAM.~{CS3}')")
-	(constraint length (min 32mm) (opt 33mm) (max 33.6mm))
-	(constraint skew (opt 1.0mm))
-)
-
-(rule "hyperram-even-skew"
-	(condition "A.NetClass == 'HyperRAM' && (A.NetName == '/RAM.DQE*' || A.NetName == '/RAM.CLK0*' || A.NetName == '/RAM.~{CS2}')")
-	(constraint length (min 32.7mm) (opt 33.7mm) (max 34.3mm))
-	(constraint skew (opt 1.0mm))
-)
-
-# These two rules are for fixing the silly that happens with the pullups on the CS lines
-
-(rule "hyperram-cs0-fix-skew"
-	(condition "A.NetName == '/RAM.~{CS0}'")
-	(constraint length (min 25.3mm) (opt 26.3mm) (max 26.9mm))
-	(constraint skew (opt 1.0mm))
-)
-
-(rule "hyperram-cs1-fix-skew"
-	(condition "A.NetName == '/RAM.~{CS1}'")
-	(constraint length (min 24.6mm) (opt 25.6mm) (max 26.2mm))
-	(constraint skew (opt 1.0mm))
 )
