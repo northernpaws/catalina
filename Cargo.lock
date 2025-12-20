@@ -256,8 +256,13 @@ dependencies = [
 name = "rythm"
 version = "0.0.1"
 dependencies = [
+ "rythm-bsp",
  "rythm-engine",
 ]
+
+[[package]]
+name = "rythm-bsp"
+version = "0.1.0"
 
 [[package]]
 name = "rythm-engine"

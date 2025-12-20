@@ -5,12 +5,22 @@ edition = "2024"
 
 
 [dependencies]
+# The core audio and synth engine.
 rythm-engine = { path = "crates/engine" }
 
+# Board support packages for modules, carriers and kits from the ecosystem.
+rythm-bsp = { path = "crates/bsp" }
+
 [features]
+
+# Generic common feature flags.
 default = []
 std = ["rythm-engine/std"]
 alloc = ["rythm-engine/alloc"]
 defmt = ["rythm-engine/defmt"]
 log = ["rythm-engine/log"]
 serde = ["rythm-engine/serde"]
+
+# Features derrived from the BSP support modules.
+bsp-mini = ["rythm-bsp/mini"]
+bsp-mini-v0_2 = ["rythm-bsp/mini-v0_2"]

@@ -1,0 +1,16 @@
+[package]
+name = "rythm-bsp"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[features]
+# Enables BSP support for Mini modules.
+#
+# A version-specific feature below will be required,
+# this flag just enables common crates for the Mini.
+mini = []
+
+# Enables the BSP for the Mini module, version 0.2.
+mini-v0_2 = ["mini"]

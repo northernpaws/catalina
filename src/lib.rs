@@ -7,3 +7,8 @@ extern crate alloc;
 pub mod engine {
     pub use rythm_engine::*;
 }
+
+/// Re-export the BSP crate under the root crate.
+pub mod bsp {
+    pub use rythm_bsp::*;
+}
