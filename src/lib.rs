@@ -12,3 +12,8 @@ pub mod engine {
 pub mod bsp {
     pub use rythm_bsp::*;
 }
+
+/// Re-export the BSP crate under the root crate.
+pub mod instruments {
+    pub use rythm_instruments::*;
+}

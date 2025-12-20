@@ -8,6 +8,9 @@ edition = "2024"
 # The core audio and synth engine.
 rythm-engine = { path = "crates/engine" }
 
+# Basic insturments implementations for examples.
+rythm-instruments = { path = "crates/instruments" }
+
 # Board support packages for modules, carriers and kits from the ecosystem.
 rythm-bsp = { path = "crates/bsp" }
 
@@ -15,8 +18,8 @@ rythm-bsp = { path = "crates/bsp" }
 
 # Generic common feature flags.
 default = []
-std = ["rythm-engine/std"]
-alloc = ["rythm-engine/alloc"]
+std = ["rythm-engine/std", "rythm-instruments/std"]
+alloc = ["rythm-engine/alloc", "rythm-instruments/alloc"]
 defmt = ["rythm-engine/defmt"]
 log = ["rythm-engine/log"]
 serde = ["rythm-engine/serde"]

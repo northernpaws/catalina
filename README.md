@@ -33,6 +33,8 @@ The engine crates are designed to be as modular as possible, so i.e. if you just
 
 The engine supports both the `core` embedded and `std` runtimes, including support for common embedded loggers (`defmt`, `log`), embedded and std library `tracing`, `std` and `alloc` feature sets from underlying libraries, and more via crate feature flags.
 
+> Note! As the engine is embedded-first, `no_std` is set by feature flags by default. You'll need to manually enable the `std` feature to toggle off the default `no_std` declaration. 
+
 Our goal is to make the usage of the engine as seamless as possible across both embedded and non-embedded platforms, making prototyping designs on PC and in simulators, and then later transferring them to embedded device runtimes as easy as possible.
 
 # Modules

@@ -258,6 +258,7 @@ version = "0.0.1"
 dependencies = [
  "rythm-bsp",
  "rythm-engine",
+ "rythm-instruments",
 ]
 
 [[package]]
@@ -275,6 +276,13 @@ dependencies = [
  "paste",
  "pretty_assertions",
  "serde",
+]
+
+[[package]]
+name = "rythm-instruments"
+version = "0.1.0"
+dependencies = [
+ "rythm-engine",
 ]
 
 [[package]]

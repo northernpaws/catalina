@@ -76,13 +76,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "instruments"
-version = "0.1.0"
-dependencies = [
- "rythm-engine",
-]
-
-[[package]]
 name = "paste"
 version = "1.0.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -126,6 +119,13 @@ dependencies = [
  "paste",
  "pretty_assertions",
  "serde",
+]
+
+[[package]]
+name = "rythm-instruments"
+version = "0.1.0"
+dependencies = [
+ "rythm-engine",
 ]
 
 [[package]]
