@@ -5852,25 +5852,25 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U4"
-				(at -11.43 -16.51 0)
+				(at 11.176 -18.034 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Value" "STM32H750XBHx"
-				(at -11.43 -19.05 0)
+				(at 11.176 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-				(at -45.72 -138.43 0)
+				(at 21.082 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -5890,6 +5890,15 @@
 			)
 			(property "Description" "STMicroelectronics Arm Cortex-M7 MCU, 128KB flash, 1024KB RAM, 480 MHz, 1.62-3.6V, 172 GPIO, TFBGA240"
 				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C405932"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -8748,120 +8757,6 @@
 						(type background)
 					)
 				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -17.78 19.05 0)
 					(length 5.08)
@@ -9254,44 +9149,6 @@
 					(alternate "USART6_CTS" bidirectional line)
 					(alternate "USART6_NSS" bidirectional line)
 				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(symbol "STM32H750XBHx_8_1"
 				(rectangle
@@ -9303,120 +9160,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin bidirectional line
@@ -12297,7 +12040,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 5.08 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -12316,7 +12059,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 2.54 180)
+					(at 22.86 17.78 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -12335,7 +12078,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 0 180)
+					(at 22.86 15.24 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -12354,7 +12097,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -2.54 180)
+					(at 22.86 12.7 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -12373,7 +12116,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -5.08 180)
+					(at 22.86 10.16 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -12392,7 +12135,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -7.62 180)
+					(at 22.86 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -12411,7 +12154,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -10.16 180)
+					(at 22.86 5.08 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -12430,7 +12173,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -12.7 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -13410,25 +13153,25 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U4"
-				(at -11.43 -16.51 0)
+				(at 11.176 -18.034 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Value" "STM32H750XBHx"
-				(at -11.43 -19.05 0)
+				(at 11.176 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-				(at -45.72 -138.43 0)
+				(at 21.082 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -13448,6 +13191,15 @@
 			)
 			(property "Description" "STMicroelectronics Arm Cortex-M7 MCU, 128KB flash, 1024KB RAM, 480 MHz, 1.62-3.6V, 172 GPIO, TFBGA240"
 				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C405932"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -16306,120 +16058,6 @@
 						(type background)
 					)
 				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -17.78 19.05 0)
 					(length 5.08)
@@ -16812,44 +16450,6 @@
 					(alternate "USART6_CTS" bidirectional line)
 					(alternate "USART6_NSS" bidirectional line)
 				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(symbol "STM32H750XBHx_1_8_1"
 				(rectangle
@@ -16861,120 +16461,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin bidirectional line
@@ -19855,7 +19341,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 5.08 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -19874,7 +19360,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 2.54 180)
+					(at 22.86 17.78 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -19893,7 +19379,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 0 180)
+					(at 22.86 15.24 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -19912,7 +19398,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -2.54 180)
+					(at 22.86 12.7 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -19931,7 +19417,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -5.08 180)
+					(at 22.86 10.16 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -19950,7 +19436,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -7.62 180)
+					(at 22.86 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -19969,7 +19455,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -10.16 180)
+					(at 22.86 5.08 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -19988,7 +19474,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -12.7 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -20014,25 +19500,25 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U4"
-				(at -11.43 -16.51 0)
+				(at 11.176 -18.034 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Value" "STM32H750XBHx"
-				(at -11.43 -19.05 0)
+				(at 11.176 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-				(at -45.72 -138.43 0)
+				(at 21.082 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -20052,6 +19538,15 @@
 			)
 			(property "Description" "STMicroelectronics Arm Cortex-M7 MCU, 128KB flash, 1024KB RAM, 480 MHz, 1.62-3.6V, 172 GPIO, TFBGA240"
 				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C405932"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -22910,120 +22405,6 @@
 						(type background)
 					)
 				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -17.78 19.05 0)
 					(length 5.08)
@@ -23416,44 +22797,6 @@
 					(alternate "USART6_CTS" bidirectional line)
 					(alternate "USART6_NSS" bidirectional line)
 				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(symbol "STM32H750XBHx_10_8_1"
 				(rectangle
@@ -23465,120 +22808,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin bidirectional line
@@ -26459,7 +25688,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 5.08 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -26478,7 +25707,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 2.54 180)
+					(at 22.86 17.78 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -26497,7 +25726,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 0 180)
+					(at 22.86 15.24 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -26516,7 +25745,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -2.54 180)
+					(at 22.86 12.7 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -26535,7 +25764,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -5.08 180)
+					(at 22.86 10.16 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -26554,7 +25783,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -7.62 180)
+					(at 22.86 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -26573,7 +25802,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -10.16 180)
+					(at 22.86 5.08 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -26592,7 +25821,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -12.7 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -26618,25 +25847,25 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U4"
-				(at -11.43 -16.51 0)
+				(at 11.176 -18.034 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Value" "STM32H750XBHx"
-				(at -11.43 -19.05 0)
+				(at 11.176 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-				(at -45.72 -138.43 0)
+				(at 21.082 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -26656,6 +25885,15 @@
 			)
 			(property "Description" "STMicroelectronics Arm Cortex-M7 MCU, 128KB flash, 1024KB RAM, 480 MHz, 1.62-3.6V, 172 GPIO, TFBGA240"
 				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C405932"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -29514,120 +28752,6 @@
 						(type background)
 					)
 				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -17.78 19.05 0)
 					(length 5.08)
@@ -30020,44 +29144,6 @@
 					(alternate "USART6_CTS" bidirectional line)
 					(alternate "USART6_NSS" bidirectional line)
 				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(symbol "STM32H750XBHx_11_8_1"
 				(rectangle
@@ -30069,120 +29155,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin bidirectional line
@@ -33063,7 +32035,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 5.08 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -33082,7 +32054,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 2.54 180)
+					(at 22.86 17.78 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -33101,7 +32073,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 0 180)
+					(at 22.86 15.24 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -33120,7 +32092,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -2.54 180)
+					(at 22.86 12.7 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -33139,7 +32111,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -5.08 180)
+					(at 22.86 10.16 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -33158,7 +32130,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -7.62 180)
+					(at 22.86 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -33177,7 +32149,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -10.16 180)
+					(at 22.86 5.08 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -33196,7 +32168,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -12.7 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -33222,25 +32194,25 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U4"
-				(at -11.43 -16.51 0)
+				(at 11.176 -18.034 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Value" "STM32H750XBHx"
-				(at -11.43 -19.05 0)
+				(at 11.176 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-				(at -45.72 -138.43 0)
+				(at 21.082 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -33260,6 +32232,15 @@
 			)
 			(property "Description" "STMicroelectronics Arm Cortex-M7 MCU, 128KB flash, 1024KB RAM, 480 MHz, 1.62-3.6V, 172 GPIO, TFBGA240"
 				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C405932"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -36118,120 +35099,6 @@
 						(type background)
 					)
 				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -17.78 19.05 0)
 					(length 5.08)
@@ -36624,44 +35491,6 @@
 					(alternate "USART6_CTS" bidirectional line)
 					(alternate "USART6_NSS" bidirectional line)
 				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(symbol "STM32H750XBHx_2_8_1"
 				(rectangle
@@ -36673,120 +35502,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin bidirectional line
@@ -39667,7 +38382,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 5.08 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -39686,7 +38401,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 2.54 180)
+					(at 22.86 17.78 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -39705,7 +38420,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 0 180)
+					(at 22.86 15.24 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -39724,7 +38439,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -2.54 180)
+					(at 22.86 12.7 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -39743,7 +38458,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -5.08 180)
+					(at 22.86 10.16 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -39762,7 +38477,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -7.62 180)
+					(at 22.86 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -39781,7 +38496,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -10.16 180)
+					(at 22.86 5.08 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -39800,7 +38515,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -12.7 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -39826,25 +38541,25 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U4"
-				(at -11.43 -16.51 0)
+				(at 11.176 -18.034 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Value" "STM32H750XBHx"
-				(at -11.43 -19.05 0)
+				(at 11.176 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-				(at -45.72 -138.43 0)
+				(at 21.082 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -39864,6 +38579,15 @@
 			)
 			(property "Description" "STMicroelectronics Arm Cortex-M7 MCU, 128KB flash, 1024KB RAM, 480 MHz, 1.62-3.6V, 172 GPIO, TFBGA240"
 				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C405932"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -42722,120 +41446,6 @@
 						(type background)
 					)
 				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -17.78 19.05 0)
 					(length 5.08)
@@ -43228,44 +41838,6 @@
 					(alternate "USART6_CTS" bidirectional line)
 					(alternate "USART6_NSS" bidirectional line)
 				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(symbol "STM32H750XBHx_3_8_1"
 				(rectangle
@@ -43277,120 +41849,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin bidirectional line
@@ -46271,7 +44729,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 5.08 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -46290,7 +44748,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 2.54 180)
+					(at 22.86 17.78 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -46309,7 +44767,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 0 180)
+					(at 22.86 15.24 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -46328,7 +44786,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -2.54 180)
+					(at 22.86 12.7 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -46347,7 +44805,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -5.08 180)
+					(at 22.86 10.16 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -46366,7 +44824,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -7.62 180)
+					(at 22.86 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -46385,7 +44843,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -10.16 180)
+					(at 22.86 5.08 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -46404,7 +44862,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -12.7 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -46430,25 +44888,25 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U4"
-				(at -11.43 -16.51 0)
+				(at 11.176 -18.034 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Value" "STM32H750XBHx"
-				(at -11.43 -19.05 0)
+				(at 11.176 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-				(at -45.72 -138.43 0)
+				(at 21.082 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -46468,6 +44926,15 @@
 			)
 			(property "Description" "STMicroelectronics Arm Cortex-M7 MCU, 128KB flash, 1024KB RAM, 480 MHz, 1.62-3.6V, 172 GPIO, TFBGA240"
 				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C405932"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -49326,120 +47793,6 @@
 						(type background)
 					)
 				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -17.78 19.05 0)
 					(length 5.08)
@@ -49832,44 +48185,6 @@
 					(alternate "USART6_CTS" bidirectional line)
 					(alternate "USART6_NSS" bidirectional line)
 				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(symbol "STM32H750XBHx_4_8_1"
 				(rectangle
@@ -49881,120 +48196,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin bidirectional line
@@ -52875,7 +51076,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 5.08 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -52894,7 +51095,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 2.54 180)
+					(at 22.86 17.78 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -52913,7 +51114,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 0 180)
+					(at 22.86 15.24 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -52932,7 +51133,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -2.54 180)
+					(at 22.86 12.7 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -52951,7 +51152,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -5.08 180)
+					(at 22.86 10.16 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -52970,7 +51171,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -7.62 180)
+					(at 22.86 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -52989,7 +51190,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -10.16 180)
+					(at 22.86 5.08 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -53008,7 +51209,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -12.7 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -53034,25 +51235,25 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U4"
-				(at -11.43 -16.51 0)
+				(at 11.176 -18.034 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Value" "STM32H750XBHx"
-				(at -11.43 -19.05 0)
+				(at 11.176 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-				(at -45.72 -138.43 0)
+				(at 21.082 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -53072,6 +51273,15 @@
 			)
 			(property "Description" "STMicroelectronics Arm Cortex-M7 MCU, 128KB flash, 1024KB RAM, 480 MHz, 1.62-3.6V, 172 GPIO, TFBGA240"
 				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C405932"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -55930,120 +54140,6 @@
 						(type background)
 					)
 				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -17.78 19.05 0)
 					(length 5.08)
@@ -56436,44 +54532,6 @@
 					(alternate "USART6_CTS" bidirectional line)
 					(alternate "USART6_NSS" bidirectional line)
 				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(symbol "STM32H750XBHx_5_8_1"
 				(rectangle
@@ -56485,120 +54543,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin bidirectional line
@@ -59479,7 +57423,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 5.08 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -59498,7 +57442,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 2.54 180)
+					(at 22.86 17.78 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -59517,7 +57461,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 0 180)
+					(at 22.86 15.24 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -59536,7 +57480,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -2.54 180)
+					(at 22.86 12.7 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -59555,7 +57499,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -5.08 180)
+					(at 22.86 10.16 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -59574,7 +57518,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -7.62 180)
+					(at 22.86 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -59593,7 +57537,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -10.16 180)
+					(at 22.86 5.08 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -59612,7 +57556,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -12.7 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -59638,25 +57582,25 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U4"
-				(at -11.43 -16.51 0)
+				(at 11.176 -18.034 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Value" "STM32H750XBHx"
-				(at -11.43 -19.05 0)
+				(at 11.176 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-				(at -45.72 -138.43 0)
+				(at 21.082 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -59676,6 +57620,15 @@
 			)
 			(property "Description" "STMicroelectronics Arm Cortex-M7 MCU, 128KB flash, 1024KB RAM, 480 MHz, 1.62-3.6V, 172 GPIO, TFBGA240"
 				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C405932"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -62534,120 +60487,6 @@
 						(type background)
 					)
 				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -17.78 19.05 0)
 					(length 5.08)
@@ -63040,44 +60879,6 @@
 					(alternate "USART6_CTS" bidirectional line)
 					(alternate "USART6_NSS" bidirectional line)
 				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(symbol "STM32H750XBHx_6_8_1"
 				(rectangle
@@ -63089,120 +60890,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin bidirectional line
@@ -66083,7 +63770,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 5.08 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -66102,7 +63789,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 2.54 180)
+					(at 22.86 17.78 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -66121,7 +63808,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 0 180)
+					(at 22.86 15.24 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -66140,7 +63827,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -2.54 180)
+					(at 22.86 12.7 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -66159,7 +63846,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -5.08 180)
+					(at 22.86 10.16 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -66178,7 +63865,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -7.62 180)
+					(at 22.86 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -66197,7 +63884,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -10.16 180)
+					(at 22.86 5.08 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -66216,7 +63903,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -12.7 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -66242,25 +63929,25 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U4"
-				(at -11.43 -16.51 0)
+				(at 11.176 -18.034 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Value" "STM32H750XBHx"
-				(at -11.43 -19.05 0)
+				(at 11.176 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-				(at -45.72 -138.43 0)
+				(at 21.082 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -66280,6 +63967,15 @@
 			)
 			(property "Description" "STMicroelectronics Arm Cortex-M7 MCU, 128KB flash, 1024KB RAM, 480 MHz, 1.62-3.6V, 172 GPIO, TFBGA240"
 				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C405932"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -69138,120 +66834,6 @@
 						(type background)
 					)
 				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -17.78 19.05 0)
 					(length 5.08)
@@ -69644,44 +67226,6 @@
 					(alternate "USART6_CTS" bidirectional line)
 					(alternate "USART6_NSS" bidirectional line)
 				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(symbol "STM32H750XBHx_7_8_1"
 				(rectangle
@@ -69693,120 +67237,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin bidirectional line
@@ -72687,7 +70117,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 5.08 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -72706,7 +70136,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 2.54 180)
+					(at 22.86 17.78 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -72725,7 +70155,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 0 180)
+					(at 22.86 15.24 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -72744,7 +70174,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -2.54 180)
+					(at 22.86 12.7 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -72763,7 +70193,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -5.08 180)
+					(at 22.86 10.16 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -72782,7 +70212,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -7.62 180)
+					(at 22.86 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -72801,7 +70231,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -10.16 180)
+					(at 22.86 5.08 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -72820,7 +70250,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -12.7 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -72846,25 +70276,25 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U4"
-				(at -11.43 -16.51 0)
+				(at 11.176 -18.034 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Value" "STM32H750XBHx"
-				(at -11.43 -19.05 0)
+				(at 11.176 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-				(at -45.72 -138.43 0)
+				(at 21.082 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -72884,6 +70314,15 @@
 			)
 			(property "Description" "STMicroelectronics Arm Cortex-M7 MCU, 128KB flash, 1024KB RAM, 480 MHz, 1.62-3.6V, 172 GPIO, TFBGA240"
 				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C405932"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -75742,120 +73181,6 @@
 						(type background)
 					)
 				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -17.78 19.05 0)
 					(length 5.08)
@@ -76248,44 +73573,6 @@
 					(alternate "USART6_CTS" bidirectional line)
 					(alternate "USART6_NSS" bidirectional line)
 				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(symbol "STM32H750XBHx_8_8_1"
 				(rectangle
@@ -76297,120 +73584,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin bidirectional line
@@ -79291,7 +76464,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 5.08 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -79310,7 +76483,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 2.54 180)
+					(at 22.86 17.78 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -79329,7 +76502,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 0 180)
+					(at 22.86 15.24 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -79348,7 +76521,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -2.54 180)
+					(at 22.86 12.7 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -79367,7 +76540,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -5.08 180)
+					(at 22.86 10.16 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -79386,7 +76559,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -7.62 180)
+					(at 22.86 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -79405,7 +76578,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -10.16 180)
+					(at 22.86 5.08 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -79424,7 +76597,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -12.7 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -79450,25 +76623,25 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U4"
-				(at -11.43 -16.51 0)
+				(at 11.176 -18.034 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Value" "STM32H750XBHx"
-				(at -11.43 -19.05 0)
+				(at 11.176 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-				(at -45.72 -138.43 0)
+				(at 21.082 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -79488,6 +76661,15 @@
 			)
 			(property "Description" "STMicroelectronics Arm Cortex-M7 MCU, 128KB flash, 1024KB RAM, 480 MHz, 1.62-3.6V, 172 GPIO, TFBGA240"
 				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C405932"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -82346,120 +79528,6 @@
 						(type background)
 					)
 				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -17.78 19.05 0)
 					(length 5.08)
@@ -82852,44 +79920,6 @@
 					(alternate "USART6_CTS" bidirectional line)
 					(alternate "USART6_NSS" bidirectional line)
 				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "E1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -12.7 17.78 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
 			(symbol "STM32H750XBHx_9_8_1"
 				(rectangle
@@ -82901,120 +79931,6 @@
 					)
 					(fill
 						(type background)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -119.38 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "N17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -121.92 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -124.46 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "M16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -127 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "L17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -132.08 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -45.72 -134.62 0)
-					(length 5.08)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "K16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
 					)
 				)
 				(pin bidirectional line
@@ -85895,7 +82811,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 5.08 180)
+					(at 22.86 20.32 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -85914,7 +82830,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 2.54 180)
+					(at 22.86 17.78 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -85933,7 +82849,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 0 180)
+					(at 22.86 15.24 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -85952,7 +82868,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -2.54 180)
+					(at 22.86 12.7 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -85971,7 +82887,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -5.08 180)
+					(at 22.86 10.16 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -85990,7 +82906,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -7.62 180)
+					(at 22.86 7.62 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -86009,7 +82925,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -10.16 180)
+					(at 22.86 5.08 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -86028,7 +82944,7 @@
 					)
 				)
 				(pin no_connect line
-					(at 22.86 -12.7 180)
+					(at 22.86 2.54 180)
 					(length 5.08)
 					(hide yes)
 					(name "NC"
@@ -86874,14 +83790,14 @@
 		)
 		(uuid "557c11ec-73bf-45c4-9a50-2747fd3a3ff7")
 	)
-	(text "Reverse voltage\nprotection circuit"
+	(text "Reverse voltage\nand short circuit\nprotection circuit"
 		(exclude_from_sim no)
-		(at 278.13 29.464 0)
+		(at 261.112 26.924 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "703f5089-0bc4-4078-a8ba-5074a265fad7")
 	)
@@ -86954,6 +83870,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1418a37f-2087-4bc8-9266-8629d0e026a9")
+	)
+	(junction
+		(at 278.13 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1bb505da-315e-4c57-a9cb-a22ad7cb3734")
 	)
 	(junction
 		(at 168.91 38.1)
@@ -87182,6 +84104,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6ebc9e8e-6c66-47e4-a7e8-c43b0ecf4bbc")
+	)
+	(junction
+		(at 257.81 21.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "705a677a-da7f-483c-90b9-b5ea9543c570")
 	)
 	(junction
 		(at 187.96 22.86)
@@ -87610,6 +84538,74 @@
 		(uuid "ffd5544d-069a-4d3a-a883-57b7dc7d3f01")
 	)
 	(no_connect
+		(at 378.46 97.79)
+		(uuid "044e9009-993d-4b4a-9be9-2efd0559430b")
+	)
+	(no_connect
+		(at 378.46 130.81)
+		(uuid "06322cde-737f-497e-95b6-0873dfd04016")
+	)
+	(no_connect
+		(at 45.72 212.09)
+		(uuid "08705027-9fb0-4fa9-ab49-5a8fe0cd9468")
+	)
+	(no_connect
+		(at 378.46 210.82)
+		(uuid "0a447d48-877e-4d02-a440-a0e7913acb2d")
+	)
+	(no_connect
+		(at 45.72 260.35)
+		(uuid "0a49c931-ba65-4e49-9536-3ecf1104ae43")
+	)
+	(no_connect
+		(at 378.46 187.96)
+		(uuid "0ba788a8-651d-43ae-8897-ec9bd81c8b29")
+	)
+	(no_connect
+		(at 96.52 186.69)
+		(uuid "11dfe162-0039-4a3a-b678-0ad75e101b8b")
+	)
+	(no_connect
+		(at 355.6 125.73)
+		(uuid "199e3fe1-4222-4c04-bd7b-407a215412b7")
+	)
+	(no_connect
+		(at 96.52 273.05)
+		(uuid "1a74e240-f07e-4ec6-a244-101d964e038a")
+	)
+	(no_connect
+		(at 355.6 100.33)
+		(uuid "1b1c220a-7a93-4b2d-bace-813e2a5ad8c9")
+	)
+	(no_connect
+		(at 96.52 270.51)
+		(uuid "1bdb1dd3-61ec-4cfa-82ec-4c4b4c714fcb")
+	)
+	(no_connect
+		(at 378.46 175.26)
+		(uuid "1e36b2c9-9258-45c8-b365-92f0bb64977c")
+	)
+	(no_connect
+		(at 355.6 123.19)
+		(uuid "246a3c75-9340-4c47-8a98-83d3866f4436")
+	)
+	(no_connect
+		(at 96.52 237.49)
+		(uuid "25c5f0b8-50d9-4a76-bcad-0081954e64ca")
+	)
+	(no_connect
+		(at 96.52 267.97)
+		(uuid "261dea49-b666-4e7a-8be4-e0c9384d6e4c")
+	)
+	(no_connect
+		(at 96.52 36.83)
+		(uuid "281d7a04-2901-4bc6-b605-cdc2af80929d")
+	)
+	(no_connect
+		(at 355.6 195.58)
+		(uuid "2ae4ca46-eff6-474d-b105-d3426dde5613")
+	)
+	(no_connect
 		(at 355.6 62.23)
 		(uuid "2b875b2a-a84d-4b77-a572-696e7854d6f3")
 	)
@@ -87618,8 +84614,308 @@
 		(uuid "2ba80cf5-5055-4b3f-a1ff-cf268864f700")
 	)
 	(no_connect
+		(at 355.6 165.1)
+		(uuid "2eecb136-2d7f-42de-adef-764bb32d5b6a")
+	)
+	(no_connect
+		(at 45.72 24.13)
+		(uuid "2fdccaa7-4395-42d3-8c58-4e2af786944d")
+	)
+	(no_connect
+		(at 96.52 265.43)
+		(uuid "3178dea2-bb23-4133-85b4-83ed1e2b1ef0")
+	)
+	(no_connect
+		(at 96.52 181.61)
+		(uuid "31d2c8b2-39be-4d37-bafc-84fc9a078656")
+	)
+	(no_connect
+		(at 45.72 49.53)
+		(uuid "3cad560e-cecb-4bfc-ac0e-43ad1138c64d")
+	)
+	(no_connect
+		(at 96.52 194.31)
+		(uuid "3ed8fc7d-c11f-4366-9523-e4d2df87c324")
+	)
+	(no_connect
+		(at 45.72 82.55)
+		(uuid "3ffaa915-1abc-4ebc-8348-dc2268b385e6")
+	)
+	(no_connect
+		(at 378.46 180.34)
+		(uuid "42cce6cf-d3d4-42d0-92ae-92d314bf0a40")
+	)
+	(no_connect
+		(at 45.72 77.47)
+		(uuid "4391f328-34ed-4e1b-9ec7-8f019a310c46")
+	)
+	(no_connect
+		(at 45.72 209.55)
+		(uuid "46fdde14-b1c9-4266-ada6-990ae9ab9833")
+	)
+	(no_connect
+		(at 45.72 240.03)
+		(uuid "4c0d9ed6-b479-48ce-a5a6-6760b2722b12")
+	)
+	(no_connect
+		(at 45.72 95.25)
+		(uuid "5111e10a-ca23-4946-92a3-2081ee73abc7")
+	)
+	(no_connect
+		(at 45.72 186.69)
+		(uuid "51de6bd7-1202-4bc5-b24a-c9b8f25bba36")
+	)
+	(no_connect
+		(at 96.52 189.23)
+		(uuid "52d726e0-9da6-4b55-a249-0861953ab7ae")
+	)
+	(no_connect
+		(at 96.52 275.59)
+		(uuid "576ccb4c-3ef2-45a5-aecb-8590c4186579")
+	)
+	(no_connect
+		(at 45.72 191.77)
+		(uuid "59738927-5839-4117-a474-2a8a523354ce")
+	)
+	(no_connect
+		(at 378.46 182.88)
+		(uuid "59ba9591-620e-4518-96d8-8ccf133009d5")
+	)
+	(no_connect
+		(at 45.72 255.27)
+		(uuid "5a1fc1b4-05f7-4615-9d78-d139cba24c72")
+	)
+	(no_connect
+		(at 45.72 207.01)
+		(uuid "5b2f83f8-fd56-4a2f-962a-c92172f76f55")
+	)
+	(no_connect
+		(at 355.6 180.34)
+		(uuid "5b92cff7-fa82-4eb0-9ca4-79255a459621")
+	)
+	(no_connect
+		(at 355.6 167.64)
+		(uuid "5cfc24c3-fa24-4d3c-bf3b-9c57ab556088")
+	)
+	(no_connect
+		(at 45.72 85.09)
+		(uuid "5eb59d45-2c26-44a0-9b5f-1694af5eab8e")
+	)
+	(no_connect
+		(at 378.46 72.39)
+		(uuid "6d69be80-398b-4d4e-a0a4-b3e48ac3b50e")
+	)
+	(no_connect
+		(at 45.72 234.95)
+		(uuid "72ef8c9c-d7e0-43cc-88c5-a85855f7ef39")
+	)
+	(no_connect
+		(at 45.72 204.47)
+		(uuid "746a12c6-e8b8-4b9a-846b-420d254a89da")
+	)
+	(no_connect
+		(at 96.52 240.03)
+		(uuid "77c4035f-cd13-42e8-90ed-06fe87e76268")
+	)
+	(no_connect
+		(at 96.52 34.29)
+		(uuid "78ea1b78-b411-4697-940a-c379a80f0bbe")
+	)
+	(no_connect
+		(at 45.72 242.57)
+		(uuid "80b4325c-4df6-4da1-bbcf-87684fec747e")
+	)
+	(no_connect
+		(at 96.52 196.85)
+		(uuid "80b64391-cd89-46d9-84ec-4ca81184ce28")
+	)
+	(no_connect
+		(at 96.52 227.33)
+		(uuid "81062ccf-e351-4050-aa27-7c083034eb12")
+	)
+	(no_connect
+		(at 45.72 224.79)
+		(uuid "814a2c8d-f0ec-452f-bbd1-18b34f3441a6")
+	)
+	(no_connect
+		(at 355.6 187.96)
+		(uuid "8cc4acc6-0b68-47c7-979c-a7f8a84f9e98")
+	)
+	(no_connect
+		(at 45.72 257.81)
+		(uuid "8f3929e5-9eae-46ae-8a6f-f210c370be3d")
+	)
+	(no_connect
+		(at 378.46 177.8)
+		(uuid "913d74af-dc54-452c-a01b-0bd6320f9216")
+	)
+	(no_connect
+		(at 355.6 115.57)
+		(uuid "916c210c-3cd8-49f3-964e-20aa368ecb26")
+	)
+	(no_connect
+		(at 378.46 105.41)
+		(uuid "938affb3-7ac8-43a1-8be8-f3b2059a3a04")
+	)
+	(no_connect
+		(at 45.72 184.15)
+		(uuid "981aefe9-7711-412c-ac74-8bbf726e9d06")
+	)
+	(no_connect
+		(at 96.52 29.21)
+		(uuid "9c072aef-397e-4c53-ab96-092ce58d3c26")
+	)
+	(no_connect
+		(at 45.72 189.23)
+		(uuid "9df33ebf-3acb-42c5-831a-5b7c443a9e98")
+	)
+	(no_connect
+		(at 45.72 247.65)
+		(uuid "9edcc8e2-f55a-4ec4-97ca-503f5f734732")
+	)
+	(no_connect
+		(at 96.52 242.57)
+		(uuid "a2079ec5-5739-489e-8bac-f6dfda8fc32e")
+	)
+	(no_connect
+		(at 355.6 128.27)
+		(uuid "a3016f3f-b606-44b9-9263-bad79a29367c")
+	)
+	(no_connect
+		(at 45.72 140.97)
+		(uuid "a4b0576d-d667-46b3-a6c6-71ecd30a6667")
+	)
+	(no_connect
 		(at 45.72 120.65)
 		(uuid "a6a7f7ed-2573-421a-82b5-b07e804bc2ab")
+	)
+	(no_connect
+		(at 45.72 245.11)
+		(uuid "a830e751-ccc4-48e0-a76f-8e2641c74152")
+	)
+	(no_connect
+		(at 378.46 228.6)
+		(uuid "aa8b3e21-1964-4d45-9ed0-a7ac84a2cfe8")
+	)
+	(no_connect
+		(at 45.72 199.39)
+		(uuid "acf6df36-d89e-47e4-a01e-240c1ffaf159")
+	)
+	(no_connect
+		(at 355.6 182.88)
+		(uuid "aecd1de3-421d-4b9a-a1cd-df755a7403a1")
+	)
+	(no_connect
+		(at 355.6 130.81)
+		(uuid "b083da0f-35b7-438a-8e9d-85b0769f1424")
+	)
+	(no_connect
+		(at 355.6 113.03)
+		(uuid "b2114ee7-9c76-4acb-949c-3c218049be64")
+	)
+	(no_connect
+		(at 96.52 191.77)
+		(uuid "b2314cec-8d74-4fb4-b735-81c06bc5ceaf")
+	)
+	(no_connect
+		(at 96.52 234.95)
+		(uuid "b245789c-661b-4ff8-9c5c-aa50b15bbe16")
+	)
+	(no_connect
+		(at 96.52 222.25)
+		(uuid "b71b792a-ea87-4b53-a709-9550e21d2a9b")
+	)
+	(no_connect
+		(at 96.52 184.15)
+		(uuid "c0a3820b-d8b6-4278-8f26-eecc8c128928")
+	)
+	(no_connect
+		(at 96.52 250.19)
+		(uuid "c4f5dfba-84fa-489b-9d61-ec6add37a362")
+	)
+	(no_connect
+		(at 45.72 252.73)
+		(uuid "c5b6eb0d-f341-4ee4-aced-a180ff3ef96c")
+	)
+	(no_connect
+		(at 45.72 39.37)
+		(uuid "c7d13372-4a79-41e0-82db-f6b55572edb6")
+	)
+	(no_connect
+		(at 45.72 232.41)
+		(uuid "c7e7d528-86f6-4a60-ac2c-c43a2756eede")
+	)
+	(no_connect
+		(at 355.6 203.2)
+		(uuid "cd1278a0-1e61-4722-99d1-1cf301f0ad45")
+	)
+	(no_connect
+		(at 378.46 90.17)
+		(uuid "cd65941c-159a-4581-ab57-ef814d8960e7")
+	)
+	(no_connect
+		(at 45.72 222.25)
+		(uuid "d0879fe1-1ce7-46f5-9011-bc883f721b6b")
+	)
+	(no_connect
+		(at 96.52 199.39)
+		(uuid "d0cfc2e0-ffce-4e53-97db-cad25fffdaf6")
+	)
+	(no_connect
+		(at 355.6 107.95)
+		(uuid "d51fc44e-94c4-4bc8-ac08-0c79f82f3993")
+	)
+	(no_connect
+		(at 378.46 123.19)
+		(uuid "d5bee83c-21a2-417c-9540-217fc4eaa438")
+	)
+	(no_connect
+		(at 45.72 130.81)
+		(uuid "dae10275-4870-48b8-8c75-b141bcfc3295")
+	)
+	(no_connect
+		(at 378.46 190.5)
+		(uuid "dc42a455-898d-4c76-afa2-27f64771d674")
+	)
+	(no_connect
+		(at 355.6 185.42)
+		(uuid "dcea28f4-e8de-45ad-a605-8c181d83d588")
+	)
+	(no_connect
+		(at 45.72 194.31)
+		(uuid "dd779378-c1ef-4527-bc17-1a804a7778b2")
+	)
+	(no_connect
+		(at 355.6 82.55)
+		(uuid "df87838c-d71e-4f45-ab85-ec15737af7f4")
+	)
+	(no_connect
+		(at 45.72 237.49)
+		(uuid "e027d705-3377-4c7f-913e-362e4db0e3d7")
+	)
+	(no_connect
+		(at 378.46 185.42)
+		(uuid "e6ff447d-8007-46c1-8eca-7e4c13ee7e4f")
+	)
+	(no_connect
+		(at 45.72 19.05)
+		(uuid "ecf9456b-f54a-4f77-9ccf-36c032205a9a")
+	)
+	(no_connect
+		(at 96.52 278.13)
+		(uuid "f08c674e-3e43-4137-8aae-2adb26748371")
+	)
+	(no_connect
+		(at 96.52 31.75)
+		(uuid "f5a8f6b0-dd22-40ed-b6ba-521ee6da5704")
+	)
+	(no_connect
+		(at 45.72 201.93)
+		(uuid "f753181a-223d-4c06-8b1e-a022e1c2eeca")
+	)
+	(no_connect
+		(at 45.72 62.23)
+		(uuid "f8224f74-4518-4912-9efe-74b5bdbb57ec")
 	)
 	(wire
 		(pts
@@ -87823,6 +85119,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 40.64) (xy 278.13 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08012309-74eb-4648-a898-ce35b3f95c73")
+	)
+	(wire
+		(pts
 			(xy 276.86 161.29) (xy 276.86 162.56)
 		)
 		(stroke
@@ -87880,6 +85186,16 @@
 			(type default)
 		)
 		(uuid "09c95450-bd45-4f90-8f57-f176756abb6d")
+	)
+	(wire
+		(pts
+			(xy 350.52 92.71) (xy 355.6 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09fdd37a-33f1-4329-8e20-888f62075028")
 	)
 	(wire
 		(pts
@@ -88773,6 +86089,16 @@
 	)
 	(wire
 		(pts
+			(xy 351.79 140.97) (xy 354.33 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28ef3731-c6ac-4ee3-a916-187f5b4e89f1")
+	)
+	(wire
+		(pts
 			(xy 99.06 176.53) (xy 96.52 176.53)
 		)
 		(stroke
@@ -89653,16 +86979,6 @@
 	)
 	(wire
 		(pts
-			(xy 351.79 143.51) (xy 351.79 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4ecd12d2-83f7-4bc3-a165-bb94b925c39b")
-	)
-	(wire
-		(pts
 			(xy 45.72 29.21) (xy 48.26 29.21)
 		)
 		(stroke
@@ -89810,6 +87126,16 @@
 			(type default)
 		)
 		(uuid "55c9aeda-4995-401d-94be-d815e9043138")
+	)
+	(wire
+		(pts
+			(xy 351.79 143.51) (xy 351.79 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5697490e-d4ce-47f6-9a71-fc15090f6a02")
 	)
 	(wire
 		(pts
@@ -90093,7 +87419,7 @@
 	)
 	(wire
 		(pts
-			(xy 378.46 133.35) (xy 383.54 133.35)
+			(xy 378.46 133.35) (xy 388.62 133.35)
 		)
 		(stroke
 			(width 0)
@@ -91613,16 +88939,6 @@
 	)
 	(wire
 		(pts
-			(xy 351.79 140.97) (xy 354.33 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "995f5eb5-9ae8-4010-8189-d20bbc79e566")
-	)
-	(wire
-		(pts
 			(xy 383.54 107.95) (xy 378.46 107.95)
 		)
 		(stroke
@@ -92163,6 +89479,16 @@
 	)
 	(wire
 		(pts
+			(xy 257.81 21.59) (xy 257.81 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b666108f-9ecc-47ad-bfb4-db0cf64a2e0d")
+	)
+	(wire
+		(pts
 			(xy 284.48 152.4) (xy 284.48 156.21)
 		)
 		(stroke
@@ -92180,6 +89506,16 @@
 			(type default)
 		)
 		(uuid "b6f2f948-684a-495c-8d1e-12f5d9de498c")
+	)
+	(wire
+		(pts
+			(xy 257.81 21.59) (xy 259.08 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7159d55-a5b2-4e20-b20b-1821fd9d07ff")
 	)
 	(wire
 		(pts
@@ -92223,7 +89559,7 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 20.32) (xy 257.81 22.86)
+			(xy 257.81 20.32) (xy 257.81 21.59)
 		)
 		(stroke
 			(width 0)
@@ -95761,7 +93097,7 @@
 		(uuid "9737f8c4-40c1-4cef-aef6-77a27b9c8ec8")
 	)
 	(label "BOOT0"
-		(at 142.24 5.08 180)
+		(at 350.52 92.71 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -99895,6 +97231,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 259.08 21.59 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2fbaccbb-7990-434f-95ef-499a729ab3b9")
+		(property "Reference" "#FLG02"
+			(at 260.985 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 262.89 21.5899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 259.08 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 259.08 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 259.08 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5ee865d1-fcd7-4125-83f9-00cfa78af3dc")
+		)
+		(instances
+			(project ""
+				(path "/f8dd7a9e-fcd3-404d-b8a5-ab89fe05940b"
+					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 306.07 190.5 90)
 		(unit 1)
@@ -100137,7 +97540,7 @@
 		(dnp no)
 		(uuid "3475a73b-72ab-4123-a4d2-cd3d4d4acd87")
 		(property "Reference" "U4"
-			(at 16.51 211.328 0)
+			(at 16.764 211.074 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -100146,7 +97549,7 @@
 			)
 		)
 		(property "Value" "STM32H750XBHx"
-			(at 16.51 213.868 0)
+			(at 16.764 213.614 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -100155,7 +97558,7 @@
 			)
 		)
 		(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-			(at 73.66 331.47 0)
+			(at 6.858 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -100952,9 +98355,6 @@
 			(uuid "3c4dbe04-7b07-497b-b302-b6bbe24146b6")
 			(alternate "FMC_D12")
 		)
-		(pin "N17"
-			(uuid "aa8dbbf4-a153-4244-9342-ffe79d1eeda0")
-		)
 		(pin "G3"
 			(uuid "30081f9a-0349-43b4-9e81-912f0de6adfd")
 		)
@@ -101039,45 +98439,6 @@
 		(pin "P6"
 			(uuid "ce7f6b20-cfe6-4c9c-9748-2cdff677430b")
 		)
-		(pin "M17"
-			(uuid "03dfd8a5-1b9b-4b45-b99e-627ffb779c5a")
-		)
-		(pin "M16"
-			(uuid "029da4c9-20e2-4ee3-b937-16b7cf1267f0")
-		)
-		(pin "L17"
-			(uuid "411ea2b5-63ef-488c-8c11-65b22b5f2890")
-		)
-		(pin "L16"
-			(uuid "d154d8b3-426d-44d1-a75f-b0e981cffb8d")
-		)
-		(pin "K17"
-			(uuid "cca2b74a-f2bc-47e8-87a1-0e5423cafdca")
-		)
-		(pin "K16"
-			(uuid "164104e7-406e-4b0a-a0ff-c2ec15c20a50")
-		)
-		(pin "E1"
-			(uuid "b1166bdb-bcef-485f-93dd-1c857b01c480")
-		)
-		(pin "N17"
-			(uuid "beb751c2-f80f-4e23-8a99-f63662c6d857")
-		)
-		(pin "M17"
-			(uuid "ad6de392-3332-4177-8166-247f9f6d2f38")
-		)
-		(pin "M16"
-			(uuid "38dadfaf-a343-444b-9b88-55cd5b8e4f75")
-		)
-		(pin "L17"
-			(uuid "02dc8794-bc34-4bba-93b8-0924d7c2b151")
-		)
-		(pin "K17"
-			(uuid "e8f1d99a-e728-441b-8c0c-cf050485470d")
-		)
-		(pin "K16"
-			(uuid "e5f15ba8-6021-4d36-a55c-ff80e0343b30")
-		)
 		(pin "G4"
 			(uuid "6188a5f3-08e7-4229-b8d4-7a46e1949dce")
 		)
@@ -101120,7 +98481,7 @@
 			)
 		)
 		(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-			(at 124.46 369.57 0)
+			(at 57.658 233.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -101909,9 +99270,6 @@
 			(uuid "3c4dbe04-7b07-497b-b302-b6bbe24146b7")
 			(alternate "FMC_D12")
 		)
-		(pin "N17"
-			(uuid "aa8dbbf4-a153-4244-9342-ffe79d1eeda1")
-		)
 		(pin "G3"
 			(uuid "30081f9a-0349-43b4-9e81-912f0de6adfe")
 		)
@@ -101996,45 +99354,6 @@
 		(pin "P6"
 			(uuid "ce7f6b20-cfe6-4c9c-9748-2cdff677430c")
 		)
-		(pin "M17"
-			(uuid "03dfd8a5-1b9b-4b45-b99e-627ffb779c5b")
-		)
-		(pin "M16"
-			(uuid "029da4c9-20e2-4ee3-b937-16b7cf1267f1")
-		)
-		(pin "L17"
-			(uuid "411ea2b5-63ef-488c-8c11-65b22b5f2891")
-		)
-		(pin "L16"
-			(uuid "d154d8b3-426d-44d1-a75f-b0e981cffb8e")
-		)
-		(pin "K17"
-			(uuid "cca2b74a-f2bc-47e8-87a1-0e5423cafdcb")
-		)
-		(pin "K16"
-			(uuid "164104e7-406e-4b0a-a0ff-c2ec15c20a51")
-		)
-		(pin "E1"
-			(uuid "b1166bdb-bcef-485f-93dd-1c857b01c481")
-		)
-		(pin "N17"
-			(uuid "beb751c2-f80f-4e23-8a99-f63662c6d858")
-		)
-		(pin "M17"
-			(uuid "ad6de392-3332-4177-8166-247f9f6d2f39")
-		)
-		(pin "M16"
-			(uuid "38dadfaf-a343-444b-9b88-55cd5b8e4f76")
-		)
-		(pin "L17"
-			(uuid "02dc8794-bc34-4bba-93b8-0924d7c2b152")
-		)
-		(pin "K17"
-			(uuid "e8f1d99a-e728-441b-8c0c-cf050485470e")
-		)
-		(pin "K16"
-			(uuid "e5f15ba8-6021-4d36-a55c-ff80e0343b31")
-		)
 		(pin "G4"
 			(uuid "2e6acfbe-2eae-4248-9da6-22231085dd87")
 		)
@@ -102059,7 +99378,7 @@
 		(dnp no)
 		(uuid "3475a73b-72ab-4123-a4d2-cd3d4d4acd89")
 		(property "Reference" "U4"
-			(at 67.31 200.914 0)
+			(at 67.564 200.914 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -102068,7 +99387,7 @@
 			)
 		)
 		(property "Value" "STM32H750XBHx"
-			(at 67.31 203.454 0)
+			(at 67.564 203.454 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -102077,7 +99396,7 @@
 			)
 		)
 		(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-			(at 124.46 321.31 0)
+			(at 57.658 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -102874,9 +100193,6 @@
 			(uuid "3c4dbe04-7b07-497b-b302-b6bbe24146b8")
 			(alternate "FMC_D12")
 		)
-		(pin "N17"
-			(uuid "aa8dbbf4-a153-4244-9342-ffe79d1eeda2")
-		)
 		(pin "G3"
 			(uuid "30081f9a-0349-43b4-9e81-912f0de6adff")
 		)
@@ -102961,45 +100277,6 @@
 		(pin "P6"
 			(uuid "ce7f6b20-cfe6-4c9c-9748-2cdff677430d")
 		)
-		(pin "M17"
-			(uuid "03dfd8a5-1b9b-4b45-b99e-627ffb779c5c")
-		)
-		(pin "M16"
-			(uuid "029da4c9-20e2-4ee3-b937-16b7cf1267f2")
-		)
-		(pin "L17"
-			(uuid "411ea2b5-63ef-488c-8c11-65b22b5f2892")
-		)
-		(pin "L16"
-			(uuid "d154d8b3-426d-44d1-a75f-b0e981cffb8f")
-		)
-		(pin "K17"
-			(uuid "cca2b74a-f2bc-47e8-87a1-0e5423cafdcc")
-		)
-		(pin "K16"
-			(uuid "164104e7-406e-4b0a-a0ff-c2ec15c20a52")
-		)
-		(pin "E1"
-			(uuid "b1166bdb-bcef-485f-93dd-1c857b01c482")
-		)
-		(pin "N17"
-			(uuid "beb751c2-f80f-4e23-8a99-f63662c6d859")
-		)
-		(pin "M17"
-			(uuid "ad6de392-3332-4177-8166-247f9f6d2f3a")
-		)
-		(pin "M16"
-			(uuid "38dadfaf-a343-444b-9b88-55cd5b8e4f77")
-		)
-		(pin "L17"
-			(uuid "02dc8794-bc34-4bba-93b8-0924d7c2b153")
-		)
-		(pin "K17"
-			(uuid "e8f1d99a-e728-441b-8c0c-cf050485470f")
-		)
-		(pin "K16"
-			(uuid "e5f15ba8-6021-4d36-a55c-ff80e0343b32")
-		)
 		(pin "G4"
 			(uuid "66dbc0a9-6ab9-4e45-aa4f-1a312da7a5ac")
 		)
@@ -103023,25 +100300,25 @@
 		(dnp no)
 		(uuid "3475a73b-72ab-4123-a4d2-cd3d4d4acd8a")
 		(property "Reference" "U4"
-			(at 16.002 61.722 0)
+			(at 39.116 58.674 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "STM32H750XBHx"
-			(at 16.002 64.262 0)
+			(at 39.116 61.214 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-			(at -17.78 179.07 0)
+			(at 49.022 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -103838,9 +101115,6 @@
 			(uuid "3c4dbe04-7b07-497b-b302-b6bbe24146b9")
 			(alternate "FMC_D12")
 		)
-		(pin "N17"
-			(uuid "aa8dbbf4-a153-4244-9342-ffe79d1eeda3")
-		)
 		(pin "G3"
 			(uuid "30081f9a-0349-43b4-9e81-912f0de6ae00")
 		)
@@ -103925,45 +101199,6 @@
 		(pin "P6"
 			(uuid "ce7f6b20-cfe6-4c9c-9748-2cdff677430e")
 		)
-		(pin "M17"
-			(uuid "03dfd8a5-1b9b-4b45-b99e-627ffb779c5d")
-		)
-		(pin "M16"
-			(uuid "029da4c9-20e2-4ee3-b937-16b7cf1267f3")
-		)
-		(pin "L17"
-			(uuid "411ea2b5-63ef-488c-8c11-65b22b5f2893")
-		)
-		(pin "L16"
-			(uuid "d154d8b3-426d-44d1-a75f-b0e981cffb90")
-		)
-		(pin "K17"
-			(uuid "cca2b74a-f2bc-47e8-87a1-0e5423cafdcd")
-		)
-		(pin "K16"
-			(uuid "164104e7-406e-4b0a-a0ff-c2ec15c20a53")
-		)
-		(pin "E1"
-			(uuid "b1166bdb-bcef-485f-93dd-1c857b01c483")
-		)
-		(pin "N17"
-			(uuid "beb751c2-f80f-4e23-8a99-f63662c6d85a")
-		)
-		(pin "M17"
-			(uuid "ad6de392-3332-4177-8166-247f9f6d2f3b")
-		)
-		(pin "M16"
-			(uuid "38dadfaf-a343-444b-9b88-55cd5b8e4f78")
-		)
-		(pin "L17"
-			(uuid "02dc8794-bc34-4bba-93b8-0924d7c2b154")
-		)
-		(pin "K17"
-			(uuid "e8f1d99a-e728-441b-8c0c-cf0504854710")
-		)
-		(pin "K16"
-			(uuid "e5f15ba8-6021-4d36-a55c-ff80e0343b33")
-		)
 		(pin "G4"
 			(uuid "66360549-5034-4333-b4ca-1a43e27b6e09")
 		)
@@ -103987,25 +101222,25 @@
 		(dnp no)
 		(uuid "3475a73b-72ab-4123-a4d2-cd3d4d4acd8b")
 		(property "Reference" "U4"
-			(at 67.056 56.642 0)
+			(at 89.916 56.134 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "STM32H750XBHx"
-			(at 67.056 59.182 0)
+			(at 89.916 58.674 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-			(at 33.02 176.53 0)
+			(at 99.822 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -104802,9 +102037,6 @@
 			(uuid "3c4dbe04-7b07-497b-b302-b6bbe24146ba")
 			(alternate "FMC_D12")
 		)
-		(pin "N17"
-			(uuid "aa8dbbf4-a153-4244-9342-ffe79d1eeda4")
-		)
 		(pin "G3"
 			(uuid "30081f9a-0349-43b4-9e81-912f0de6ae01")
 		)
@@ -104889,45 +102121,6 @@
 		(pin "P6"
 			(uuid "ce7f6b20-cfe6-4c9c-9748-2cdff677430f")
 		)
-		(pin "M17"
-			(uuid "03dfd8a5-1b9b-4b45-b99e-627ffb779c5e")
-		)
-		(pin "M16"
-			(uuid "029da4c9-20e2-4ee3-b937-16b7cf1267f4")
-		)
-		(pin "L17"
-			(uuid "411ea2b5-63ef-488c-8c11-65b22b5f2894")
-		)
-		(pin "L16"
-			(uuid "d154d8b3-426d-44d1-a75f-b0e981cffb91")
-		)
-		(pin "K17"
-			(uuid "cca2b74a-f2bc-47e8-87a1-0e5423cafdce")
-		)
-		(pin "K16"
-			(uuid "164104e7-406e-4b0a-a0ff-c2ec15c20a54")
-		)
-		(pin "E1"
-			(uuid "b1166bdb-bcef-485f-93dd-1c857b01c484")
-		)
-		(pin "N17"
-			(uuid "beb751c2-f80f-4e23-8a99-f63662c6d85b")
-		)
-		(pin "M17"
-			(uuid "ad6de392-3332-4177-8166-247f9f6d2f3c")
-		)
-		(pin "M16"
-			(uuid "38dadfaf-a343-444b-9b88-55cd5b8e4f79")
-		)
-		(pin "L17"
-			(uuid "02dc8794-bc34-4bba-93b8-0924d7c2b155")
-		)
-		(pin "K17"
-			(uuid "e8f1d99a-e728-441b-8c0c-cf0504854711")
-		)
-		(pin "K16"
-			(uuid "e5f15ba8-6021-4d36-a55c-ff80e0343b34")
-		)
 		(pin "G4"
 			(uuid "192b363c-214f-4da5-af8d-1edb0aadcb6e")
 		)
@@ -104951,25 +102144,25 @@
 		(dnp no)
 		(uuid "3475a73b-72ab-4123-a4d2-cd3d4d4acd8c")
 		(property "Reference" "U4"
-			(at 67.056 104.648 0)
+			(at 89.916 104.394 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "STM32H750XBHx"
-			(at 67.056 107.188 0)
+			(at 89.916 106.934 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-			(at 33.02 224.79 0)
+			(at 99.822 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -105766,9 +102959,6 @@
 			(uuid "3c4dbe04-7b07-497b-b302-b6bbe24146bb")
 			(alternate "FMC_D12")
 		)
-		(pin "N17"
-			(uuid "aa8dbbf4-a153-4244-9342-ffe79d1eeda5")
-		)
 		(pin "G3"
 			(uuid "30081f9a-0349-43b4-9e81-912f0de6ae02")
 		)
@@ -105853,45 +103043,6 @@
 		(pin "P6"
 			(uuid "ce7f6b20-cfe6-4c9c-9748-2cdff6774310")
 		)
-		(pin "M17"
-			(uuid "03dfd8a5-1b9b-4b45-b99e-627ffb779c5f")
-		)
-		(pin "M16"
-			(uuid "029da4c9-20e2-4ee3-b937-16b7cf1267f5")
-		)
-		(pin "L17"
-			(uuid "411ea2b5-63ef-488c-8c11-65b22b5f2895")
-		)
-		(pin "L16"
-			(uuid "d154d8b3-426d-44d1-a75f-b0e981cffb92")
-		)
-		(pin "K17"
-			(uuid "cca2b74a-f2bc-47e8-87a1-0e5423cafdcf")
-		)
-		(pin "K16"
-			(uuid "164104e7-406e-4b0a-a0ff-c2ec15c20a55")
-		)
-		(pin "E1"
-			(uuid "b1166bdb-bcef-485f-93dd-1c857b01c485")
-		)
-		(pin "N17"
-			(uuid "beb751c2-f80f-4e23-8a99-f63662c6d85c")
-		)
-		(pin "M17"
-			(uuid "ad6de392-3332-4177-8166-247f9f6d2f3d")
-		)
-		(pin "M16"
-			(uuid "38dadfaf-a343-444b-9b88-55cd5b8e4f7a")
-		)
-		(pin "L17"
-			(uuid "02dc8794-bc34-4bba-93b8-0924d7c2b156")
-		)
-		(pin "K17"
-			(uuid "e8f1d99a-e728-441b-8c0c-cf0504854712")
-		)
-		(pin "K16"
-			(uuid "e5f15ba8-6021-4d36-a55c-ff80e0343b35")
-		)
 		(pin "G4"
 			(uuid "13555337-4b33-4cb5-a1db-705506982260")
 		)
@@ -105915,25 +103066,25 @@
 		(dnp no)
 		(uuid "3475a73b-72ab-4123-a4d2-cd3d4d4acd8d")
 		(property "Reference" "U4"
-			(at 16.002 109.982 0)
+			(at 39.116 109.474 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "STM32H750XBHx"
-			(at 16.002 112.522 0)
+			(at 39.116 112.014 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-			(at -17.78 229.87 0)
+			(at 49.022 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -106730,9 +103881,6 @@
 			(uuid "3c4dbe04-7b07-497b-b302-b6bbe24146bc")
 			(alternate "FMC_D12")
 		)
-		(pin "N17"
-			(uuid "aa8dbbf4-a153-4244-9342-ffe79d1eeda6")
-		)
 		(pin "G3"
 			(uuid "30081f9a-0349-43b4-9e81-912f0de6ae03")
 		)
@@ -106817,45 +103965,6 @@
 		(pin "P6"
 			(uuid "ce7f6b20-cfe6-4c9c-9748-2cdff6774311")
 		)
-		(pin "M17"
-			(uuid "03dfd8a5-1b9b-4b45-b99e-627ffb779c60")
-		)
-		(pin "M16"
-			(uuid "029da4c9-20e2-4ee3-b937-16b7cf1267f6")
-		)
-		(pin "L17"
-			(uuid "411ea2b5-63ef-488c-8c11-65b22b5f2896")
-		)
-		(pin "L16"
-			(uuid "d154d8b3-426d-44d1-a75f-b0e981cffb93")
-		)
-		(pin "K17"
-			(uuid "cca2b74a-f2bc-47e8-87a1-0e5423cafdd0")
-		)
-		(pin "K16"
-			(uuid "164104e7-406e-4b0a-a0ff-c2ec15c20a56")
-		)
-		(pin "E1"
-			(uuid "b1166bdb-bcef-485f-93dd-1c857b01c486")
-		)
-		(pin "N17"
-			(uuid "beb751c2-f80f-4e23-8a99-f63662c6d85d")
-		)
-		(pin "M17"
-			(uuid "ad6de392-3332-4177-8166-247f9f6d2f3e")
-		)
-		(pin "M16"
-			(uuid "38dadfaf-a343-444b-9b88-55cd5b8e4f7b")
-		)
-		(pin "L17"
-			(uuid "02dc8794-bc34-4bba-93b8-0924d7c2b157")
-		)
-		(pin "K17"
-			(uuid "e8f1d99a-e728-441b-8c0c-cf0504854713")
-		)
-		(pin "K16"
-			(uuid "e5f15ba8-6021-4d36-a55c-ff80e0343b36")
-		)
 		(pin "G4"
 			(uuid "637a7ac6-1c83-4c57-8dbe-257f4259ca56")
 		)
@@ -106880,7 +103989,7 @@
 		(dnp no)
 		(uuid "3475a73b-72ab-4123-a4d2-cd3d4d4acd8e")
 		(property "Reference" "U4"
-			(at 16.51 259.334 0)
+			(at 16.764 259.334 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -106889,7 +103998,7 @@
 			)
 		)
 		(property "Value" "STM32H750XBHx"
-			(at 16.51 261.874 0)
+			(at 16.764 261.874 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -106898,7 +104007,7 @@
 			)
 		)
 		(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-			(at 73.66 379.73 0)
+			(at 6.858 243.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -107695,9 +104804,6 @@
 			(uuid "3c4dbe04-7b07-497b-b302-b6bbe24146bd")
 			(alternate "FMC_D12")
 		)
-		(pin "N17"
-			(uuid "aa8dbbf4-a153-4244-9342-ffe79d1eeda7")
-		)
 		(pin "G3"
 			(uuid "30081f9a-0349-43b4-9e81-912f0de6ae04")
 		)
@@ -107782,45 +104888,6 @@
 		(pin "P6"
 			(uuid "ce7f6b20-cfe6-4c9c-9748-2cdff6774312")
 		)
-		(pin "M17"
-			(uuid "03dfd8a5-1b9b-4b45-b99e-627ffb779c61")
-		)
-		(pin "M16"
-			(uuid "029da4c9-20e2-4ee3-b937-16b7cf1267f7")
-		)
-		(pin "L17"
-			(uuid "411ea2b5-63ef-488c-8c11-65b22b5f2897")
-		)
-		(pin "L16"
-			(uuid "d154d8b3-426d-44d1-a75f-b0e981cffb94")
-		)
-		(pin "K17"
-			(uuid "cca2b74a-f2bc-47e8-87a1-0e5423cafdd1")
-		)
-		(pin "K16"
-			(uuid "164104e7-406e-4b0a-a0ff-c2ec15c20a57")
-		)
-		(pin "E1"
-			(uuid "b1166bdb-bcef-485f-93dd-1c857b01c487")
-		)
-		(pin "N17"
-			(uuid "beb751c2-f80f-4e23-8a99-f63662c6d85e")
-		)
-		(pin "M17"
-			(uuid "ad6de392-3332-4177-8166-247f9f6d2f3f")
-		)
-		(pin "M16"
-			(uuid "38dadfaf-a343-444b-9b88-55cd5b8e4f7c")
-		)
-		(pin "L17"
-			(uuid "02dc8794-bc34-4bba-93b8-0924d7c2b158")
-		)
-		(pin "K17"
-			(uuid "e8f1d99a-e728-441b-8c0c-cf0504854714")
-		)
-		(pin "K16"
-			(uuid "e5f15ba8-6021-4d36-a55c-ff80e0343b37")
-		)
 		(pin "G4"
 			(uuid "cf64bd5e-c79f-47c0-99c5-c4ca6cfd537e")
 		)
@@ -107845,7 +104912,7 @@
 		(dnp no)
 		(uuid "3475a73b-72ab-4123-a4d2-cd3d4d4acd8f")
 		(property "Reference" "U4"
-			(at 67.564 277.114 0)
+			(at 67.564 287.274 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -107854,7 +104921,7 @@
 			)
 		)
 		(property "Value" "STM32H750XBHx"
-			(at 67.564 279.654 0)
+			(at 67.564 289.814 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -107863,7 +104930,7 @@
 			)
 		)
 		(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-			(at 124.46 407.67 0)
+			(at 57.658 271.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -108660,9 +105727,6 @@
 			(uuid "3c4dbe04-7b07-497b-b302-b6bbe24146be")
 			(alternate "FMC_D12")
 		)
-		(pin "N17"
-			(uuid "aa8dbbf4-a153-4244-9342-ffe79d1eeda8")
-		)
 		(pin "G3"
 			(uuid "30081f9a-0349-43b4-9e81-912f0de6ae05")
 		)
@@ -108747,45 +105811,6 @@
 		(pin "P6"
 			(uuid "ce7f6b20-cfe6-4c9c-9748-2cdff6774313")
 		)
-		(pin "M17"
-			(uuid "03dfd8a5-1b9b-4b45-b99e-627ffb779c62")
-		)
-		(pin "M16"
-			(uuid "029da4c9-20e2-4ee3-b937-16b7cf1267f8")
-		)
-		(pin "L17"
-			(uuid "411ea2b5-63ef-488c-8c11-65b22b5f2898")
-		)
-		(pin "L16"
-			(uuid "d154d8b3-426d-44d1-a75f-b0e981cffb95")
-		)
-		(pin "K17"
-			(uuid "cca2b74a-f2bc-47e8-87a1-0e5423cafdd2")
-		)
-		(pin "K16"
-			(uuid "164104e7-406e-4b0a-a0ff-c2ec15c20a58")
-		)
-		(pin "E1"
-			(uuid "b1166bdb-bcef-485f-93dd-1c857b01c488")
-		)
-		(pin "N17"
-			(uuid "beb751c2-f80f-4e23-8a99-f63662c6d85f")
-		)
-		(pin "M17"
-			(uuid "ad6de392-3332-4177-8166-247f9f6d2f40")
-		)
-		(pin "M16"
-			(uuid "38dadfaf-a343-444b-9b88-55cd5b8e4f7d")
-		)
-		(pin "L17"
-			(uuid "02dc8794-bc34-4bba-93b8-0924d7c2b159")
-		)
-		(pin "K17"
-			(uuid "e8f1d99a-e728-441b-8c0c-cf0504854715")
-		)
-		(pin "K16"
-			(uuid "e5f15ba8-6021-4d36-a55c-ff80e0343b38")
-		)
 		(pin "G4"
 			(uuid "558c9b75-7a45-42d1-91de-5ddeb0f4b0bf")
 		)
@@ -108809,25 +105834,25 @@
 		(dnp no)
 		(uuid "3475a73b-72ab-4123-a4d2-cd3d4d4acd90")
 		(property "Reference" "U4"
-			(at 67.056 152.908 0)
+			(at 89.916 152.654 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "STM32H750XBHx"
-			(at 67.056 155.448 0)
+			(at 89.916 155.194 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-			(at 33.02 273.05 0)
+			(at 99.822 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -109624,9 +106649,6 @@
 			(uuid "3c4dbe04-7b07-497b-b302-b6bbe24146bf")
 			(alternate "FMC_D12")
 		)
-		(pin "N17"
-			(uuid "aa8dbbf4-a153-4244-9342-ffe79d1eeda9")
-		)
 		(pin "G3"
 			(uuid "30081f9a-0349-43b4-9e81-912f0de6ae06")
 		)
@@ -109711,45 +106733,6 @@
 		(pin "P6"
 			(uuid "ce7f6b20-cfe6-4c9c-9748-2cdff6774314")
 		)
-		(pin "M17"
-			(uuid "03dfd8a5-1b9b-4b45-b99e-627ffb779c63")
-		)
-		(pin "M16"
-			(uuid "029da4c9-20e2-4ee3-b937-16b7cf1267f9")
-		)
-		(pin "L17"
-			(uuid "411ea2b5-63ef-488c-8c11-65b22b5f2899")
-		)
-		(pin "L16"
-			(uuid "d154d8b3-426d-44d1-a75f-b0e981cffb96")
-		)
-		(pin "K17"
-			(uuid "cca2b74a-f2bc-47e8-87a1-0e5423cafdd3")
-		)
-		(pin "K16"
-			(uuid "164104e7-406e-4b0a-a0ff-c2ec15c20a59")
-		)
-		(pin "E1"
-			(uuid "b1166bdb-bcef-485f-93dd-1c857b01c489")
-		)
-		(pin "N17"
-			(uuid "beb751c2-f80f-4e23-8a99-f63662c6d860")
-		)
-		(pin "M17"
-			(uuid "ad6de392-3332-4177-8166-247f9f6d2f41")
-		)
-		(pin "M16"
-			(uuid "38dadfaf-a343-444b-9b88-55cd5b8e4f7e")
-		)
-		(pin "L17"
-			(uuid "02dc8794-bc34-4bba-93b8-0924d7c2b15a")
-		)
-		(pin "K17"
-			(uuid "e8f1d99a-e728-441b-8c0c-cf0504854716")
-		)
-		(pin "K16"
-			(uuid "e5f15ba8-6021-4d36-a55c-ff80e0343b39")
-		)
 		(pin "G4"
 			(uuid "0604995a-3c86-43b8-802b-43c5ee602474")
 		)
@@ -109773,25 +106756,25 @@
 		(dnp no)
 		(uuid "3475a73b-72ab-4123-a4d2-cd3d4d4acd91")
 		(property "Reference" "U4"
-			(at 16.256 163.068 0)
+			(at 39.116 160.274 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "STM32H750XBHx"
-			(at 16.256 165.608 0)
+			(at 39.116 162.814 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-			(at -17.78 280.67 0)
+			(at 49.022 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -110588,9 +107571,6 @@
 			(uuid "3c4dbe04-7b07-497b-b302-b6bbe24146c0")
 			(alternate "FMC_D12")
 		)
-		(pin "N17"
-			(uuid "aa8dbbf4-a153-4244-9342-ffe79d1eedaa")
-		)
 		(pin "G3"
 			(uuid "30081f9a-0349-43b4-9e81-912f0de6ae07")
 		)
@@ -110675,45 +107655,6 @@
 		(pin "P6"
 			(uuid "ce7f6b20-cfe6-4c9c-9748-2cdff6774315")
 		)
-		(pin "M17"
-			(uuid "03dfd8a5-1b9b-4b45-b99e-627ffb779c64")
-		)
-		(pin "M16"
-			(uuid "029da4c9-20e2-4ee3-b937-16b7cf1267fa")
-		)
-		(pin "L17"
-			(uuid "411ea2b5-63ef-488c-8c11-65b22b5f289a")
-		)
-		(pin "L16"
-			(uuid "d154d8b3-426d-44d1-a75f-b0e981cffb97")
-		)
-		(pin "K17"
-			(uuid "cca2b74a-f2bc-47e8-87a1-0e5423cafdd4")
-		)
-		(pin "K16"
-			(uuid "164104e7-406e-4b0a-a0ff-c2ec15c20a5a")
-		)
-		(pin "E1"
-			(uuid "b1166bdb-bcef-485f-93dd-1c857b01c48a")
-		)
-		(pin "N17"
-			(uuid "beb751c2-f80f-4e23-8a99-f63662c6d861")
-		)
-		(pin "M17"
-			(uuid "ad6de392-3332-4177-8166-247f9f6d2f42")
-		)
-		(pin "M16"
-			(uuid "38dadfaf-a343-444b-9b88-55cd5b8e4f7f")
-		)
-		(pin "L17"
-			(uuid "02dc8794-bc34-4bba-93b8-0924d7c2b15b")
-		)
-		(pin "K17"
-			(uuid "e8f1d99a-e728-441b-8c0c-cf0504854717")
-		)
-		(pin "K16"
-			(uuid "e5f15ba8-6021-4d36-a55c-ff80e0343b3a")
-		)
 		(pin "G4"
 			(uuid "a37761f8-7cc1-4f58-ad6a-a877b8e1ff0c")
 		)
@@ -110736,25 +107677,25 @@
 		(dnp no)
 		(uuid "3475a73b-72ab-4123-a4d2-cd3d4d4acd92")
 		(property "Reference" "U4"
-			(at 196.596 103.886 0)
+			(at 204.216 96.774 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "STM32H750XBHx"
-			(at 196.596 106.426 0)
+			(at 204.216 99.314 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Package_BGA:TFBGA-265_14x14mm_Layout17x17_P0.8mm"
-			(at 147.32 217.17 0)
+			(at 214.122 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -111551,9 +108492,6 @@
 			(uuid "3c4dbe04-7b07-497b-b302-b6bbe24146c1")
 			(alternate "FMC_D12")
 		)
-		(pin "N17"
-			(uuid "aa8dbbf4-a153-4244-9342-ffe79d1eedab")
-		)
 		(pin "G3"
 			(uuid "30081f9a-0349-43b4-9e81-912f0de6ae08")
 		)
@@ -111637,45 +108575,6 @@
 		)
 		(pin "P6"
 			(uuid "ce7f6b20-cfe6-4c9c-9748-2cdff6774316")
-		)
-		(pin "M17"
-			(uuid "03dfd8a5-1b9b-4b45-b99e-627ffb779c65")
-		)
-		(pin "M16"
-			(uuid "029da4c9-20e2-4ee3-b937-16b7cf1267fb")
-		)
-		(pin "L17"
-			(uuid "411ea2b5-63ef-488c-8c11-65b22b5f289b")
-		)
-		(pin "L16"
-			(uuid "d154d8b3-426d-44d1-a75f-b0e981cffb98")
-		)
-		(pin "K17"
-			(uuid "cca2b74a-f2bc-47e8-87a1-0e5423cafdd5")
-		)
-		(pin "K16"
-			(uuid "164104e7-406e-4b0a-a0ff-c2ec15c20a5b")
-		)
-		(pin "E1"
-			(uuid "b1166bdb-bcef-485f-93dd-1c857b01c48b")
-		)
-		(pin "N17"
-			(uuid "beb751c2-f80f-4e23-8a99-f63662c6d862")
-		)
-		(pin "M17"
-			(uuid "ad6de392-3332-4177-8166-247f9f6d2f43")
-		)
-		(pin "M16"
-			(uuid "38dadfaf-a343-444b-9b88-55cd5b8e4f80")
-		)
-		(pin "L17"
-			(uuid "02dc8794-bc34-4bba-93b8-0924d7c2b15c")
-		)
-		(pin "K17"
-			(uuid "e8f1d99a-e728-441b-8c0c-cf0504854718")
-		)
-		(pin "K16"
-			(uuid "e5f15ba8-6021-4d36-a55c-ff80e0343b3b")
 		)
 		(pin "G4"
 			(uuid "ee0fc17c-4228-441e-b699-c615984538d0")
@@ -113994,6 +110893,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 388.62 133.35 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "673b71d6-afd5-4f2e-be80-07d26c231570")
+		(property "Reference" "#FLG04"
+			(at 390.525 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 392.43 133.3499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 388.62 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 388.62 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 388.62 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8ac5aabe-9aab-43ea-b61d-21554e857301")
+		)
+		(instances
+			(project "mini_v0.2"
+				(path "/f8dd7a9e-fcd3-404d-b8a5-ab89fe05940b"
+					(reference "#FLG04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 228.6 121.92 0)
 		(unit 1)
@@ -115093,6 +112059,72 @@
 			(project "rythm_mini_v0.2"
 				(path "/f8dd7a9e-fcd3-404d-b8a5-ab89fe05940b"
 					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 351.79 143.51 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "887e4a54-9cd7-4d5f-b4c6-c867d9c1eed3")
+		(property "Reference" "#PWR033"
+			(at 351.79 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 351.79 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 351.79 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 351.79 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 351.79 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "95e6a67e-638e-4bda-92c2-3b6ffa4d619a")
+		)
+		(instances
+			(project "mini_v0.2"
+				(path "/f8dd7a9e-fcd3-404d-b8a5-ab89fe05940b"
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -116649,6 +113681,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 278.13 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b7c1c20b-c476-4000-915e-2c3e534b3129")
+		(property "Reference" "#FLG03"
+			(at 278.13 38.735 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 278.13 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 278.13 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 278.13 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 278.13 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "14c87f72-fbbc-4320-853e-003df545602f")
+		)
+		(instances
+			(project "mini_v0.2"
+				(path "/f8dd7a9e-fcd3-404d-b8a5-ab89fe05940b"
+					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 173.99 152.4 0)
 		(unit 1)
@@ -117476,72 +114574,6 @@
 			(project "rythm_mini_v0.2"
 				(path "/f8dd7a9e-fcd3-404d-b8a5-ab89fe05940b"
 					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 351.79 143.51 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c05261f1-f7ca-4201-abed-4ef67ce21958")
-		(property "Reference" "#PWR036"
-			(at 351.79 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 351.79 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 351.79 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 351.79 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 351.79 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "51f78258-587d-4bb0-9d0a-72ef331c3215")
-		)
-		(instances
-			(project "rythm_mini_v0.2"
-				(path "/f8dd7a9e-fcd3-404d-b8a5-ab89fe05940b"
-					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -118579,7 +115611,7 @@
 		(dnp no)
 		(uuid "e8917dbb-b435-4c92-8841-0667f3a12fc1")
 		(property "Reference" "IC1"
-			(at 280.416 197.612 0)
+			(at 280.416 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -118587,7 +115619,7 @@
 			)
 		)
 		(property "Value" "NAU88C22YG"
-			(at 280.416 200.152 0)
+			(at 280.416 201.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
