@@ -138,6 +138,18 @@ The hardware ecosystem will also include several soldering kits that are current
 
 Each of these kits will come with a board support package via a feature flag in the Rust crate. These board support packages will come with all the scaffolding necessary to quickly build a project around the boards, as well as several example projects. 
 
-## TODO
+# TODO
   * FUSB303BTMX on discovery for USB-C support
   * Amphenol_12401610E4-2A or HRO_TYPE-C-31-M-12?
+
+# License
+
+## License
+
+The hardware and CAD components of this project are licensed under the CERN Open Hardware License v2.0. The particular of the CERN-OHL license (permissive, weakly reciprocal, strongly reciprocal) can very depending on the hardware component and should be checked on a per-component basis by finding the closest LICENSE file to it.
+
+The software components of this project are under the MIT license.
+
+Concepts, such as the pin arrangement of the high-density connectors on the modules is consided free and open to build on, especially if you're looking to make a carrier board or product!
+
+`SPDX-License-Identifier: CERN-OHL-S-2.0 AND MIT`
