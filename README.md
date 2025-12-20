@@ -123,6 +123,10 @@ Some of the planned carriers are:
 And a couple other ideas that need to be planned out:
   * A carrier that breaks out the audio and MIDI lines as 3.5mm sockets, and IO on [Molex PicoBlade connectors](https://www.google.com/search?client=safari&rls=en&q=picoblade+connector&ie=UTF-8&oe=UTF-8) for rapid modular prototyping (maybe use the "Discovery" name for this one instead?). 
 
+## TODO
+  * FUSB303BTMX on discovery for USB-C support
+  * Amphenol_12401610E4-2A or HRO_TYPE-C-31-M-12?
+
 # Kits
 
 The hardware ecosystem will also include several soldering kits that are currently in various stages of development:
@@ -138,13 +142,24 @@ The hardware ecosystem will also include several soldering kits that are current
 
 Each of these kits will come with a board support package via a feature flag in the Rust crate. These board support packages will come with all the scaffolding necessary to quickly build a project around the boards, as well as several example projects. 
 
-# TODO
-  * FUSB303BTMX on discovery for USB-C support
-  * Amphenol_12401610E4-2A or HRO_TYPE-C-31-M-12?
+# Supporters
+
+Thank you to the supporters that helped design and fund this project!
+
+It would not have been possible for me to spend the time or funds on making this without their support.
+
+ * [Rachel Mant (@dragonmux)](https://github.com/dragonmux)
+ * [Aki (@lethalbit)](https://github.com/lethalbit)
+ * [Luna Rabbit (@LunaUsagi)](https://lunarabbit.moe)
+ * [Sludge (@SludgeGirl)](https://github.com/SludgeGirl)
+ * [Esden (@esden)](https://github.com/esden)
+ * [Miika (@nykseli)](https://github.com/Nykseli)
+ * Freyja
+ * [Mary Guillemard (@marysaka)](https://github.com/marysaka)
+
+If you would like to support this project, see either my [GitHub Sponsors page](https://github.com/sponsors/northernpaws) or [Patreon](https://www.patreon.com/cw/Northernpaws). Support includes access to exclusive Discord channels with sneak peaks and design discussions.
 
 # License
-
-## License
 
 The hardware and CAD components of this project are licensed under the CERN Open Hardware License v2.0. The particular of the CERN-OHL license (permissive, weakly reciprocal, strongly reciprocal) can very depending on the hardware component and should be checked on a per-component basis by finding the closest LICENSE file to it.
 
