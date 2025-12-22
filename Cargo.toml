@@ -24,18 +24,22 @@ categories = [
 
 [dependencies]
 # The core audio and synth engine.
-catalina-engine = { path = "crates/catalina-engine" }
+catalina-engine = { path = "crates/catalina-engine", version = "0.1.0", optional = true }
 
 # Basic insturments implementations for examples.
-catalina-instruments = { path = "crates/catalina-instruments" }
+catalina-instruments = { path = "crates/catalina-instruments", version = "0.1.0", optional = true }
 
 # Board support packages for modules, carriers and kits from the ecosystem.
-catalina-bsp = { path = "crates/catalina-bsp" }
+catalina-bsp = { path = "crates/catalina-bsp", version = "0.1.0", optional = true }
 
 [features]
 
+engine = ["dep:catalina-engine"]
+instruments = ["dep:catalina-instruments"]
+bsp = ["dep:catalina-bsp"]
+
 # Generic common feature flags.
-default = []
+default = ["engine"]
 std = ["catalina-engine/std", "catalina-instruments/std"]
 alloc = ["catalina-engine/alloc", "catalina-instruments/alloc"]
 defmt = ["catalina-engine/defmt"]
@@ -43,5 +47,5 @@ log = ["catalina-engine/log"]
 serde = ["catalina-engine/serde"]
 
 # Features derrived from the BSP support modules.
-bsp-mini = ["catalina-bsp/mini"]
-bsp-mini-v0_2 = ["catalina-bsp/mini-v0_2"]
+bsp-mini = ["bsp", "catalina-bsp/mini"]
+bsp-mini-v0_2 = ["bsp", "catalina-bsp/mini-v0_2"]

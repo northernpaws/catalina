@@ -129,7 +129,7 @@ version = "0.1.0"
 
 [[package]]
 name = "catalina-engine"
-version = "0.0.1"
+version = "0.1.0"
 dependencies = [
  "dasp",
  "defmt 1.0.1",
