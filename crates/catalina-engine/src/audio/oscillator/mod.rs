@@ -16,7 +16,7 @@ use core::array;
 
 use heapless::index_map::FnvIndexMap;
 
-use dasp::sample::{FromSample, Sample};
+use crate::audio::sample::{FromSample, Sample};
 
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};

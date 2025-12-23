@@ -18,3 +18,6 @@ mini = []
 
 # Enables the BSP for the Mini module, version 0.2.
 mini-v0_2 = ["mini"]
+
+[package.metadata.docs.rs]
+all-features = true

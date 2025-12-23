@@ -34,3 +34,6 @@ alloc = []
 serde = ["dep:serde"]
 defmt = ["dep:defmt"]
 log = []
+
+[package.metadata.docs.rs]
+all-features = true
