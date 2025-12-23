@@ -78,3 +78,9 @@ serde = ["catalina-engine/serde"]
 # Features derrived from the BSP support modules.
 bsp-mini = ["bsp", "catalina-bsp/mini"]
 bsp-mini-v0_2 = ["bsp", "catalina-bsp/mini-v0_2"]
+
+[patch.crates-io]
+# Note that we're using the main branch because a release
+# including the change in cd8d893 hasn't been made.
+#  see: https://github.com/RustAudio/dasp/commit/cd8d8931ba6ff589d5c6334641641c116e09fe58
+dasp = { git = "https://github.com/RustAudio/dasp", branch = "master" }
