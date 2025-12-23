@@ -29,6 +29,8 @@ The ecosystem is comprised of:
 
 # Engine
 
+[**Visit on crates.io**](https://crates.io/crates/catalina)
+
 `catalina-engine` is a set of embedded-first DSP and audio engine crates that can be quickly integrated into embedded projects as a dependency, or used standalone with the std library for audio application.
 
 The engine crates are designed to be as modular as possible, so i.e. if you just need a couple oscillators, you can use the oscillator module without needed to depend on any other parts of the engine. This composability is designed to make building audio effects and instruments as intuitive as possible.
