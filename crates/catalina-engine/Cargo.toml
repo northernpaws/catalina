@@ -16,19 +16,13 @@ pretty_assertions = "1.4.1"
 # (De)serialization
 serde = { version = "1", features = ["derive"], optional = true }
 
-# Traits for representing audio samples, frames, etc.
-#
-# Note that we're using the main branch because a release
-# including the change in cd8d893 hasn't been made.
-#  see: https://github.com/RustAudio/dasp/commit/cd8d8931ba6ff589d5c6334641641c116e09fe58
-dasp = { version = "0.11.0", features = ["slice"] }
 float_eq = "1.0.1"
 paste = "1.0.15"
 
 [features]
 default = ["serde"]
 
-std = ["alloc", "dasp/std"]
+std = ["alloc"]
 alloc = []
 
 serde = ["dep:serde"]
