@@ -2,6 +2,7 @@
 name = "catalina-bsp"
 version = "0.1.0"
 edition = "2024"
+description = "Board support packages for Catalina native hardware components"
 
 [dependencies]
 

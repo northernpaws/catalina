@@ -2,6 +2,7 @@
 name = "catalina-engine"
 version = "0.1.0"
 edition = "2024"
+description = "Audio and synth DSP framework for creating audio processing and music platforms on embedded platforms"
 
 [dependencies]
 

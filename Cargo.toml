@@ -5,6 +5,11 @@ members = [
     "crates/catalina-engine/examples/embedded/*",
 ]
 
+[workspace.package]
+keywords = ["audio", "music", "dsp"]
+repository = "https://github.com/northernpaws/catalina"
+license = "MIT"
+
 [package]
 name = "catalina"
 version = "0.0.1"
