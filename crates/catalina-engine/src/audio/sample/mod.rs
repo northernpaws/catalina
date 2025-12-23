@@ -1,7 +1,7 @@
 //! Use the Sample trait to remain generic over sample types, easily
 //! access sample type conversions, apply basic audio operations and more.
 //!
-//! The sample types where adapted from [dasp](https://github.com/RustAudio/dasp/tree/master)
+//! The frame types where adapted from [dasp](https://github.com/RustAudio/dasp/tree/master)
 //! under the MIT license due to it's unmaintained status leaving the published
 //! crates in an unusable state for embbeded use.
 
