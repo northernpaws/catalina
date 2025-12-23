@@ -182,7 +182,7 @@ where
 /// ```
 /// fn main() {
 ///     let foo = &[[0.0, 0.5], [0.0, -0.5]][..];
-///     let bar = dasp_slice::to_sample_slice(foo);
+///     let bar = catalina_engine::audio::slice::to_sample_slice(foo);
 ///     assert_eq!(bar, &[0.0, 0.5, 0.0, -0.5][..]);
 /// }
 /// ```
@@ -203,7 +203,7 @@ where
 /// ```
 /// fn main() {
 ///     let foo = &mut [[0.0, 0.5], [0.0, -0.5]][..];
-///     let bar = dasp_slice::to_sample_slice_mut(foo);
+///     let bar = catalina_engine::audio::slice::to_sample_slice_mut(foo);
 ///     assert_eq!(bar, &mut [0.0, 0.5, 0.0, -0.5][..]);
 /// }
 /// ```
@@ -227,7 +227,7 @@ where
 /// ```
 /// fn main() {
 ///     let foo = &[0.0, 0.5, 0.0, -0.5][..];
-///     let bar: Option<&_> = dasp_slice::from_sample_slice(foo);
+///     let bar: Option<&_> = catalina_engine::audio::slice::from_sample_slice(foo);
 ///     assert_eq!(bar, Some(&[[0.0, 0.5], [0.0, -0.5]][..]));
 /// }
 /// ```
@@ -251,7 +251,7 @@ where
 /// ```
 /// fn main() {
 ///     let foo = &mut [0.0, 0.5, 0.0, -0.5][..];
-///     let bar: Option<&mut _> = dasp_slice::from_sample_slice_mut(foo);
+///     let bar: Option<&mut _> = catalina_engine::audio::slice::from_sample_slice_mut(foo);
 ///     assert_eq!(bar, Some(&mut [[0.0, 0.5], [0.0, -0.5]][..]));
 /// }
 /// ```

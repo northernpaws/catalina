@@ -114,11 +114,11 @@ where
 /// ```
 /// fn main() {
 ///     let foo = &[0.0, 0.5, 0.0, -0.5][..];
-///     let bar = dasp_slice::to_frame_slice(foo);
+///     let bar = catalina_engine::audio::slice::to_frame_slice(foo);
 ///     assert_eq!(bar, Some(&[[0.0, 0.5], [0.0, -0.5]][..]));
 ///
 ///     let foo = &[0.0, 0.5, 0.0][..];
-///     let bar = dasp_slice::to_frame_slice(foo);
+///     let bar = catalina_engine::audio::slice::to_frame_slice(foo);
 ///     assert_eq!(bar, None::<&[[f32; 2]]>);
 /// }
 /// ```
@@ -142,11 +142,11 @@ where
 /// ```
 /// fn main() {
 ///     let foo = &mut [0.0, 0.5, 0.0, -0.5][..];
-///     let bar = dasp_slice::to_frame_slice_mut(foo);
+///     let bar = catalina_engine::audio::slice::to_frame_slice_mut(foo);
 ///     assert_eq!(bar, Some(&mut [[0.0, 0.5], [0.0, -0.5]][..]));
 ///
 ///     let foo = &mut [0.0, 0.5, 0.0][..];
-///     let bar = dasp_slice::to_frame_slice_mut(foo);
+///     let bar = catalina_engine::audio::slice::to_frame_slice_mut(foo);
 ///     assert_eq!(bar, None::<&mut [[f32; 2]]>);
 /// }
 /// ```
@@ -167,7 +167,7 @@ where
 /// ```
 /// fn main() {
 ///     let foo = &[[0.0, 0.5], [0.0, -0.5]][..];
-///     let bar: &[f32] = dasp_slice::from_frame_slice(foo);
+///     let bar: &[f32] = catalina_engine::audio::slice::from_frame_slice(foo);
 ///     assert_eq!(bar, &[0.0, 0.5, 0.0, -0.5][..]);
 /// }
 /// ```
@@ -188,7 +188,7 @@ where
 /// ```
 /// fn main() {
 ///     let foo = &mut [[0.0, 0.5], [0.0, -0.5]][..];
-///     let bar: &mut [f32] = dasp_slice::from_frame_slice_mut(foo);
+///     let bar: &mut [f32] = catalina_engine::audio::slice::from_frame_slice_mut(foo);
 ///     assert_eq!(bar, &mut [0.0, 0.5, 0.0, -0.5][..]);
 /// }
 /// ```

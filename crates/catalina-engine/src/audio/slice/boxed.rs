@@ -1,9 +1,4 @@
 //! Items related to boxed-slice conversions.
-//!
-//! ### Required Features
-//!
-//! - When using `dasp_slice`, this module requires the **boxed** feature to be enabled.
-//! - When using `dasp`, this module requires the **slice-boxed** feature to be enabled.
 
 #[cfg(not(feature = "std"))]
 extern crate alloc;
@@ -22,11 +17,6 @@ pub type Box<T> = std::boxed::Box<T>;
 // ----------------------------------------------------------------------------
 
 /// For converting a boxed slice of `Sample`s to a boxed slice of `Frame`s.
-///
-/// ### Required Features
-///
-/// - When using `dasp_slice`, this item requires the **boxed** feature to be enabled.
-/// - When using `dasp`, this item requires the **slice-boxed** feature to be enabled.
 pub trait FromBoxedSampleSlice<S>: Sized
 where
     S: Sample,
@@ -35,11 +25,6 @@ where
 }
 
 /// For converting from a boxed slice of `Frame`s to a boxed slice of `Sample`s.
-///
-/// ### Required Features
-///
-/// - When using `dasp_slice`, this item requires the **boxed** feature to be enabled.
-/// - When using `dasp`, this item requires the **slice-boxed** feature to be enabled.
 pub trait FromBoxedFrameSlice<F>
 where
     F: Frame,
@@ -48,11 +33,6 @@ where
 }
 
 /// For converting from a boxed slice of `Frame`s to a boxed slice of `Sample`s.
-///
-/// ### Required Features
-///
-/// - When using `dasp_slice`, this item requires the **boxed** feature to be enabled.
-/// - When using `dasp`, this item requires the **slice-boxed** feature to be enabled.
 pub trait ToBoxedSampleSlice<S>
 where
     S: Sample,
@@ -61,11 +41,6 @@ where
 }
 
 /// For converting from a boxed slice of `Sample`s to a boxed slice of `Frame`s.
-///
-/// ### Required Features
-///
-/// - When using `dasp_slice`, this item requires the **boxed** feature to be enabled.
-/// - When using `dasp`, this item requires the **slice-boxed** feature to be enabled.
 pub trait ToBoxedFrameSlice<F>
 where
     F: Frame,
@@ -74,11 +49,6 @@ where
 }
 
 /// For converting to and from a boxed slice of `Sample`s.
-///
-/// ### Required Features
-///
-/// - When using `dasp_slice`, this item requires the **boxed** feature to be enabled.
-/// - When using `dasp`, this item requires the **slice-boxed** feature to be enabled.
 pub trait DuplexBoxedSampleSlice<S>: FromBoxedSampleSlice<S> + ToBoxedSampleSlice<S>
 where
     S: Sample,
@@ -86,11 +56,6 @@ where
 }
 
 /// For converting to and from a boxed slice of `Frame`s.
-///
-/// ### Required Features
-///
-/// - When using `dasp_slice`, this item requires the **boxed** feature to be enabled.
-/// - When using `dasp`, this item requires the **slice-boxed** feature to be enabled.
 pub trait DuplexBoxedFrameSlice<F>: FromBoxedFrameSlice<F> + ToBoxedFrameSlice<F>
 where
     F: Frame,
@@ -99,11 +64,6 @@ where
 
 /// For converting to and from a boxed slice of `Sample`s of type `S` and a slice of `Frame`s of
 /// type `F`.
-///
-/// ### Required Features
-///
-/// - When using `dasp_slice`, this item requires the **boxed** feature to be enabled.
-/// - When using `dasp`, this item requires the **slice-boxed** feature to be enabled.
 pub trait DuplexBoxedSlice<S, F>: DuplexBoxedSampleSlice<S> + DuplexBoxedFrameSlice<F>
 where
     S: Sample,
@@ -188,15 +148,11 @@ where
 /// ```
 /// fn main() {
 ///     let foo = vec![[0.0, 0.5], [0.0, -0.5]].into_boxed_slice();
-///     let bar = dasp_slice::to_boxed_sample_slice(foo);
+///     let bar = catalina_engine::audio::slice::to_boxed_sample_slice(foo);
 ///     assert_eq!(bar.into_vec(), vec![0.0, 0.5, 0.0, -0.5]);
 /// }
 /// ```
-///
-/// ### Required Features
-///
-/// - When using `dasp_slice`, this item requires the **boxed** feature to be enabled.
-/// - When using `dasp`, this item requires the **slice-boxed** feature to be enabled.
+
 pub fn to_boxed_sample_slice<T, S>(slice: T) -> Box<[S]>
 where
     S: Sample,
@@ -217,19 +173,15 @@ where
 /// ```
 /// fn main() {
 ///     let foo = vec![0.0, 0.5, 0.0, -0.5].into_boxed_slice();
-///     let bar: Box<[[f32; 2]]> = dasp_slice::to_boxed_frame_slice(foo).unwrap();
+///     let bar: Box<[[f32; 2]]> = catalina_engine::audio::slice::to_boxed_frame_slice(foo).unwrap();
 ///     assert_eq!(bar.into_vec(), vec![[0.0, 0.5], [0.0, -0.5]]);
 ///
 ///     let foo = vec![0.0, 0.5, 0.0].into_boxed_slice();
-///     let bar = dasp_slice::to_boxed_frame_slice(foo);
+///     let bar = catalina_engine::audio::slice::to_boxed_frame_slice(foo);
 ///     assert_eq!(bar, None::<Box<[[f32; 2]]>>);
 /// }
 /// ```
-///
-/// ### Required Features
-///
-/// - When using `dasp_slice`, this item requires the **boxed** feature to be enabled.
-/// - When using `dasp`, this item requires the **slice-boxed** feature to be enabled.
+
 pub fn to_boxed_frame_slice<T, F>(slice: T) -> Option<Box<[F]>>
 where
     F: Frame,
@@ -250,15 +202,11 @@ where
 /// ```
 /// fn main() {
 ///     let foo = vec![0.0, 0.5, 0.0, -0.5].into_boxed_slice();
-///     let bar: Box<[[f32; 2]]> = dasp_slice::from_boxed_sample_slice(foo).unwrap();
+///     let bar: Box<[[f32; 2]]> = catalina_engine::audio::slice::from_boxed_sample_slice(foo).unwrap();
 ///     assert_eq!(bar.into_vec(), vec![[0.0, 0.5], [0.0, -0.5]]);
 /// }
 /// ```
-///
-/// ### Required Features
-///
-/// - When using `dasp_slice`, this item requires the **boxed** feature to be enabled.
-/// - When using `dasp`, this item requires the **slice-boxed** feature to be enabled.
+
 pub fn from_boxed_sample_slice<T, S>(slice: Box<[S]>) -> Option<T>
 where
     S: Sample,
@@ -276,15 +224,11 @@ where
 /// ```
 /// fn main() {
 ///     let foo = vec![[0.0, 0.5], [0.0, -0.5]].into_boxed_slice();
-///     let bar: Box<[f32]> = dasp_slice::from_boxed_frame_slice(foo);
+///     let bar: Box<[f32]> = catalina_engine::audio::slice::from_boxed_frame_slice(foo);
 ///     assert_eq!(bar.into_vec(), vec![0.0, 0.5, 0.0, -0.5]);
 /// }
 /// ```
-///
-/// ### Required Features
-///
-/// - When using `dasp_slice`, this item requires the **boxed** feature to be enabled.
-/// - When using `dasp`, this item requires the **slice-boxed** feature to be enabled.
+
 pub fn from_boxed_frame_slice<T, F>(slice: Box<[F]>) -> T
 where
     F: Frame,
