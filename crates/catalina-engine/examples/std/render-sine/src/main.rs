@@ -16,7 +16,7 @@ fn main() {
     let mut writer = hound::WavWriter::create("sine.wav", spec).expect("Failed to create WAV file");
 
     // Create a sine oscillator with a frequency of 261.63 (middle C)
-    let osc = oscillator::RuntimeOscillator::new(
+    let mut osc = oscillator::RuntimeOscillator::new(
         oscillator::OscillatorType::Triangle,
         spec.sample_rate as usize,
         Hertz::from_hertz(261.63),
@@ -27,7 +27,7 @@ fn main() {
     let total_samples = (sample_rate * duration_secs) as usize;
 
     for t in 0..total_samples {
-        let sample: f32 = osc.sample(t);
+        let sample: f32 = osc.sample();
         writer.write_sample(sample).unwrap();
     }
 

@@ -61,14 +61,11 @@ where
     let channels = config.channels as usize;
 
     // Create a sine oscillator with a frequency of 261.63 (middle C)
-    let osc = oscillator::RuntimeOscillator::new(
+    let mut osc = oscillator::RuntimeOscillator::new(
         oscillator::OscillatorType::Sine,
         sample_rate,
         Hertz::from_hertz(261.63),
     );
-
-    // Clock to track which sample we're currently rendering from the oscillator.
-    let mut sample_clock = 0;
 
     let err_fn = |err| eprintln!("an error occurred on stream: {err}");
 
@@ -76,9 +73,8 @@ where
         config,
         move |data: &mut [T], _: &cpal::OutputCallbackInfo| {
             for frame in data.chunks_mut(channels) {
-                let sample = osc.sample(sample_clock);
+                let sample = osc.sample();
                 let value: T = T::from_sample(sample);
-                sample_clock = (sample_clock + 1) % sample_rate;
                 // println!("{}, {:?}", sample_clock, sample);
                 for sample in frame.iter_mut() {
                     *sample = value;

@@ -16,23 +16,16 @@ use catalina_engine::{
 struct Voice {
     /// The sine oscillator used to render the voice.
     pub osc: RuntimeOscillator,
-
-    /// A per-voice timebase for the oscillator index to allow each voice
-    /// to oscillate relative to when the trigger key was pressed.
-    time: usize,
 }
 
 impl Voice {
     pub fn new(osc: RuntimeOscillator) -> Self {
-        Self { osc, time: 0 }
+        Self { osc }
     }
 
     /// Takes the next sample from the oscillator and increments the voice time base.
     fn next_sample<S: Sample + FromSample<f32>>(&mut self) -> S {
-        let sample = self.osc.sample(self.time);
-
-        // Make sure to increment the sine time index so the oscillator.. oscillates
-        self.time = (self.time + 1) % self.osc.get_sample_rate();
+        let sample = self.osc.sample();
 
         sample
     }
