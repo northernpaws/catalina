@@ -1,6 +1,6 @@
 //! A module for the [`Pitch`] enum.
 
-use crate::core::Frequency;
+use crate::core::Hertz;
 
 /**
    MIT License
@@ -120,8 +120,8 @@ pub enum Pitch {
 // Pitch impls.
 
 impl Pitch {
-    pub const fn base_frequency(&self) -> Frequency {
-        Frequency(match self {
+    pub const fn base_frequency(&self) -> Hertz {
+        Hertz(match self {
             Pitch::C => 16.35,
             Pitch::DFlat => 17.32,
             Pitch::D => 18.35,

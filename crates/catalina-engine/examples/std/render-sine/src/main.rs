@@ -1,6 +1,6 @@
 use catalina_engine::{
     audio::oscillator::{self, Oscillator},
-    core::Frequency,
+    core::Hertz,
 };
 
 fn main() {
@@ -19,7 +19,7 @@ fn main() {
     let osc = oscillator::RuntimeOscillator::new(
         oscillator::OscillatorType::Triangle,
         spec.sample_rate as usize,
-        Frequency::from_hertz(261.63),
+        Hertz::from_hertz(261.63),
     );
 
     let duration_secs = 2.0; // 2 seconds

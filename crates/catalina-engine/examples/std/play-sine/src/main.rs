@@ -5,7 +5,7 @@ use cpal::{
 
 use catalina_engine::{
     audio::oscillator::{self, Oscillator},
-    core::Frequency,
+    core::Hertz,
 };
 
 fn main() -> anyhow::Result<()> {
@@ -64,7 +64,7 @@ where
     let osc = oscillator::RuntimeOscillator::new(
         oscillator::OscillatorType::Sine,
         sample_rate,
-        Frequency::from_hertz(261.63),
+        Hertz::from_hertz(261.63),
     );
 
     // Clock to track which sample we're currently rendering from the oscillator.

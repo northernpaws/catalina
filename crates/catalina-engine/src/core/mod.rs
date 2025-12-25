@@ -18,9 +18,9 @@ use serde::{Deserialize, Serialize};
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Debug, Copy, Clone)]
-pub struct Frequency(pub f32);
+pub struct Hertz(pub f32);
 
-impl Frequency {
+impl Hertz {
     /// Builds a frequency from hertz.
     pub fn from_hertz(value: f32) -> Self {
         Self(value)
@@ -32,19 +32,19 @@ impl Frequency {
     }
 }
 
-impl From<f32> for Frequency {
+impl From<f32> for Hertz {
     fn from(value: f32) -> Self {
-        Frequency(value)
+        Hertz(value)
     }
 }
 
-impl From<Frequency> for f32 {
-    fn from(value: Frequency) -> Self {
+impl From<Hertz> for f32 {
+    fn from(value: Hertz) -> Self {
         value.0
     }
 }
 
-impl PartialEq for Frequency {
+impl PartialEq for Hertz {
     fn eq(&self, other: &Self) -> bool {
         // For music, we only really care about hertz resolution down to 0.0001
         float_eq!(self.0, other.0, abs <= 0.000_1)
@@ -53,28 +53,28 @@ impl PartialEq for Frequency {
 
 // We consider the accurancy afforded by our PartialEq
 // implementation "good enough" for music use, so allow Eq.
-impl Eq for Frequency {}
+impl Eq for Hertz {}
 
 /// Allows for directly multiplying with other frequencies.
-impl Mul for Frequency {
-    type Output = Frequency;
+impl Mul for Hertz {
+    type Output = Hertz;
 
     fn mul(self, rhs: Self) -> Self::Output {
-        Frequency(self.0 * rhs.0)
+        Hertz(self.0 * rhs.0)
     }
 }
 
 /// Allows for direct multiplication with floats.
-impl Mul<f32> for Frequency {
-    type Output = Frequency;
+impl Mul<f32> for Hertz {
+    type Output = Hertz;
 
     fn mul(self, rhs: f32) -> Self::Output {
-        Frequency(self.0 * rhs)
+        Hertz(self.0 * rhs)
     }
 }
 
 /// Allows us to properly use frequencies as keys in hashmaps.
-impl Hash for Frequency {
+impl Hash for Hertz {
     fn hash<H: Hasher>(&self, hasher: &mut H) {
         let bits = if self.0.is_nan() {
             0x7fc00000

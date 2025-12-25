@@ -21,7 +21,9 @@ use crate::audio::sample::{FromSample, Sample};
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};
 
-use crate::{core::Frequency, prelude::*};
+use crate::{core::Hertz, prelude::*};
+
+pub mod variable;
 
 const PI2: f32 = PI * 2.0;
 
@@ -43,7 +45,7 @@ pub fn sine<S: Sample + FromSample<f32>>(phase: f32) -> S {
 pub fn sample_sine<S: Sample + FromSample<f32>>(
     index: usize,
     sample_rate: usize,
-    frequency: Frequency,
+    frequency: Hertz,
 ) -> S {
     // Note that to_sample() handles the convertion of
     // the float-based waveform into other bit depth
@@ -69,7 +71,7 @@ pub fn saw<S: Sample + FromSample<f32>>(phase: f32) -> S {
 pub fn sample_saw<S: Sample + FromSample<f32>>(
     index: usize,
     sample_rate: usize,
-    frequency: Frequency,
+    frequency: Hertz,
 ) -> S {
     saw(index as f32 / sample_rate as f32 * frequency.0)
 }
@@ -96,7 +98,7 @@ pub fn triangle<S: Sample + FromSample<f32>>(phase: f32) -> S {
 pub fn sample_triangle<S: Sample + FromSample<f32>>(
     index: usize,
     sample_rate: usize,
-    frequency: Frequency,
+    frequency: Hertz,
 ) -> S {
     triangle(index as f32 / sample_rate as f32 * frequency.0)
 }
@@ -122,7 +124,7 @@ pub fn square<S: Sample + FromSample<f32>>(phase: f32, duty_cycle: DutyCycle) ->
 pub fn sample_square<S: Sample + FromSample<f32>>(
     index: usize,
     sample_rate: usize,
-    frequency: Frequency,
+    frequency: Hertz,
     duty_cycle: DutyCycle,
 ) -> S {
     square(index as f32 / sample_rate as f32 * frequency.0, duty_cycle)
@@ -218,7 +220,7 @@ impl OscillatorType {
         &self,
         index: usize,
         sample_rate: usize,
-        frequency: Frequency,
+        frequency: Hertz,
         duty_cycle: DutyCycle,
     ) -> S {
         match self {
@@ -235,7 +237,7 @@ impl OscillatorType {
         &self,
         table: &'_ mut [S],
         sample_rate: usize,
-        frequency: Frequency,
+        frequency: Hertz,
         duty_cycle: DutyCycle,
     ) -> Result<(), TableError> {
         // For this lookup we expect the table size
@@ -296,7 +298,7 @@ pub struct RuntimeOscillator {
     osc_type: OscillatorType,
 
     sample_rate: usize,
-    frequency: Frequency,
+    frequency: Hertz,
 
     /// Fractional duty cycle for square waves.
     duty_cycle: DutyCycle,
@@ -304,7 +306,7 @@ pub struct RuntimeOscillator {
 
 impl RuntimeOscillator {
     /// Construct a new runtime oscillator.
-    pub fn new(osc_type: OscillatorType, sample_rate: usize, frequency: Frequency) -> Self {
+    pub fn new(osc_type: OscillatorType, sample_rate: usize, frequency: Hertz) -> Self {
         Self {
             osc_type,
             sample_rate,
@@ -325,7 +327,7 @@ impl RuntimeOscillator {
     pub fn sample_with_frequency<S: Sample + FromSample<f32>>(
         &self,
         phase: usize,
-        freq: Frequency,
+        freq: Hertz,
     ) -> S {
         self.osc_type
             .sample_index(phase, self.sample_rate, freq, self.duty_cycle)
@@ -384,7 +386,7 @@ pub struct OscillatorAllocator<
     ///
     /// Keyed by the oscillator type, frequency, and duty cycle.
     lookup: FnvIndexMap<
-        (OscillatorType, Frequency, DutyCycle),
+        (OscillatorType, Hertz, DutyCycle),
         RefCell<[LookupSample; SAMPLE_RATE]>,
         MAX_TABLES,
     >,
@@ -400,7 +402,7 @@ impl<LookupSample: Sample + FromSample<f32>, const SAMPLE_RATE: usize, const MAX
     pub fn lookup_or_allocate(
         &mut self,
         osc: OscillatorType,
-        frequency: Frequency,
+        frequency: Hertz,
         duty_cycle: DutyCycle,
     ) -> Result<RefCell<[LookupSample; SAMPLE_RATE]>, TableError> {
         let table = match self

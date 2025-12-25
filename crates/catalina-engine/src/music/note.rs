@@ -23,7 +23,7 @@
    SOFTWARE.
 */
 use crate::{
-    core::Frequency,
+    core::Hertz,
     music::{
         named_pitch::NamedPitch,
         octave::ALL_OCTAVES,
@@ -63,7 +63,7 @@ impl Note {
     }
 
     /// Returns the frequency of the note in hertz.
-    pub fn frequency(&self) -> Frequency {
+    pub fn frequency(&self) -> Hertz {
         let mut octave = self.octave();
         let base_frequency = self.pitch().base_frequency();
 
