@@ -39,7 +39,9 @@ use interpolate::Converter;
 pub mod interpolate;
 mod ops;
 
+#[cfg(feature = "alloc")]
 mod boxed;
+#[cfg(feature = "alloc")]
 pub mod bus;
 pub mod envelope;
 pub mod rms;

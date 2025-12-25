@@ -13,7 +13,7 @@ pub mod f64 {
 
     #[cfg(not(feature = "std"))]
     pub fn cos(x: f64) -> f64 {
-        libm::cos(f)
+        libm::cos(x)
     }
 
     #[cfg(feature = "std")]

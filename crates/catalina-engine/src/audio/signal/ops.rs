@@ -4,7 +4,7 @@ pub mod f64 {
 
     #[cfg(not(feature = "std"))]
     pub fn floor(x: f64) -> f64 {
-        libm::floor(f)
+        libm::floor(x)
     }
 
     #[cfg(feature = "std")]
