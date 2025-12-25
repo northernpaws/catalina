@@ -5,16 +5,36 @@
 //! or for more complex sound synthesis.
 
 // Traits for working with audio samples.
+// Ported from dasp.
 pub mod sample;
 pub use sample::{FromSample, Sample};
 
 // Traits for working with audio frames, one or
 // more samples based on the sampling rate.
+// Ported from dasp.
 pub mod frame;
 pub use frame::{Frame, Mono, Stereo};
 
-// Traits and methods for working with slices of samples and frames.
+// Traits and functions for working with slices of samples and frames.
+// Ported from dasp.
 pub mod slice;
+
+// Ported from dasp.
+pub mod window;
+
+// Ported from dasp.
+pub mod rms;
+
+// Ported from dasp.
+pub mod peak;
+
+// Provides functions for ample/frame rate interpolation.
+// Ported from dasp.
+pub mod interpolate;
+
+// Traits and functions working with audio signals.
+// Ported from dasp.
+pub mod signal;
 
 // Traits and implementations for working with oscillators.
 pub mod oscillator;

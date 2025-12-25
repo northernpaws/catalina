@@ -9,6 +9,8 @@ use float_eq::float_eq;
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};
 
+pub mod ring_buffer;
+
 /// Frequency in hertz, wraps an f32 with sufficiant 0.0001 precision for musical use.
 ///
 /// Note that I made this frequency implementaiton a lot harder by not
