@@ -207,20 +207,26 @@ checksum = "b35204fbdc0b3f4446b89fc1ac2cf84a8a68971995d0bf2e925ec7cd960f9cb3"
 name = "catalina"
 version = "0.0.1"
 dependencies = [
- "anstyle",
  "catalina-bsp",
  "catalina-engine",
  "catalina-instruments",
+]
+
+[[package]]
+name = "catalina-bsp"
+version = "0.1.0"
+
+[[package]]
+name = "catalina-cli"
+version = "0.1.0"
+dependencies = [
+ "anstyle",
  "clap",
  "color-eyre",
  "env_logger",
  "log",
  "owo-colors",
 ]
-
-[[package]]
-name = "catalina-bsp"
-version = "0.1.0"
 
 [[package]]
 name = "catalina-engine"

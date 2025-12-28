@@ -1,0 +1,25 @@
+[package]
+name = "catalina-cli"
+version = "0.1.0"
+edition = "2024"
+keywords.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+anstyle = { version = "1.0" }
+clap = { version = "4.5.53", default-features = false, features = [
+    "std",
+    "color",
+    "help",
+    "usage",
+    "unicode",
+    "wrap_help",
+    "cargo",
+    "derive",
+    "suggestions",
+] }
+color-eyre = { version = "0.6.5" }
+owo-colors = { version = "4.2.0" }
+env_logger = { version = "0.11" }
+log = { version = "0.4" }
