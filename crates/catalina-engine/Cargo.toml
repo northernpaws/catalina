@@ -16,7 +16,7 @@ pretty_assertions = "1.4.1"
 # (De)serialization
 serde = { version = "1", features = ["derive"], optional = true }
 
-float_eq = "1.0.1"
+float_eq = { version = "1.0.1", default-features = false }
 paste = "1.0.15"
 
 # Intrinsics without needing the nightly core_intrinsics feature.
@@ -25,7 +25,7 @@ libm = "0.2.15"
 [features]
 default = []
 
-std = ["alloc"]
+std = ["alloc", "float_eq/std"]
 alloc = []
 
 serde = ["dep:serde"]
