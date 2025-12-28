@@ -23,7 +23,7 @@ paste = "1.0.15"
 libm = "0.2.15"
 
 [features]
-default = ["serde"]
+default = []
 
 std = ["alloc"]
 alloc = []
