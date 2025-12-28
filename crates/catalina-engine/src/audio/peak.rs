@@ -4,8 +4,6 @@
 //! under the MIT license due to it's unmaintained status leaving the published
 //! crates in an unusable state for embbeded use.
 
-#![cfg_attr(not(feature = "std"), no_std)]
-
 use crate::audio::frame::Frame;
 use crate::audio::sample::Sample;
 

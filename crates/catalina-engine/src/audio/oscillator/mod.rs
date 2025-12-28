@@ -41,7 +41,7 @@ pub fn sine<S: Sample + FromSample<f32>>(phase: f32) -> S {
     // domains - for f32 it's a no-op.
 
     // TODO: replace 2.0*PI with TAU?
-    ((2.0 * PI * phase).sin()).to_sample()
+    (libm::sinf(2.0 * PI * phase)).to_sample()
 }
 
 /// Generates a sample of a sine wave given the provided
@@ -260,7 +260,7 @@ impl OscillatorType {
                 // Note that we don't use the sample_sine function from above - there are a
                 // few math optimizations we can do for sine to speed up building the table.
                 for (index, row) in table.iter_mut().enumerate() {
-                    *row = ((index as f32 * mult).sin()).to_sample()
+                    *row = (libm::sinf(index as f32 * mult)).to_sample()
                 }
             }
 

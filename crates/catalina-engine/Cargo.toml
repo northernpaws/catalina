@@ -11,7 +11,6 @@ license = "MIT"
 
 defmt = { version = "1.0.1", optional = true }
 heapless = "0.9.2"
-pretty_assertions = "1.4.1"
 
 # (De)serialization
 serde = { version = "1", features = ["derive"], optional = true }
@@ -21,6 +20,9 @@ paste = "1.0.15"
 
 # Intrinsics without needing the nightly core_intrinsics feature.
 libm = "0.2.15"
+
+[dev-dependencies]
+pretty_assertions = "1.4.1"
 
 [features]
 default = []
