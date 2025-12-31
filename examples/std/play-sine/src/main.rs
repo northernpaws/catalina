@@ -4,7 +4,10 @@ use cpal::{
 };
 
 use catalina::engine::{
-    audio::oscillator::{self, Oscillator},
+    audio::{
+        Frame,
+        oscillator::{self, Oscillator},
+    },
     core::Hertz,
 };
 
@@ -73,9 +76,8 @@ where
         config,
         move |data: &mut [T], _: &cpal::OutputCallbackInfo| {
             for frame in data.chunks_mut(channels) {
-                let sample = osc.sample();
-                let value: T = T::from_sample(sample);
-                // println!("{}, {:?}", sample_clock, sample);
+                let sample: f32 = osc.sample();
+                let value: T = T::from_sample(sample.scale_amp(0.5));
                 for sample in frame.iter_mut() {
                     *sample = value;
                 }
