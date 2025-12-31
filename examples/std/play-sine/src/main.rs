@@ -63,7 +63,7 @@ where
     // Create a sine oscillator with a frequency of 261.63 (middle C)
     let mut osc = oscillator::RuntimeOscillator::new(
         oscillator::OscillatorType::Sine,
-        sample_rate,
+        sample_rate, // 48000
         Hertz::from_hertz(261.63),
     );
 
