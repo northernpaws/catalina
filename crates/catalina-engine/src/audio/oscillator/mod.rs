@@ -360,6 +360,9 @@ impl<S: Sample + FromSample<f32>> Oscillator<S> for RuntimeOscillator {
         let sample = self.osc_type.sample(self.phase, self.duty_cycle);
 
         self.phase = self.phase + (self.frequency.hertz() / self.sample_rate as f32);
+        if self.phase >= 1.0 {
+            self.phase = 0.0;
+        }
 
         sample
     }
