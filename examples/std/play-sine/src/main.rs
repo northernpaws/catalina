@@ -66,7 +66,7 @@ where
     // Create a sine oscillator with a frequency of 261.63 (middle C)
     let mut osc = oscillator::RuntimeOscillator::new(
         oscillator::OscillatorType::Sine,
-        sample_rate, // 48000
+        sample_rate as f32, // 48000
         Hertz::from_hertz(261.63),
     );
 
@@ -89,7 +89,7 @@ where
 
     stream.play()?;
 
-    std::thread::sleep(std::time::Duration::from_millis(1000));
+    std::thread::sleep(std::time::Duration::from_millis(10000));
 
     Ok(())
 }

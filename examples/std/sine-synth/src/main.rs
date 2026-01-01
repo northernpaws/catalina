@@ -67,7 +67,7 @@ where
     let channels = config.channels as usize;
 
     // Create an instance of the example instrument.
-    let mut inst = SineInstrument::new(sample_rate);
+    let mut inst = SineInstrument::new(sample_rate as f32);
 
     let err_fn = |err| eprintln!("an error occurred on stream: {err}");
 

@@ -18,7 +18,7 @@ fn main() {
     // Create a sine oscillator with a frequency of 261.63 (middle C)
     let mut osc = oscillator::RuntimeOscillator::new(
         oscillator::OscillatorType::Sine,
-        spec.sample_rate as usize,
+        spec.sample_rate as f32,
         Hertz::from_hertz(261.63),
     );
 

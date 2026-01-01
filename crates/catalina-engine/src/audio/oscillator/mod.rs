@@ -17,7 +17,7 @@ use core::array;
 use heapless::index_map::FnvIndexMap;
 
 use crate::audio::{
-    Frame, Mono,
+    Frame,
     sample::{FromSample, Sample},
     signal::Signal,
 };
@@ -48,14 +48,14 @@ pub fn sine<S: Sample + FromSample<f32>>(phase: f32) -> S {
 /// time index, sample rate, frequency, and amplitude.
 pub fn sample_sine<S: Sample + FromSample<f32>>(
     index: usize,
-    sample_rate: usize,
+    sample_rate: f32,
     frequency: Hertz,
 ) -> S {
     // Note that to_sample() handles the convertion of
     // the float-based waveform into other bit depth
     // domains - for f32 it's a no-op.
 
-    sine(frequency.0 * index as f32 / sample_rate as f32)
+    sine(frequency.0 * index as f32 / sample_rate)
 }
 
 /// Generates a sample of a saw wave given the provided
@@ -74,10 +74,10 @@ pub fn saw<S: Sample + FromSample<f32>>(phase: f32) -> S {
 /// time index, sample rate, frequency, and amplitude.
 pub fn sample_saw<S: Sample + FromSample<f32>>(
     index: usize,
-    sample_rate: usize,
+    sample_rate: f32,
     frequency: Hertz,
 ) -> S {
-    saw(index as f32 / sample_rate as f32 * frequency.0)
+    saw(index as f32 / sample_rate * frequency.0)
 }
 
 /// Generates a sample of a triangle wave given the
@@ -101,10 +101,10 @@ pub fn triangle<S: Sample + FromSample<f32>>(phase: f32) -> S {
 /// provided time index, sample rate, and frequency.
 pub fn sample_triangle<S: Sample + FromSample<f32>>(
     index: usize,
-    sample_rate: usize,
+    sample_rate: f32,
     frequency: Hertz,
 ) -> S {
-    triangle(index as f32 / sample_rate as f32 * frequency.0)
+    triangle(index as f32 / sample_rate * frequency.0)
 }
 
 /// Generates a sample of a square wave given the
@@ -127,11 +127,11 @@ pub fn square<S: Sample + FromSample<f32>>(phase: f32, duty_cycle: DutyCycle) ->
 /// provided time index, sample rate, and frequency.
 pub fn sample_square<S: Sample + FromSample<f32>>(
     index: usize,
-    sample_rate: usize,
+    sample_rate: f32,
     frequency: Hertz,
     duty_cycle: DutyCycle,
 ) -> S {
-    square(index as f32 / sample_rate as f32 * frequency.0, duty_cycle)
+    square(index as f32 / sample_rate * frequency.0, duty_cycle)
 }
 
 /// Temporary solution to specifying an Eq compatile duty cycle.
@@ -223,7 +223,7 @@ impl OscillatorType {
     pub fn sample_index<S: Sample + FromSample<f32>>(
         &self,
         index: usize,
-        sample_rate: usize,
+        sample_rate: f32,
         frequency: Hertz,
         duty_cycle: DutyCycle,
     ) -> S {
@@ -240,15 +240,15 @@ impl OscillatorType {
     pub fn build_table<S: Sample + FromSample<f32>>(
         &self,
         table: &'_ mut [S],
-        sample_rate: usize,
+        sample_rate: f32,
         frequency: Hertz,
         duty_cycle: DutyCycle,
     ) -> Result<(), TableError> {
         // For this lookup we expect the table size
         // to match the provided sample rate.
-        if table.len() != sample_rate {
+        if table.len() != sample_rate as usize {
             return Err(TableError::IncorrectSize {
-                expected: sample_rate,
+                expected: sample_rate as usize,
                 actual: table.len(),
             });
         }
@@ -314,7 +314,7 @@ pub struct RuntimeOscillator {
     /// determine which algorithm to use at runtime.
     osc_type: OscillatorType,
 
-    sample_rate: usize,
+    sample_rate: f32,
     frequency: Hertz,
 
     /// Fractional duty cycle for square waves.
@@ -325,7 +325,7 @@ pub struct RuntimeOscillator {
 
 impl RuntimeOscillator {
     /// Construct a new runtime oscillator.
-    pub fn new(osc_type: OscillatorType, sample_rate: usize, frequency: Hertz) -> Self {
+    pub fn new(osc_type: OscillatorType, sample_rate: f32, frequency: Hertz) -> Self {
         Self {
             osc_type,
             sample_rate,
@@ -336,7 +336,7 @@ impl RuntimeOscillator {
     }
 
     #[inline]
-    pub const fn get_sample_rate(&self) -> usize {
+    pub const fn get_sample_rate(&self) -> f32 {
         self.sample_rate
     }
 
@@ -483,7 +483,7 @@ impl<LookupSample: Sample + FromSample<f32>, const SAMPLE_RATE: usize, const MAX
 
                 // TODO: this will create the table on stack which will be too big for most MCUs
                 let mut table: [LookupSample; SAMPLE_RATE] = array::from_fn(|_| 0.0.to_sample());
-                osc.build_table(&mut table, SAMPLE_RATE, frequency, duty_cycle)?;
+                osc.build_table(&mut table, SAMPLE_RATE as f32, frequency, duty_cycle)?;
 
                 let cell = RefCell::new(table);
 

@@ -34,7 +34,7 @@ impl Voice {
 
 /// Example instrument implementation with 8 polyphonic sine oscillator voices.
 pub struct SineInstrument {
-    sample_rate: usize,
+    sample_rate: f32,
 
     /// Configure the instrument with 8-voice polyphony.
     ///
@@ -44,7 +44,7 @@ pub struct SineInstrument {
 }
 
 impl SineInstrument {
-    pub fn new(sample_rate: usize) -> Self {
+    pub fn new(sample_rate: f32) -> Self {
         Self {
             sample_rate,
             voices: FnvIndexMap::new(),

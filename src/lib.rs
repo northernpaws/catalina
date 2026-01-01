@@ -9,15 +9,22 @@ extern crate alloc;
 ///
 /// Re-exports the `catalina-engine` crate.
 #[cfg(feature = "engine")]
-#[doc(inline)]
-pub use catalina_engine as engine;
+pub mod engine {
+    #[doc(inline)]
+    #[allow(unused_imports)]
+    pub use catalina_engine::*;
+}
 
 /// Board support packages for Catalina native hardware components.
 ///
 /// Re-exports the `catalina-bsp` crate.
 #[cfg(feature = "bsp")]
 #[doc(inline)]
-pub use catalina_bsp as bsp;
+pub mod bsp {
+    #[doc(inline)]
+    #[allow(unused_imports)]
+    pub use catalina_bsp::*;
+}
 
 /// Basic instruments to quickly get started with on Catalina hardware,
 /// also serves as references and samples for the instrument framework.
@@ -25,4 +32,8 @@ pub use catalina_bsp as bsp;
 /// Re-exports the `catalina-instruments` crate.
 #[cfg(feature = "instruments")]
 #[doc(inline)]
-pub use catalina_instruments as instruments;
+pub mod instruments {
+    #[doc(inline)]
+    #[allow(unused_imports)]
+    pub use catalina_instruments::*;
+}
