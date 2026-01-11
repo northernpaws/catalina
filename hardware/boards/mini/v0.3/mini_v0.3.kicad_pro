@@ -493,7 +493,8 @@
   "libraries": {
     "pinned_footprint_libs": [
       "Library",
-      "Rythm"
+      "Rythm",
+      "Catalina"
     ],
     "pinned_symbol_libs": [
       "Library",

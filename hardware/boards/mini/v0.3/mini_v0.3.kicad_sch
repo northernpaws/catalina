@@ -90871,10 +90871,6 @@
 		(uuid "5b2f83f8-fd56-4a2f-962a-c92172f76f55")
 	)
 	(no_connect
-		(at 45.72 85.09)
-		(uuid "5eb59d45-2c26-44a0-9b5f-1694af5eab8e")
-	)
-	(no_connect
 		(at 45.72 234.95)
 		(uuid "72ef8c9c-d7e0-43cc-88c5-a85855f7ef39")
 	)
@@ -90907,6 +90903,10 @@
 		(uuid "814a2c8d-f0ec-452f-bbd1-18b34f3441a6")
 	)
 	(no_connect
+		(at 143.51 127)
+		(uuid "8b4243e4-1d0e-4229-a591-c4c37d84c349")
+	)
+	(no_connect
 		(at 45.72 257.81)
 		(uuid "8f3929e5-9eae-46ae-8a6f-f210c370be3d")
 	)
@@ -90919,12 +90919,8 @@
 		(uuid "916c210c-3cd8-49f3-964e-20aa368ecb26")
 	)
 	(no_connect
-		(at 45.72 184.15)
-		(uuid "981aefe9-7711-412c-ac74-8bbf726e9d06")
-	)
-	(no_connect
-		(at 96.52 29.21)
-		(uuid "9c072aef-397e-4c53-ab96-092ce58d3c26")
+		(at 45.72 158.75)
+		(uuid "96132a97-f458-4012-b0d1-a629f630ce09")
 	)
 	(no_connect
 		(at 45.72 189.23)
@@ -91003,6 +90999,10 @@
 		(uuid "c7e7d528-86f6-4a60-ac2c-c43a2756eede")
 	)
 	(no_connect
+		(at 45.72 196.85)
+		(uuid "cfcd0680-9840-4f25-a88f-98c5f7b703a7")
+	)
+	(no_connect
 		(at 45.72 222.25)
 		(uuid "d0879fe1-1ce7-46f5-9011-bc883f721b6b")
 	)
@@ -91029,6 +91029,10 @@
 	(no_connect
 		(at 45.72 237.49)
 		(uuid "e027d705-3377-4c7f-913e-362e4db0e3d7")
+	)
+	(no_connect
+		(at 45.72 85.09)
+		(uuid "e35de5e2-dfe8-4633-89ec-e8ae8ee3f516")
 	)
 	(no_connect
 		(at 378.46 185.42)
@@ -93017,6 +93021,16 @@
 			(type default)
 		)
 		(uuid "3c677384-c13c-400e-8fe1-ecc1ad5498df")
+	)
+	(wire
+		(pts
+			(xy 96.52 29.21) (xy 99.06 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c84fe35-a629-4f3e-a7ae-86604f0fd06e")
 	)
 	(wire
 		(pts
@@ -96960,6 +96974,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 184.15) (xy 48.26 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0503c5e-32a8-418a-bbad-48fef865a5f1")
+	)
+	(wire
+		(pts
 			(xy 162.56 88.9) (xy 162.56 93.98)
 		)
 		(stroke
@@ -97447,16 +97471,6 @@
 			(type default)
 		)
 		(uuid "d3412b46-d55e-44d8-bdfa-19582f0250fa")
-	)
-	(wire
-		(pts
-			(xy 45.72 158.75) (xy 48.26 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d3ea560a-a83b-4861-b8a6-d218c318d1a4")
 	)
 	(wire
 		(pts
@@ -99231,7 +99245,7 @@
 		(uuid "17099eb8-0f3f-46cc-a1de-7ccbdf7b8b17")
 	)
 	(label "LED_STATUS"
-		(at 48.26 158.75 0)
+		(at 99.06 29.21 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -102013,6 +102027,16 @@
 			(justify left bottom)
 		)
 		(uuid "e12d1fa1-3f6c-4215-aa95-18a5665a5067")
+	)
+	(label "LED_STATUS2"
+		(at 48.26 184.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e1a44b75-b04f-4f3a-ba71-871a917f25c5")
 	)
 	(label "PJ2"
 		(at 350.52 208.28 180)
