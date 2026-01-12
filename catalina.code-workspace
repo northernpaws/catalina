@@ -10,18 +10,23 @@
 			"path": "crates/catalina-instruments"
 		},
 		{
+			"name": "examples/play-sine",
 			"path": "examples/std/play-sine"
 		},
 		{
+			"name": "examples/render-sine",
 			"path": "examples/std/render-sine"
 		},
 		{
+			"name": "examples/sine-synth",
 			"path": "examples/std/sine-synth"
 		},
 		{
+			"name": "examples/terminal-sequencer",
 			"path": "examples/std/terminal-sequencer"
 		},
 		{
+			"name": "examples/stm32l433",
 			"path": "examples/embedded/stm32l433"
 		}
 	],
