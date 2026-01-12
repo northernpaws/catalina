@@ -4,7 +4,7 @@
 	(generator_version "9.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at 0 -0.5 0)
+		(at -9.1 -15.6 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "b2594bf2-7138-4692-a234-7bcbc14c7b4c")
@@ -13,10 +13,11 @@
 				(size 1 1)
 				(thickness 0.1)
 			)
+			(justify left)
 		)
 	)
 	(property "Value" "Mini-v0.3"
-		(at 0 1 0)
+		(at -9.1 -14.1 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "a8810852-ccc5-4782-983b-fb59e842f17f")
@@ -25,6 +26,7 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
+			(justify left)
 		)
 	)
 	(property "Datasheet" ""
@@ -220,7 +222,7 @@
 	)
 	(fp_line
 		(start -8.9 -20)
-		(end 8.9 -20)
+		(end -1.1 -20)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -319,14 +321,34 @@
 		(uuid "081af94c-7729-4848-b84f-844a1a7e7529")
 	)
 	(fp_line
-		(start 8.9 20)
+		(start -1.1 20)
 		(end -8.9 20)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "9fcaff36-3b80-4a07-9ead-d28022f820e3")
+		(uuid "1851a2e3-6481-480e-a80b-0a4356de4b70")
+	)
+	(fp_line
+		(start 1.1 -20)
+		(end 8.9 -20)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "c8c70252-e3b8-4494-96a0-4e25a60d3ec7")
+	)
+	(fp_line
+		(start 8.9 20)
+		(end 1.1 20)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "d0736066-614e-4d58-9343-7162899350a7")
 	)
 	(fp_line
 		(start 10 18.9)
@@ -381,6 +403,50 @@
 		)
 		(layer "F.SilkS")
 		(uuid "02a532c4-470a-4b01-92e6-ce7dc30d2d13")
+	)
+	(fp_arc
+		(start -2.5 20)
+		(mid 0 17.5)
+		(end 2.5 20)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c0d7a14c-ae71-421f-9956-bf921c0be6d5")
+	)
+	(fp_arc
+		(start -1.1 20)
+		(mid 0 18.9)
+		(end 1.1 20)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "662e1367-9a9c-4fed-b797-acff74835b18")
+	)
+	(fp_arc
+		(start 1.1 -20)
+		(mid 0 -18.9)
+		(end -1.1 -20)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5b2777e2-8dfe-46b4-a2a9-429fcbc671c0")
+	)
+	(fp_arc
+		(start 2.5 -20)
+		(mid 0 -17.5)
+		(end -2.5 -20)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "870b31d2-4fb2-40f3-a56f-cd4134875a68")
 	)
 	(fp_arc
 		(start 7.5 20)
@@ -469,6 +535,50 @@
 		(fill no)
 		(layer "Cmts.User")
 		(uuid "4db95353-685d-445e-863a-943c67b33a44")
+	)
+	(fp_circle
+		(center 0 -20)
+		(end -2.5 -20)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "240490d8-db01-4cad-b263-9f0218996902")
+	)
+	(fp_circle
+		(center 0 -20)
+		(end 1.1 -20)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "a041741d-74eb-45cb-a8ed-c70e84d8d4dd")
+	)
+	(fp_circle
+		(center 0 20)
+		(end -2.5 20)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "19728aac-5496-4b4c-884d-27e164eb8f00")
+	)
+	(fp_circle
+		(center 0 20)
+		(end 1.1 20)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "e580f44e-e662-4f7b-94d4-0f015fe18e27")
 	)
 	(fp_circle
 		(center 10 -20)
@@ -652,6 +762,18 @@
 		)
 	)
 	(fp_text user "M2"
+		(at 0 -20 0)
+		(unlocked yes)
+		(layer "Cmts.User")
+		(uuid "8068052b-1612-4220-9440-439f4dbe9f9e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "M2"
 		(at -10 -20 0)
 		(unlocked yes)
 		(layer "Cmts.User")
@@ -675,8 +797,32 @@
 			)
 		)
 	)
+	(fp_text user "M2"
+		(at 0 20 0)
+		(unlocked yes)
+		(layer "Cmts.User")
+		(uuid "ff95c0a9-b86f-4b80-a656-69fbc8d531ff")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "DF40C(xx)-90DS-0.4V"
+		(at -5 9 90)
+		(unlocked yes)
+		(layer "F.CrtYd")
+		(uuid "23f1bc04-1ca5-4e11-b3b2-375d86d597b9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
 	(fp_text user "${REFERENCE}"
-		(at 0 2.5 0)
+		(at -9.1 -12.6 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(uuid "1e49e652-b49b-47a1-a2ba-3b552e6026f2")
@@ -685,6 +831,45 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
+			(justify left)
+		)
+	)
+	(fp_text_box "No components taller then 2.5mm under module, if using 4mm mating connector."
+		(start -10 -11.55)
+		(end 10 -7.25)
+		(margins 1.0025 1.0025 1.0025 1.0025)
+		(layer "Cmts.User")
+		(uuid "6887bc8c-edcf-4e43-835a-1761dc03cde6")
+		(effects
+			(font
+				(size 0.75 0.75)
+				(thickness 0.1)
+			)
+			(justify left top)
+		)
+		(border no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+	)
+	(fp_text_box "1.5mm: DF40C(1.5)-90DS-0.4V\n3.0mm: DF40C(3.0)-90DS-0.4V\n4.0mm: DF40C(4.0)-90DS-0.4V"
+		(start -10.3 -7.2)
+		(end 13.3 -2.2)
+		(margins 1.0025 1.0025 1.0025 1.0025)
+		(layer "Cmts.User")
+		(uuid "6a456084-e9df-4dec-8b16-f73119f5cbbd")
+		(effects
+			(font
+				(size 0.75 0.75)
+				(thickness 0.1)
+			)
+			(justify left top)
+		)
+		(border no)
+		(stroke
+			(width 0)
+			(type solid)
 		)
 	)
 	(pad "1" smd roundrect

@@ -494,7 +494,8 @@
     "pinned_footprint_libs": [
       "Library",
       "Rythm",
-      "Catalina"
+      "Catalina",
+      "Northernpaws"
     ],
     "pinned_symbol_libs": [
       "Library",
