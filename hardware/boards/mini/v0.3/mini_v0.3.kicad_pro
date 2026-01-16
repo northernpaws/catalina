@@ -765,9 +765,9 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "mini_v0.3.step",
       "svg": "",
-      "vrml": ""
+      "vrml": "mini_v0.3.wrl"
     },
     "page_layout_descr_file": ""
   },
