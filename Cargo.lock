@@ -210,6 +210,7 @@ dependencies = [
  "catalina-bsp",
  "catalina-engine",
  "catalina-instruments",
+ "catalina-seq",
 ]
 
 [[package]]
@@ -234,7 +235,7 @@ version = "0.1.0"
 dependencies = [
  "defmt 1.0.1",
  "float_eq",
- "heapless 0.9.2",
+ "heapless 0.9.3",
  "libm",
  "paste",
  "pretty_assertions",
@@ -246,7 +247,14 @@ name = "catalina-instruments"
 version = "0.1.0"
 dependencies = [
  "catalina-engine",
- "heapless 0.9.2",
+ "heapless 0.9.3",
+]
+
+[[package]]
+name = "catalina-seq"
+version = "0.1.0"
+dependencies = [
+ "heapless 0.9.3",
 ]
 
 [[package]]
@@ -955,9 +963,9 @@ dependencies = [
 
 [[package]]
 name = "heapless"
-version = "0.9.2"
+version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2af2455f757db2b292a9b1768c4b70186d443bcb3b316252d6b540aec1cd89ed"
+checksum = "25ba4bd83f9415b58b4ed8dc5714c76e626a105be4646c02630ad730ad3b5aa4"
 dependencies = [
  "hash32",
  "stable_deref_trait",
@@ -1580,7 +1588,7 @@ dependencies = [
  "anyhow",
  "catalina",
  "cpal",
- "heapless 0.9.2",
+ "heapless 0.9.3",
 ]
 
 [[package]]

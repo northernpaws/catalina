@@ -37,14 +37,18 @@ catalina-instruments = { path = "crates/catalina-instruments", version = "0.1.0"
 # Board support packages for modules, carriers and kits from the ecosystem.
 catalina-bsp = { path = "crates/catalina-bsp", version = "0.1.0", optional = true }
 
+# Step sequencer.
+catalina-seq = { path = "crates/catalina-seq", version = "0.1.0", optional = true }
+
 [features]
 engine = ["dep:catalina-engine"]
 instruments = ["dep:catalina-instruments"]
 bsp = ["dep:catalina-bsp"]
+seq = ["dep:catalina-seq"]
 
 # Generic common feature flags.
 default = ["engine"]
-std = ["catalina-engine/std", "catalina-instruments/std"]
+std = ["catalina-engine/std", "catalina-instruments/std", "catalina-seq/std"]
 alloc = ["catalina-engine/alloc", "catalina-instruments/alloc"]
 defmt = ["catalina-engine/defmt"]
 log = ["catalina-engine/log"]
