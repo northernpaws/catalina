@@ -1,3 +1,5 @@
+use catalina_engine::music::note::{CFour, Note};
+
 use crate::{ParameterID, PatternTiming};
 
 pub struct MicrotimingStep {
@@ -248,13 +250,6 @@ impl<const MAX_STEPS: usize, const MAX_TICK: usize> Track<MAX_STEPS, MAX_TICK> {
     }
 }
 
-/// Specifies a value for a parameter that's
-/// changed by a given step triggering.
-pub struct ParameterLock {
-    /// The parameter that the lock exists for.
-    parameter: ParameterID,
-}
-
 /// Specifies a conditional rule used to decide if the trigger should play.
 #[derive(Default, PartialEq)]
 pub enum TriggerCondition {
@@ -378,6 +373,13 @@ impl TriggerCondition {
     }
 }
 
+/// Specifies a value for a parameter that's
+/// changed by a given step triggering.
+pub struct ParameterLock {
+    /// The parameter that the lock exists for.
+    parameter: ParameterID,
+}
+
 /// A trigger placed on a step in a track.
 pub struct Trigger<const MAX_TICK: usize> {
     /// Specifies an offset in divisions of the BMP (calculated by BMP/MAX_TICK)
@@ -386,6 +388,27 @@ pub struct Trigger<const MAX_TICK: usize> {
     /// Microtiming can be ±(MAX_TICK/2), this is to prevent the next step
     /// from acidentally overlapping with the previous step.
     microtiming: i8,
+
+    /// Specifies the root note played when this trigger is hit.
+    ///
+    /// NOTE: This is specifically disambiguated as "root" note
+    ///  and note just "note" because it may be used as the root
+    ///  for polyphony in some setups.
+    root_note: Note,
+
+    /// Specifies the velocity of the note played by the trigger.
+    velocity: u8, // (0-127)
+
+    /// Specifies the length of the note in steps.
+    ///
+    /// This defines how long it takes for a note
+    /// release event to occur for the trigger.
+    length: u8,
+
+    /// Percentage of probability as 0-100.
+    ///
+    /// Over 100 is counted as 100.
+    probability: u8,
 
     /// Condition that decide if this trigger
     /// is actually triggered when hit or not.
@@ -396,6 +419,21 @@ pub struct Trigger<const MAX_TICK: usize> {
     /// These change parameters related to the track sequencing,
     /// instruments, etc. in response to this trigger being hit.
     parameter: bool,
+}
+
+/// Creates a trigger with sane defaults.
+impl<const MAX_TICK: usize> Default for Trigger<MAX_TICK> {
+    fn default() -> Self {
+        Self {
+            microtiming: 0,
+            root_note: CFour, // Use C4(60) as the default root note
+            velocity: 80,     // mid-range velocity (0-127)
+            length: 1,        // one step default
+            probability: 100, // default 100% chance to trigger
+            condition: TriggerCondition::Always, // always trigger by default
+            parameter: Default::default(),
+        }
+    }
 }
 
 impl<const MAX_TICK: usize> Trigger<MAX_TICK> {
@@ -411,15 +449,27 @@ impl<const MAX_TICK: usize> Trigger<MAX_TICK> {
         pattern_change_queued: bool,
         repeats: usize,
     ) -> bool {
-        // TODO: trigger conditions
-
         // Evaluate if the condition for the trigger is met.
-        self.condition.evaluate(
+        let condition = self.condition.evaluate(
             last_trig_eval,
             last_neighbour_trig_eval,
             pattern_change_queued,
             repeats,
-        )
+        );
+
+        // With the trig conditions evaluated to true,
+        // we can now check the probability factor.
+        if self.probability < 100 {
+            // Pass the probabilty to the `rand`
+            // crate as a percentage to calculate.
+            //
+            // SAFETY: Because of the above <100 check, and it
+            //  being an unsigned int, we know a /100.0 will
+            //  always be in the required 0.0-1.0 range for `rand`.
+            rand::random_bool(self.probability as f64 / 100.0)
+        } else {
+            condition
+        }
     }
 
     /// Sets the microtiming for the trigger.

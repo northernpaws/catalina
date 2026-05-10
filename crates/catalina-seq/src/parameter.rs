@@ -25,9 +25,9 @@ impl ParameterValue {
     }
 }
 
-/// Indicates the kind of the parameter, used for routing.
+/// Indicates the domain of the parameter, used for routing.
 #[repr(u8)]
-pub enum ParameterKind {
+pub enum ParameterDomain {
     /// Indicates that the parameter control some function
     /// of the track sequencing or playback that it's in.
     Track,
@@ -35,8 +35,8 @@ pub enum ParameterKind {
 
 /// Defines details about a parameter.
 pub struct Parameter {
-    /// Indicates the kind of the parameter.
-    kind: ParameterKind,
+    /// Indicates the domain of the parameter.
+    domain: ParameterDomain,
     /// Indicates the kind of the values of the parameter.
     value_kind: ParameterValueKind,
 }

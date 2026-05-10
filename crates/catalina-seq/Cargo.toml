@@ -8,6 +8,10 @@ license.workspace = true
 
 [dependencies]
 heapless = "0.9.3"
+catalina-engine = { path = "../catalina-engine", version = "0.1.0" }
+rand = { version = "0.10.1", default-features = false, features = [
+    "thread_rng",
+] }
 
 [features]
-std = []
+std = ["rand/std", "rand/std_rng"]
