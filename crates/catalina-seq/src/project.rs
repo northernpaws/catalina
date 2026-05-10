@@ -51,6 +51,7 @@ impl<
         pattern.reset();
     }
 
+    #[must_use = "project events need to be processed"]
     pub fn tick(&mut self) {
         // Shortcut if there is no pattern selected somehow.
         let Some(current_pattern) = self.current_pattern else {

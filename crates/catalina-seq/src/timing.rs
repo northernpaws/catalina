@@ -131,4 +131,19 @@ impl<const MAX_TICK: usize> PatternTiming<MAX_TICK> {
         self.step = 0;
         self.repeats = 0;
     }
+
+    /// Checks if the current step is 0.
+    pub fn is_first_step(&self) -> bool {
+        self.step == 0
+    }
+
+    /// Checks if the current step is the last
+    pub fn is_last_step(&self) -> bool {
+        self.step == self.steps
+    }
+
+    /// Returns if the current tick is the last in the timing.
+    pub fn is_last_tick(&self) -> bool {
+        self.tick - 1 == MAX_TICK
+    }
 }

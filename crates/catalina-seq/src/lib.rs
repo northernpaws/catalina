@@ -10,11 +10,17 @@
 //! as required from the main application loop in response to
 //! triggers.
 
+mod event;
+pub use event::*;
+
 mod timing;
 pub use timing::*;
 
 mod parameter;
 pub use parameter::*;
+
+mod trigger;
+pub use trigger::*;
 
 mod track;
 pub use track::*;
@@ -47,7 +53,8 @@ impl<
     const MAX_TICK: usize,
 > Sequencer<MAX_PATTERNS, MAX_TRACKS, MAX_STEPS, MAX_TICK>
 {
-    fn tick(&mut self) {
+    #[must_use = "sequencer events need to be processed"]
+    pub fn tick(&mut self) {
         self.project.tick();
     }
 }

@@ -251,6 +251,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "catalina-machines"
+version = "0.1.0"
+
+[[package]]
 name = "catalina-seq"
 version = "0.1.0"
 dependencies = [

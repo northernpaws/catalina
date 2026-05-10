@@ -1,4 +1,4 @@
-use crate::{PatternTiming, Track};
+use crate::{Events, PatternTiming, Track, TrackEvent, TrackEvents};
 
 /// Concrete type for the name of patterns.
 #[cfg(not(feature = "std"))]
@@ -9,6 +9,21 @@ pub type PatternName = String;
 pub enum PatternTickResult {
     /// Indicates that nothing of note happened.
     Tick,
+    /// Indicates that this tick is the start of the pattern.
+    PatternStart,
+    /// Indicates that this tick has reached the end of the pattern.
+    PatternEnd,
+}
+
+/// An event raised from a pattern.
+///
+/// This encapsulates both pattern-specific events,
+/// and events from tracks within that pattern.
+pub enum PatternEvent {
+    /// Indicates that a track raised some
+    /// event(s), and what track it was.
+    Track(u8, TrackEvents),
+
     /// Indicates that this tick is the start of the pattern.
     PatternStart,
     /// Indicates that this tick has reached the end of the pattern.
@@ -45,6 +60,7 @@ impl<const MAX_TRACKS: usize, const MAX_STEPS: usize, const MAX_TICK: usize>
     }
 
     /// Tick the pattern.
+    #[must_use = "pattern events need to be processed"]
     pub fn tick(&mut self, pattern_change_queued: bool) -> PatternTickResult {
         // Tick the pattern-wide timing.
         self.timing.tick();

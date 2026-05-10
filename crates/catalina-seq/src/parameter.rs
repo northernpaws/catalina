@@ -3,7 +3,7 @@
 ///
 /// A parameter name can be resolved by feeding the parameter ID
 /// to the parameter names string table.
-pub type ParameterID = usize;
+pub type ParameterID = u16;
 
 /// Indicates the type of a parameter value.
 #[repr(u8)]
@@ -31,6 +31,11 @@ pub enum ParameterDomain {
     /// Indicates that the parameter control some function
     /// of the track sequencing or playback that it's in.
     Track,
+
+    /// Indicates that the parameter controls some aspect
+    /// of the macine (instrument, sampler, etc.) attached
+    /// to the track.
+    Machine,
 }
 
 /// Defines details about a parameter.
@@ -39,4 +44,7 @@ pub struct Parameter {
     domain: ParameterDomain,
     /// Indicates the kind of the values of the parameter.
     value_kind: ParameterValueKind,
+
+    /// Defines if the parameter can be locked per-step.
+    lockable: bool,
 }
