@@ -18,6 +18,23 @@ pub struct PatternTiming<const MAX_TICK: usize> {
 
     /// Indicates if the last tick caused a step.
     did_step: bool,
+
+    /// Indicates how many times the pattern has looped.
+    repeats: usize,
+}
+
+pub enum TimingTickResult {
+    /// Nothing of note happened.
+    Tick,
+    /// Indicates that this tick advanced
+    /// the steps to the specified step.
+    Step(usize),
+    /// Indicates that this tick advanced
+    /// the steps to the specified step,
+    /// and looped the pattern.
+    ///
+    /// Second parameter contains the pattern loop counter.
+    StepAndRepeat(usize, usize),
 }
 
 /// Generic pattern timing methods.
@@ -30,6 +47,7 @@ impl<const MAX_TICK: usize> PatternTiming<MAX_TICK> {
             tick: 0,
             step: 0,
             did_step: false,
+            repeats: 0,
         }
     }
 
@@ -55,23 +73,26 @@ impl<const MAX_TICK: usize> PatternTiming<MAX_TICK> {
     ///
     /// Returns [true] if max ticks have been
     /// reached and a step should occur.
-    pub fn tick(&mut self) -> bool {
+    pub fn tick(&mut self) -> TimingTickResult {
         self.did_step = false;
         self.tick = self.tick + 1;
 
         if self.tick >= MAX_TICK {
             self.tick = 0;
 
+            self.did_step = true;
             self.step = self.step + 1;
             if self.step > self.steps {
                 self.step = 0;
-            }
-            self.did_step = true;
+                self.repeats = self.repeats + 1;
 
-            return true;
+                return TimingTickResult::StepAndRepeat(self.step, self.repeats);
+            }
+
+            return TimingTickResult::Step(self.step);
         }
 
-        return false;
+        return TimingTickResult::Tick;
     }
 
     /// Returns if the last tick caused a sequence step.
@@ -96,5 +117,18 @@ impl<const MAX_TICK: usize> PatternTiming<MAX_TICK> {
     /// Returns the current tick within the step.
     pub fn get_tick(&self) -> usize {
         self.tick
+    }
+
+    /// Returns how many times the sequence has repeated.
+    pub fn get_repeats(&self) -> usize {
+        self.repeats
+    }
+
+    /// Zeros-out the timing tracking variables for a fresh play.
+    pub fn reset(&mut self) {
+        self.did_step = false;
+        self.tick = 0;
+        self.step = 0;
+        self.repeats = 0;
     }
 }
