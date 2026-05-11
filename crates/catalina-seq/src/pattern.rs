@@ -1,4 +1,4 @@
-use crate::{Events, PatternTiming, Track, TrackEvent, TrackEvents};
+use crate::{STEP_SUBSTEPS, PatternTiming, Track, TrackEvents};
 
 /// Concrete type for the name of patterns.
 #[cfg(not(feature = "std"))]
@@ -31,21 +31,19 @@ pub enum PatternEvent {
 }
 
 /// A pattern sequences a set of tracks.
-pub struct Pattern<const MAX_TRACKS: usize, const MAX_STEPS: usize, const MAX_TICK: usize> {
+pub struct Pattern<const MAX_TRACKS: usize, const MAX_STEPS: usize> {
     /// Display name of the pattern.
     name: PatternName,
 
     /// Tracks for the pattern.
-    tracks: [Track<MAX_STEPS, MAX_TICK>; MAX_TRACKS],
+    tracks: [Track<MAX_STEPS>; MAX_TRACKS],
 
     /// Configures the timing for the pattern.
-    timing: PatternTiming<MAX_TICK>,
+    timing: PatternTiming,
 }
 
 /// Generic platform methods.
-impl<const MAX_TRACKS: usize, const MAX_STEPS: usize, const MAX_TICK: usize>
-    Pattern<MAX_TRACKS, MAX_STEPS, MAX_TICK>
-{
+impl<const MAX_TRACKS: usize, const MAX_STEPS: usize> Pattern<MAX_TRACKS, MAX_STEPS> {
     /// Sets the name of the pattern.
     pub fn set_name(&mut self, name: PatternName) {
         self.name = name;
@@ -63,12 +61,12 @@ impl<const MAX_TRACKS: usize, const MAX_STEPS: usize, const MAX_TICK: usize>
     #[must_use = "pattern events need to be processed"]
     pub fn tick(&mut self, pattern_change_queued: bool) -> PatternTickResult {
         // Tick the pattern-wide timing.
-        self.timing.tick();
+        self.timing.advance();
 
         // Track the last track that was ticked and evaluated.
         //
         // This is used for neighboring track conditional logic on triggers.
-        let mut last_track: Option<&mut Track<MAX_STEPS, MAX_TICK>> = None;
+        let mut last_track: Option<&mut Track<MAX_STEPS>> = None;
 
         // Loop through and tick the tracks.
         for track in &mut self.tracks {
@@ -89,7 +87,7 @@ impl<const MAX_TRACKS: usize, const MAX_STEPS: usize, const MAX_TICK: usize>
 
         if self.timing.get_tick() == 0 {
             PatternTickResult::PatternStart
-        } else if self.timing.get_tick() == MAX_TICK - 1 {
+        } else if self.timing.get_tick() == STEP_SUBSTEPS - 1 {
             PatternTickResult::PatternEnd
         } else {
             PatternTickResult::Tick

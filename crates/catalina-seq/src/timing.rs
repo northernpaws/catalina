@@ -1,6 +1,94 @@
+/// Pulses-per-quarter-note.
+///
+/// Typically MIDI terminology for how the MIDI clock operates.
+///
+// In the sequencer, we correlate one quarter-note to 4 steps in
+// the sequencer. That means the step resolution is PPQM/4.
+pub const SEQUENCER_PPQM: u8 = 96;
+
+/// Each step is divided into 24 sub-steps.
+///
+/// A tick is created for each sub-step.
+///
+/// This corrosponds to Elektron sequencer's
+/// 96 pulse-per-quarter-note resolution where
+/// every 4 steps is 96 "ticks".
+pub const STEP_SUBSTEPS: u8 = SEQUENCER_PPQM / 4;
+
+/// A bar on the sequencer is 4 quarter notes.
+///
+/// This is typically 384.
+pub const TICKS_PER_BAR: u16 = SEQUENCER_PPQM as u16 * 4;
+
+pub struct SequencerTiming {
+    /// Specifies the beats-per-minute for the project.
+    ///
+    /// Each beat corresponds to a step advance in a sequence,
+    /// but doesn't necessarily mean a sequence step is triggered,
+    /// depending on conditions and microtiming adjustments.
+    bpm: u8,
+
+    /// Internal counter tracking ticks.
+    ///
+    /// Ticks are counted in divisions of the BMP.
+    tick: u8,
+}
+
+impl SequencerTiming {
+    pub fn new() -> Self {
+        Self {
+            bpm: 120, // sane default
+
+            tick: 0, // counter
+        }
+    }
+
+    /// Advances the project timing by a tick.
+    pub fn tick(&mut self) {
+        self.tick = self.tick + 1;
+
+        if self.tick == STEP_SUBSTEPS {
+            self.tick = 0;
+        }
+    }
+
+    /// Returns true if the current tick is on a beat of the BMP.
+    pub fn is_beat(&self) -> bool {
+        self.tick == 0
+    }
+}
+
+/// Allows a pattern to run in multiples of the project BMP.
+#[derive(Default)]
+#[repr(u8)]
+pub enum TimingSpeed {
+    OneEighth = 0,    // 1/8
+    OneFourth = 1,    // 1/4
+    Half = 2,         // 1/2
+    ThreeFourths = 3, // 3/4
+    #[default]
+    Normal = 4, // 1
+    ThreeTwos = 5,    // 3/2
+    Double = 6,       // 2
+}
+
+// impl TimingSpeed {
+//     pub fn should_tick(&self, tick: usize) -> bool {
+//         match self {
+//             TimingSpeed::OneEighth => tick % 8 == 0,
+//             TimingSpeed::OneFourth => tick % 4 == 0,
+//             TimingSpeed::Half => tick % 2 == 0,
+//             TimingSpeed::ThreeFourths => todo!(),
+//             TimingSpeed::Normal => true,
+//             TimingSpeed::ThreeTwos => todo!(),
+//             TimingSpeed::Double => ,
+//         }
+//     }
+// }
+
 /// A type for managing timing for all tracks in a
 /// pattern that don't have their own timing.
-pub struct PatternTiming<const MAX_TICK: usize> {
+pub struct PatternTiming {
     /// Specifies how many steps the track or pattern has.
     steps: usize,
 
@@ -11,7 +99,7 @@ pub struct PatternTiming<const MAX_TICK: usize> {
     ///
     /// Ticks and incremented at a multiple
     /// of the BMP set for the pattern.
-    tick: usize,
+    tick: u8,
 
     /// The current rounded sequencer step, devoid of microtiming.
     step: usize,
@@ -21,6 +109,9 @@ pub struct PatternTiming<const MAX_TICK: usize> {
 
     /// Indicates how many times the pattern has looped.
     repeats: usize,
+
+    /// Specifies how fast the pattern or track is played relative to the BMP.
+    speed: TimingSpeed,
 }
 
 pub enum TimingTickResult {
@@ -38,7 +129,7 @@ pub enum TimingTickResult {
 }
 
 /// Generic pattern timing methods.
-impl<const MAX_TICK: usize> PatternTiming<MAX_TICK> {
+impl PatternTiming {
     pub fn new() -> Self {
         Self {
             steps: 16,
@@ -48,6 +139,7 @@ impl<const MAX_TICK: usize> PatternTiming<MAX_TICK> {
             step: 0,
             did_step: false,
             repeats: 0,
+            speed: TimingSpeed::Normal,
         }
     }
 
@@ -70,14 +162,11 @@ impl<const MAX_TICK: usize> PatternTiming<MAX_TICK> {
     }
 
     /// Advances the timing.
-    ///
-    /// Returns [true] if max ticks have been
-    /// reached and a step should occur.
-    pub fn tick(&mut self) -> TimingTickResult {
+    pub fn advance(&mut self) -> TimingTickResult {
         self.did_step = false;
         self.tick = self.tick + 1;
 
-        if self.tick >= MAX_TICK {
+        if self.tick >= STEP_SUBSTEPS {
             self.tick = 0;
 
             self.did_step = true;
@@ -115,7 +204,7 @@ impl<const MAX_TICK: usize> PatternTiming<MAX_TICK> {
     }
 
     /// Returns the current tick within the step.
-    pub fn get_tick(&self) -> usize {
+    pub fn get_tick(&self) -> u8 {
         self.tick
     }
 
@@ -144,6 +233,6 @@ impl<const MAX_TICK: usize> PatternTiming<MAX_TICK> {
 
     /// Returns if the current tick is the last in the timing.
     pub fn is_last_tick(&self) -> bool {
-        self.tick - 1 == MAX_TICK
+        self.tick - 1 == STEP_SUBSTEPS
     }
 }

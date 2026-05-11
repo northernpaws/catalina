@@ -12,6 +12,6 @@ catalina-engine = { path = "../catalina-engine", version = "0.1.0" }
 rand = { version = "0.10.1", default-features = false, features = [
     "thread_rng",
 ] }
-
+num-integer = { version = "0.1.46", default-features = false }
 [features]
 std = ["rand/std", "rand/std_rng"]

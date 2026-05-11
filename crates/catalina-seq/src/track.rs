@@ -1,10 +1,8 @@
-use catalina_engine::music::note::{CFour, Note};
-
-use crate::{Events, ParameterID, PatternTiming, Trigger, TriggerCondition, TriggerEvent};
+use crate::{Events, PatternTiming, STEP_SUBSTEPS, Trigger, TriggerCondition, TriggerEvent};
 
 pub struct MicrotimingStep {
     /// The tick to trigger the step on.
-    tick: usize,
+    tick: u8,
 
     /// Index of the step to trigger.
     ///
@@ -40,13 +38,16 @@ pub type TrackEvents = Events<TrackEvent, 2>;
 
 /// A track contains an assortment of steps that
 /// trigger a machine associated with a track.
-pub struct Track<const MAX_STEPS: usize, const MAX_TICK: usize> {
-    steps: [Option<Trigger<MAX_TICK>>; MAX_STEPS],
+///
+/// BPM_DIVISIONS is divisions of the BPM used for
+/// microtiming and playback speed adjustments.
+pub struct Track<const MAX_STEPS: usize> {
+    steps: [Option<Trigger>; MAX_STEPS],
 
     /// Configures the timing for the track.
     ///
     /// When [None] then the parent pattern timing is used.
-    timing: Option<PatternTiming<MAX_TICK>>,
+    timing: Option<PatternTiming>,
 
     this_step: Option<MicrotimingStep>,
     next_step: Option<MicrotimingStep>,
@@ -62,7 +63,7 @@ pub struct Track<const MAX_STEPS: usize, const MAX_TICK: usize> {
     trigger_events: Events<TriggerEvent>,
 }
 
-impl<const MAX_STEPS: usize, const MAX_TICK: usize> Track<MAX_STEPS, MAX_TICK> {
+impl<const MAX_STEPS: usize> Track<MAX_STEPS> {
     /// Sets the maximum steps in the track.
     pub fn set_steps(&mut self, steps: usize) {
         // Enable per-track timing if required.
@@ -106,37 +107,17 @@ impl<const MAX_STEPS: usize, const MAX_TICK: usize> Track<MAX_STEPS, MAX_TICK> {
         }
     }
 
-    /// Tick the track in the sequence.
+    /// Performs the actual tick.
     ///
-    /// Receives the pattern timing information which is used
-    /// if no tracks-specific timing information is present.
+    /// How many times this is called per "tick"
+    /// depends on the timing speed settings.
     #[must_use = "track events need to be processed"]
-    pub fn tick(
+    fn internal_tick(
         &mut self,
-        pattern_timing: &PatternTiming<MAX_TICK>,
+        timing: &PatternTiming,
         last_neighbour_trig_eval: bool,
         pattern_change_queued: bool,
     ) -> TrackEvents {
-        // Reset the event container.
-        self.events.reset();
-
-        // Determine whether to use a pattern or track specific timing.
-        let timing = match &mut self.timing {
-            Some(timing) => {
-                // Tick the timing if we're using track-specific timing.
-                //
-                // Not requred when using pattern timing as it'll have
-                // already been ticked before the track tick is called.
-                timing.tick();
-
-                // SAFETY: we explicity remove the mutability and don't
-                //  take pattern_timing as mut to ensure we're not
-                //  acidentally modifing pattern timing per-track.
-                timing as &_
-            }
-            None => pattern_timing,
-        };
-
         // If we're on the last step and last tick of
         // the step, then append a track end event.
         if timing.is_last_step() && timing.is_last_tick() {
@@ -173,7 +154,7 @@ impl<const MAX_STEPS: usize, const MAX_TICK: usize> Track<MAX_STEPS, MAX_TICK> {
                             //
                             // SAFETY: since we've checked >0 above, we can assume
                             //  it's castable from signed into a usize.
-                            tick: step.microtiming as usize,
+                            tick: step.microtiming as u8,
                             step: timing.get_step(),
                         })
                     }
@@ -204,7 +185,7 @@ impl<const MAX_STEPS: usize, const MAX_TICK: usize> Track<MAX_STEPS, MAX_TICK> {
                         // SAFETY: Since we've checked <0 above we know it's
                         //  negative, so inverting and subtracking from steps
                         //  will be positive.
-                        tick: MAX_TICK - (-step.microtiming as usize),
+                        tick: STEP_SUBSTEPS - (-step.microtiming as u8),
                         step: timing.get_step(),
                     })
                 }
@@ -281,6 +262,41 @@ impl<const MAX_STEPS: usize, const MAX_TICK: usize> Track<MAX_STEPS, MAX_TICK> {
                 }
             }
         }
+
+        self.events.clone()
+    }
+
+    /// Tick the track in the sequence.
+    ///
+    /// Receives the pattern timing information which is used
+    /// if no tracks-specific timing information is present.
+    #[must_use = "track events need to be processed"]
+    pub fn tick(
+        &mut self,
+        pattern_timing: &PatternTiming,
+        last_neighbour_trig_eval: bool,
+        pattern_change_queued: bool,
+    ) -> TrackEvents {
+        // Reset the event container.
+        self.events.reset();
+
+        // Determine whether to use a pattern or track specific timing.
+        match &mut self.timing {
+            Some(timing) => {
+                // Tick the timing if we're using track-specific timing.
+                //
+                // Not requred when using pattern timing as it'll have
+                // already been ticked before the track tick is called.
+                timing.advance();
+            }
+            None => {
+                self.internal_tick(
+                    pattern_timing,
+                    last_neighbour_trig_eval,
+                    pattern_change_queued,
+                );
+            }
+        };
 
         self.events.clone()
     }

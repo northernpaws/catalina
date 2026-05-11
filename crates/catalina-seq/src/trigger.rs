@@ -1,6 +1,6 @@
 use catalina_engine::music::note::{CFour, Note};
 
-use crate::{Events, ParameterID};
+use crate::{Events, ParameterID, STEP_SUBSTEPS, TICKS_PER_BAR};
 
 /// Specifies a conditional rule used to decide if the trigger should play.
 #[derive(Default, PartialEq)]
@@ -152,13 +152,131 @@ pub enum TriggerEvent {
     ParameterChange {},
 }
 
-/// A trigger placed on a step in a track.
-pub struct Trigger<const MAX_TICK: usize> {
-    /// Specifies an offset in divisions of the BMP (calculated by BMP/MAX_TICK)
-    /// that will play this trigger earlier or later then the step boundary.
+/// Microtiming allows for specifying an offset on a trigger
+/// that places it earlier or later in the sequencer grid
+/// then the actual step it's on. This takes advantage of the
+/// sequencer being divided into sub-steps of the BPM, typically
+/// as 24 sub-steps per step.
+pub struct TriggerMicrotiming(i8);
+
+impl TriggerMicrotiming {
+    /// For some reason, Elektron sequencers, which use 24 subset
+    /// resolution, display microtiming as fractionals of 384.
     ///
-    /// Microtiming can be ±(MAX_TICK/2), this is to prevent the next step
-    /// from acidentally overlapping with the previous step.
+    /// At 24 substep resolution, we get 4 steps in every quarter note.
+    /// At 96 ppqn resolution, multiplying that by 4 gives us 384 sequencece
+    /// ticks per bar. So these microtiming divisions are show as fractions
+    /// of the offset in the entire bar.
+    ///
+    /// These are calculated by dividing the microtiming number by 384,
+    /// but then Elektron also simplifies the fractions where possible.
+    ///
+    /// This method performs that calculation and returns the numberator
+    /// and denominator for display.
+    pub fn as_384s(&self) -> (u16, u16) {
+        // If we're not using 384 ticks per bar, then this ins't valid.
+        assert!(TICKS_PER_BAR == 384);
+
+        match self.0 {
+            0 => (1, 1),
+
+            1 => (1, 384),
+            2 => (1, 192),
+            3 => (1, 128),
+            4 => (1, 96),
+            5 => (5, 384),
+            6 => (1, 64),
+            7 => (7, 384),
+            8 => (1, 48),
+            9 => (3, 128),
+            10 => (5, 192),
+            11 => (11, 384),
+            12 => (1, 32),
+            13 => (13, 384),
+            14 => (7, 192),
+            15 => (5, 128),
+            16 => (1, 24),
+            17 => (17, 384),
+            18 => (3, 64),
+            19 => (9, 384),
+            20 => (5, 96),
+            21 => (7, 128),
+            22 => (11, 192),
+            23 => (23, 284),
+            24 => (1, 16),
+
+            _ => {
+                // NOTE: conversion to u16 is needed
+                // for comparison with 384 value.
+                let numerator: u16 = if self.0 < 0 {
+                    (-self.0) as u16
+                } else {
+                    self.0 as u16
+                };
+
+                // Simply the fraction.
+                let gdc = num_integer::gcd(numerator, 384);
+                (numerator / gdc, 382 / gdc)
+            }
+        }
+    }
+
+    /// For some reason, Elektron sequencers, which use 24 subset
+    /// resolution, display microtiming as fractionals of 384, where
+    /// the 384 is derrived from 384 seq clicks per bar, from 96 ppqn.
+    ///
+    /// These are calculated by dividing the microtiming number by 384,
+    /// but then Elektron also simplifies the fractions where possible.
+    ///
+    /// See [as_384s] for more details
+    ///
+    /// This converts to a known string table of string representations
+    /// of the microtiming division where known for 24-substep resolution.
+    pub fn to_384_str(&self) -> &str {
+        // If we're not using 384 ticks per bar, then this ins't valid.
+        assert!(TICKS_PER_BAR == 384);
+
+        match self.0 {
+            0 => "",
+
+            1 => "1/384",
+            2 => "1/192",
+            3 => "1/128",
+            4 => "1/96",
+            5 => "5/384",
+            6 => "1/64",
+            7 => "7/384",
+            8 => "1/48",
+            9 => "3/128",
+            10 => "5/192",
+            11 => "11/384",
+            12 => "1/32",
+            13 => "13/384",
+            14 => "7/192",
+            15 => "5/128",
+            16 => "1/24",
+            17 => "17/384",
+            18 => "3/64",
+            19 => "9/384",
+            20 => "5/96",
+            21 => "7/128 ",
+            22 => "11/192",
+            23 => "23/284",
+            24 => "1/16",
+
+            _ => "",
+        }
+    }
+}
+
+/// A trigger placed on a step in a track.
+pub struct Trigger {
+    /// Specifies an offset in substeps of the BMP that will
+    /// play this trigger earlier or later then the step boundary.
+    ///
+    /// This is defined by the PPQN resolution, which is divided by
+    /// 4 to get the substep resolution. Typically this is 96 PPQN,
+    /// resulting in ±24 substep resolution for microtiming.
     pub(crate) microtiming: i8,
 
     /// Specifies the root note played when this trigger is hit.
@@ -194,7 +312,7 @@ pub struct Trigger<const MAX_TICK: usize> {
 }
 
 /// Creates a trigger with sane defaults.
-impl<const MAX_TICK: usize> Default for Trigger<MAX_TICK> {
+impl Default for Trigger {
     fn default() -> Self {
         Self {
             microtiming: 0,
@@ -208,7 +326,7 @@ impl<const MAX_TICK: usize> Default for Trigger<MAX_TICK> {
     }
 }
 
-impl<const MAX_TICK: usize> Trigger<MAX_TICK> {
+impl Trigger {
     /// Attempt to trigger the trigger.
     ///
     /// This returns if the trigger should actually be
@@ -256,13 +374,18 @@ impl<const MAX_TICK: usize> Trigger<MAX_TICK> {
     ///
     /// This allows a trigger to be triggered earlier or later the the step boundary
     /// it's actually placed on, thanks to fractional BMP-derrived ticks.
+    ///
+    /// If the specified BPM exceeds the step resolution,
+    /// then it's capped to the max resolution.
     pub fn set_microtiming(&mut self, microtiming: i8) {
-        // Check that the microtiming doesn't
-        // exceed the half-step boundary.
-        if microtiming as usize > MAX_TICK / 2 {
-            self.microtiming = ((MAX_TICK / 2) - 1) as i8;
-        } else if microtiming < (MAX_TICK / 2) as i8 {
-            self.microtiming = -(((MAX_TICK / 2) - 1) as i8);
+        if microtiming > 0 && microtiming as u8 >= STEP_SUBSTEPS - 1 {
+            // SAFETY: While technically possible for STEP_SUBSTEPS to be
+            //  set high enough to overflow i8, it never should be.
+            self.microtiming = STEP_SUBSTEPS as i8 - 1;
+        } else if microtiming < 0 && (microtiming < -(STEP_SUBSTEPS as i8 - 1)) {
+            // SAFETY: While technically possible for STEP_SUBSTEPS to be
+            //  set high enough to overflow i8, it never should be.
+            self.microtiming = -(STEP_SUBSTEPS as i8 - 1);
         } else {
             self.microtiming = microtiming;
         }
