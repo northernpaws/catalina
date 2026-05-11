@@ -152,123 +152,6 @@ pub enum TriggerEvent {
     ParameterChange {},
 }
 
-/// Microtiming allows for specifying an offset on a trigger
-/// that places it earlier or later in the sequencer grid
-/// then the actual step it's on. This takes advantage of the
-/// sequencer being divided into sub-steps of the BPM, typically
-/// as 24 sub-steps per step.
-pub struct TriggerMicrotiming(i8);
-
-impl TriggerMicrotiming {
-    /// For some reason, Elektron sequencers, which use 24 subset
-    /// resolution, display microtiming as fractionals of 384.
-    ///
-    /// At 24 substep resolution, we get 4 steps in every quarter note.
-    /// At 96 ppqn resolution, multiplying that by 4 gives us 384 sequencece
-    /// ticks per bar. So these microtiming divisions are show as fractions
-    /// of the offset in the entire bar.
-    ///
-    /// These are calculated by dividing the microtiming number by 384,
-    /// but then Elektron also simplifies the fractions where possible.
-    ///
-    /// This method performs that calculation and returns the numberator
-    /// and denominator for display.
-    pub fn as_384s(&self) -> (u16, u16) {
-        // If we're not using 384 ticks per bar, then this ins't valid.
-        assert!(TICKS_PER_BAR == 384);
-
-        match self.0 {
-            0 => (1, 1),
-
-            1 => (1, 384),
-            2 => (1, 192),
-            3 => (1, 128),
-            4 => (1, 96),
-            5 => (5, 384),
-            6 => (1, 64),
-            7 => (7, 384),
-            8 => (1, 48),
-            9 => (3, 128),
-            10 => (5, 192),
-            11 => (11, 384),
-            12 => (1, 32),
-            13 => (13, 384),
-            14 => (7, 192),
-            15 => (5, 128),
-            16 => (1, 24),
-            17 => (17, 384),
-            18 => (3, 64),
-            19 => (9, 384),
-            20 => (5, 96),
-            21 => (7, 128),
-            22 => (11, 192),
-            23 => (23, 284),
-            24 => (1, 16),
-
-            _ => {
-                // NOTE: conversion to u16 is needed
-                // for comparison with 384 value.
-                let numerator: u16 = if self.0 < 0 {
-                    (-self.0) as u16
-                } else {
-                    self.0 as u16
-                };
-
-                // Simply the fraction.
-                let gdc = num_integer::gcd(numerator, 384);
-                (numerator / gdc, 382 / gdc)
-            }
-        }
-    }
-
-    /// For some reason, Elektron sequencers, which use 24 subset
-    /// resolution, display microtiming as fractionals of 384, where
-    /// the 384 is derrived from 384 seq clicks per bar, from 96 ppqn.
-    ///
-    /// These are calculated by dividing the microtiming number by 384,
-    /// but then Elektron also simplifies the fractions where possible.
-    ///
-    /// See [as_384s] for more details
-    ///
-    /// This converts to a known string table of string representations
-    /// of the microtiming division where known for 24-substep resolution.
-    pub fn to_384_str(&self) -> &str {
-        // If we're not using 384 ticks per bar, then this ins't valid.
-        assert!(TICKS_PER_BAR == 384);
-
-        match self.0 {
-            0 => "",
-
-            1 => "1/384",
-            2 => "1/192",
-            3 => "1/128",
-            4 => "1/96",
-            5 => "5/384",
-            6 => "1/64",
-            7 => "7/384",
-            8 => "1/48",
-            9 => "3/128",
-            10 => "5/192",
-            11 => "11/384",
-            12 => "1/32",
-            13 => "13/384",
-            14 => "7/192",
-            15 => "5/128",
-            16 => "1/24",
-            17 => "17/384",
-            18 => "3/64",
-            19 => "9/384",
-            20 => "5/96",
-            21 => "7/128 ",
-            22 => "11/192",
-            23 => "23/284",
-            24 => "1/16",
-
-            _ => "",
-        }
-    }
-}
-
 /// A trigger placed on a step in a track.
 pub struct Trigger {
     /// Specifies an offset in substeps of the BMP that will
@@ -277,6 +160,12 @@ pub struct Trigger {
     /// This is defined by the PPQN resolution, which is divided by
     /// 4 to get the substep resolution. Typically this is 96 PPQN,
     /// resulting in ±24 substep resolution for microtiming.
+    ///
+    /// Microtiming allows for specifying an offset on a trigger
+    /// that places it earlier or later in the sequencer grid
+    /// then the actual step it's on. This takes advantage of the
+    /// sequencer being divided into sub-steps of the BPM, typically
+    /// as 24 sub-steps per step.
     pub(crate) microtiming: i8,
 
     /// Specifies the root note played when this trigger is hit.
@@ -388,6 +277,114 @@ impl Trigger {
             self.microtiming = -(STEP_SUBSTEPS as i8 - 1);
         } else {
             self.microtiming = microtiming;
+        }
+    }
+
+    /// For some reason, Elektron sequencers, which use 24 subset
+    /// resolution, display microtiming as fractionals of 384.
+    ///
+    /// At 24 substep resolution, we get 4 steps in every quarter note.
+    /// At 96 ppqn resolution, multiplying that by 4 gives us 384 sequencece
+    /// ticks per bar. So these microtiming divisions are show as fractions
+    /// of the offset in the entire bar.
+    ///
+    /// These are calculated by dividing the microtiming number by 384,
+    /// but then Elektron also simplifies the fractions where possible.
+    ///
+    /// This method performs that calculation and returns the numberator
+    /// and denominator for display.
+    pub fn microtiming_384s(&self) -> (u16, u16) {
+        // If we're not using 384 ticks per bar, then this ins't valid.
+        assert!(TICKS_PER_BAR == 384);
+
+        match self.microtiming {
+            0 => (1, 1),
+
+            1 => (1, 384),
+            2 => (1, 192),
+            3 => (1, 128),
+            4 => (1, 96),
+            5 => (5, 384),
+            6 => (1, 64),
+            7 => (7, 384),
+            8 => (1, 48),
+            9 => (3, 128),
+            10 => (5, 192),
+            11 => (11, 384),
+            12 => (1, 32),
+            13 => (13, 384),
+            14 => (7, 192),
+            15 => (5, 128),
+            16 => (1, 24),
+            17 => (17, 384),
+            18 => (3, 64),
+            19 => (9, 384),
+            20 => (5, 96),
+            21 => (7, 128),
+            22 => (11, 192),
+            23 => (23, 284),
+            24 => (1, 16),
+
+            _ => {
+                // NOTE: conversion to u16 is needed
+                // for comparison with 384 value.
+                let numerator: u16 = if self.microtiming < 0 {
+                    (-self.microtiming) as u16
+                } else {
+                    self.microtiming as u16
+                };
+
+                // Simply the fraction.
+                let gdc = num_integer::gcd(numerator, 384);
+                (numerator / gdc, 382 / gdc)
+            }
+        }
+    }
+
+    /// For some reason, Elektron sequencers, which use 24 subset
+    /// resolution, display microtiming as fractionals of 384, where
+    /// the 384 is derrived from 384 seq clicks per bar, from 96 ppqn.
+    ///
+    /// These are calculated by dividing the microtiming number by 384,
+    /// but then Elektron also simplifies the fractions where possible.
+    ///
+    /// See [microtiming_384s] for more details
+    ///
+    /// This converts to a known string table of string representations
+    /// of the microtiming division where known for 24-substep resolution.
+    pub fn microtiming_384_str(&self) -> &str {
+        // If we're not using 384 ticks per bar, then this ins't valid.
+        assert!(TICKS_PER_BAR == 384);
+
+        match self.microtiming {
+            0 => "",
+
+            1 => "1/384",
+            2 => "1/192",
+            3 => "1/128",
+            4 => "1/96",
+            5 => "5/384",
+            6 => "1/64",
+            7 => "7/384",
+            8 => "1/48",
+            9 => "3/128",
+            10 => "5/192",
+            11 => "11/384",
+            12 => "1/32",
+            13 => "13/384",
+            14 => "7/192",
+            15 => "5/128",
+            16 => "1/24",
+            17 => "17/384",
+            18 => "3/64",
+            19 => "9/384",
+            20 => "5/96",
+            21 => "7/128 ",
+            22 => "11/192",
+            23 => "23/284",
+            24 => "1/16",
+
+            _ => "",
         }
     }
 }
