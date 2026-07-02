@@ -1,4 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "Rythm")(type "KiCad")(uri "/Users/kat/Projects/rythm/hardware/footprints/Rythm.pretty")(options "")(descr ""))
-)
