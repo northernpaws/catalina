@@ -515,7 +515,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "Northernpaws_Audio"
+    ]
   },
   "meta": {
     "filename": "card_v0.1.kicad_pro",
@@ -546,16 +548,23 @@
         "clearance": 0.09,
         "name": "BGA",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 5,
+        "priority": 6,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.1,
+        "tuning_profile": ""
+      },
+      {
+        "name": "SDMMC",
+        "pcb_color": "rgb(255, 26, 18)",
+        "priority": 0,
+        "schematic_color": "rgb(255, 26, 18)",
         "tuning_profile": ""
       },
       {
         "clearance": 0.09,
         "name": "SDRAM_ADDR",
         "pcb_color": "rgb(255, 37, 109)",
-        "priority": 2,
+        "priority": 3,
         "schematic_color": "rgb(255, 37, 109)",
         "track_width": 0.1,
         "tuning_profile": "",
@@ -566,7 +575,7 @@
         "clearance": 0.09,
         "name": "SDRAM_CTRL",
         "pcb_color": "rgb(255, 102, 65)",
-        "priority": 1,
+        "priority": 2,
         "schematic_color": "rgb(255, 102, 65)",
         "track_width": 0.1,
         "tuning_profile": "",
@@ -577,7 +586,7 @@
         "clearance": 0.09,
         "name": "SDRAM_DQMH",
         "pcb_color": "rgb(84, 34, 255)",
-        "priority": 3,
+        "priority": 4,
         "schematic_color": "rgb(84, 34, 255)",
         "track_width": 0.1,
         "tuning_profile": "",
@@ -588,7 +597,7 @@
         "clearance": 0.09,
         "name": "SDRAM_DQML",
         "pcb_color": "rgb(115, 113, 255)",
-        "priority": 4,
+        "priority": 5,
         "schematic_color": "rgb(115, 113, 255)",
         "track_width": 0.1,
         "tuning_profile": "",
@@ -601,7 +610,7 @@
         "diff_pair_width": 0.14,
         "name": "USB",
         "pcb_color": "rgb(255, 162, 108)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgb(255, 162, 108)",
         "track_width": 0.1,
         "tuning_profile": "",
@@ -615,6 +624,21 @@
     "net_colors": null,
     "netclass_assignments": {
       "+3.3V": [
+        "BGA"
+      ],
+      "+5V": [
+        "BGA"
+      ],
+      "/AINL+": [
+        "BGA"
+      ],
+      "/AINL-": [
+        "BGA"
+      ],
+      "/AINR+": [
+        "BGA"
+      ],
+      "/AINR-": [
         "BGA"
       ],
       "/DEBUG_SWCLK": [
@@ -757,6 +781,9 @@
         "SDRAM_CTRL"
       ],
       "/FMC_SDCKE0": [
+        "BGA"
+      ],
+      "/FMC_SDCKE1": [
         "BGA",
         "SDRAM_CTRL"
       ],
@@ -783,6 +810,75 @@
         "BGA",
         "SDRAM_CTRL"
       ],
+      "/I2C2_SCL": [
+        "BGA"
+      ],
+      "/I2C2_SDA": [
+        "BGA"
+      ],
+      "/IN_L": [
+        "BGA"
+      ],
+      "/SAI1_FS_A": [
+        "BGA"
+      ],
+      "/SAI1_MCLK_A": [
+        "BGA"
+      ],
+      "/SAI1_SCK_A": [
+        "BGA"
+      ],
+      "/SAI1_SD_A": [
+        "BGA"
+      ],
+      "/SAI1_SD_B": [
+        "BGA"
+      ],
+      "/SAI2_SD_A": [
+        "BGA"
+      ],
+      "/SAI2_SD_B": [
+        "BGA"
+      ],
+      "/SAI4_SD_B": [
+        "BGA"
+      ],
+      "/SDMMC1_CK": [
+        "BGA"
+      ],
+      "/SDMMC1_CMD": [
+        "BGA"
+      ],
+      "/SDMMC1_D0": [
+        "BGA"
+      ],
+      "/SDMMC1_D1": [
+        "BGA"
+      ],
+      "/SDMMC1_D2": [
+        "BGA"
+      ],
+      "/SDMMC1_D3": [
+        "BGA"
+      ],
+      "/SPI1_MISO": [
+        "BGA"
+      ],
+      "/SPI1_MOSI": [
+        "BGA"
+      ],
+      "/SPI1_NSS": [
+        "BGA"
+      ],
+      "/SPI1_SCK": [
+        "BGA"
+      ],
+      "/UART4_RX": [
+        "BGA"
+      ],
+      "/UART4_TX": [
+        "BGA"
+      ],
       "/USB_OTG_FS_D+": [
         "BGA"
       ],
@@ -799,6 +895,87 @@
         "BGA"
       ],
       "GND": [
+        "BGA"
+      ],
+      "Net-(C16-Pad2)": [
+        "BGA"
+      ],
+      "Net-(C17-Pad2)": [
+        "BGA"
+      ],
+      "Net-(C19-Pad1)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_1)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_10)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_11)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_12)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_13)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_14)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_15)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_16)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_2)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_3)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_4)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_5)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_6)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_7)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_8)": [
+        "BGA"
+      ],
+      "Net-(J8-Pin_9)": [
+        "BGA"
+      ],
+      "Net-(U2-PC14)": [
+        "BGA"
+      ],
+      "Net-(U2-PC15)": [
+        "BGA"
+      ],
+      "Net-(U2-PH0)": [
+        "BGA"
+      ],
+      "Net-(U2-PH1)": [
+        "BGA"
+      ],
+      "Net-(U3A-+)": [
+        "BGA"
+      ],
+      "Net-(U3A--)": [
+        "BGA"
+      ],
+      "Net-(U3B-+)": [
+        "BGA"
+      ],
+      "Net-(U3B--)": [
         "BGA"
       ],
       "unconnected-(IC1-NC-PadE2)": [
@@ -847,9 +1024,6 @@
         "BGA"
       ],
       "unconnected-(IC2-BA1-PadG8)": [
-        "BGA"
-      ],
-      "unconnected-(IC2-CKE-PadF3)": [
         "BGA"
       ],
       "unconnected-(IC2-CLK-PadF2)": [
@@ -981,6 +1155,180 @@
       "unconnected-(J1-Pad9)": [
         "BGA"
       ],
+      "unconnected-(J5-Pin_4-Pad4)": [
+        "BGA"
+      ],
+      "unconnected-(J5-Pin_5-Pad5)": [
+        "BGA"
+      ],
+      "unconnected-(J5-Pin_6-Pad6)": [
+        "BGA"
+      ],
+      "unconnected-(J6-Pin_5-Pad5)": [
+        "BGA"
+      ],
+      "unconnected-(J6-Pin_6-Pad6)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AD0{slash}CS-Pad10)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AD1{slash}CDIN-Pad9)": [
+        "BGA"
+      ],
+      "unconnected-(U1-ADCIN1-Pad58)": [
+        "BGA"
+      ],
+      "unconnected-(U1-ADCIN2-Pad57)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AINL+-Pad15)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AINL--Pad16)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AINR+-Pad14)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AINR--Pad13)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTA1+-Pad36)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTA1--Pad37)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTA2+-Pad32)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTA2--Pad33)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTA3+-Pad28)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTA3--Pad29)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTA4+-Pad22)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTA4--Pad23)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTB1+-Pad35)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTB1--Pad34)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTB2+-Pad31)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTB2--Pad30)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTB3+-Pad27)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTB3--Pad26)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTB4+-Pad21)": [
+        "BGA"
+      ],
+      "unconnected-(U1-AOUTB4--Pad20)": [
+        "BGA"
+      ],
+      "unconnected-(U1-CX_LRCK-Pad3)": [
+        "BGA"
+      ],
+      "unconnected-(U1-CX_SCLK-Pad2)": [
+        "BGA"
+      ],
+      "unconnected-(U1-CX_SDIN1-Pad1)": [
+        "BGA"
+      ],
+      "unconnected-(U1-CX_SDIN2-Pad64)": [
+        "BGA"
+      ],
+      "unconnected-(U1-CX_SDIN3-Pad63)": [
+        "BGA"
+      ],
+      "unconnected-(U1-CX_SDIN4-Pad62)": [
+        "BGA"
+      ],
+      "unconnected-(U1-CX_SDOUT-Pad56)": [
+        "BGA"
+      ],
+      "unconnected-(U1-FILT+-Pad18)": [
+        "BGA"
+      ],
+      "unconnected-(U1-INT-Pad11)": [
+        "BGA"
+      ],
+      "unconnected-(U1-LPFLT-Pad39)": [
+        "BGA"
+      ],
+      "unconnected-(U1-MUTEC-Pad38)": [
+        "BGA"
+      ],
+      "unconnected-(U1-OMCK-Pad59)": [
+        "BGA"
+      ],
+      "unconnected-(U1-RMCK-Pad55)": [
+        "BGA"
+      ],
+      "unconnected-(U1-RXP0-Pad49)": [
+        "BGA"
+      ],
+      "unconnected-(U1-RXP1{slash}GPO1-Pad48)": [
+        "BGA"
+      ],
+      "unconnected-(U1-RXP2{slash}GPO2-Pad47)": [
+        "BGA"
+      ],
+      "unconnected-(U1-RXP3{slash}GPO3-Pad46)": [
+        "BGA"
+      ],
+      "unconnected-(U1-RXP4{slash}GPO4-Pad45)": [
+        "BGA"
+      ],
+      "unconnected-(U1-RXP5{slash}GPO5-Pad44)": [
+        "BGA"
+      ],
+      "unconnected-(U1-RXP6{slash}GPO6-Pad43)": [
+        "BGA"
+      ],
+      "unconnected-(U1-RXP7{slash}GPO7-Pad42)": [
+        "BGA"
+      ],
+      "unconnected-(U1-SAI_LRCK-Pad60)": [
+        "BGA"
+      ],
+      "unconnected-(U1-SAI_SCLK-Pad61)": [
+        "BGA"
+      ],
+      "unconnected-(U1-SAI_SDOUT-Pad54)": [
+        "BGA"
+      ],
+      "unconnected-(U1-SCL{slash}CCLK-Pad7)": [
+        "BGA"
+      ],
+      "unconnected-(U1-SDA{slash}CDOUT-Pad8)": [
+        "BGA"
+      ],
+      "unconnected-(U1-TXP-Pad50)": [
+        "BGA"
+      ],
+      "unconnected-(U1-VQ-Pad17)": [
+        "BGA"
+      ],
+      "unconnected-(U1-~{RST}-Pad12)": [
+        "BGA"
+      ],
       "unconnected-(U2-BOOT0-PadE8)": [
         "BGA"
       ],
@@ -1086,22 +1434,7 @@
       "unconnected-(U2-PC1-PadM2)": [
         "BGA"
       ],
-      "unconnected-(U2-PC10-PadA13)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PC11-PadB13)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PC12-PadC12)": [
-        "BGA"
-      ],
       "unconnected-(U2-PC13-PadE3)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PC14-PadC2)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PC15-PadC1)": [
         "BGA"
       ],
       "unconnected-(U2-PC2_C-PadR1)": [
@@ -1122,12 +1455,6 @@
       "unconnected-(U2-PC7-PadF13)": [
         "BGA"
       ],
-      "unconnected-(U2-PC8-PadE13)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PC9-PadE14)": [
-        "BGA"
-      ],
       "unconnected-(U2-PD11-PadR15)": [
         "BGA"
       ],
@@ -1135,9 +1462,6 @@
         "BGA"
       ],
       "unconnected-(U2-PD13-PadR17)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PD2-PadD12)": [
         "BGA"
       ],
       "unconnected-(U2-PD3-PadB12)": [
@@ -1150,9 +1474,6 @@
         "BGA"
       ],
       "unconnected-(U2-PD6-PadB11)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PD7-PadC11)": [
         "BGA"
       ],
       "unconnected-(U2-PDR_ON-PadE7)": [
@@ -1188,12 +1509,6 @@
       "unconnected-(U2-PF9-PadL4)": [
         "BGA"
       ],
-      "unconnected-(U2-PG10-PadA9)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PG11-PadB9)": [
-        "BGA"
-      ],
       "unconnected-(U2-PG12-PadC9)": [
         "BGA"
       ],
@@ -1212,15 +1527,6 @@
       "unconnected-(U2-PG7-PadF16)": [
         "BGA"
       ],
-      "unconnected-(U2-PG9-PadA10)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PH0-PadJ2)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PH1-PadJ1)": [
-        "BGA"
-      ],
       "unconnected-(U2-PH10-PadP13)": [
         "BGA"
       ],
@@ -1228,12 +1534,6 @@
         "BGA"
       ],
       "unconnected-(U2-PH12-PadR14)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PH13-PadD16)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PH14-PadB17)": [
         "BGA"
       ],
       "unconnected-(U2-PH15-PadB16)": [
@@ -1249,9 +1549,6 @@
         "BGA"
       ],
       "unconnected-(U2-PH5-PadP4)": [
-        "BGA"
-      ],
-      "unconnected-(U2-PH7-PadU13)": [
         "BGA"
       ],
       "unconnected-(U2-PH8-PadT13)": [
@@ -1424,12 +1721,22 @@
       ],
       "unconnected-(U2-VREF--PadN1)": [
         "BGA"
+      ],
+      "unconnected-(U3C-V+-Pad8)": [
+        "BGA"
+      ],
+      "unconnected-(U3C-V--Pad4)": [
+        "BGA"
       ]
     },
     "netclass_patterns": [
       {
         "netclass": "USB",
         "pattern": "/USB_*"
+      },
+      {
+        "netclass": "SDMMC",
+        "pattern": "/SDMMC*"
       }
     ]
   },
@@ -1511,12 +1818,54 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Name",
+          "name": "Manufacturer_Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Price/Stock",
+          "name": "Mouser Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -1561,7 +1910,7 @@
         "uuid": "4a993d7c-875c-4b13-8f2e-6d83d2004e4e"
       }
     ],
-    "used_designators": "#PWR12,J2-3",
+    "used_designators": "R1-20,C15-26,U3-4,#PWR14-19,J8-9",
     "variants": []
   },
   "sheets": [
