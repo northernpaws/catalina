@@ -641,6 +641,54 @@
       "/AINR-": [
         "BGA"
       ],
+      "/AOUTA1+": [
+        "BGA"
+      ],
+      "/AOUTA1-": [
+        "BGA"
+      ],
+      "/AOUTA2+": [
+        "BGA"
+      ],
+      "/AOUTA2-": [
+        "BGA"
+      ],
+      "/AOUTA3+": [
+        "BGA"
+      ],
+      "/AOUTA3-": [
+        "BGA"
+      ],
+      "/AOUTA4+": [
+        "BGA"
+      ],
+      "/AOUTA4-": [
+        "BGA"
+      ],
+      "/AOUTB1+": [
+        "BGA"
+      ],
+      "/AOUTB1-": [
+        "BGA"
+      ],
+      "/AOUTB2+": [
+        "BGA"
+      ],
+      "/AOUTB2-": [
+        "BGA"
+      ],
+      "/AOUTB3+": [
+        "BGA"
+      ],
+      "/AOUTB3-": [
+        "BGA"
+      ],
+      "/AOUTB4+": [
+        "BGA"
+      ],
+      "/AOUTB4-": [
+        "BGA"
+      ],
       "/DEBUG_SWCLK": [
         "BGA"
       ],
@@ -817,6 +865,12 @@
         "BGA"
       ],
       "/IN_L": [
+        "BGA"
+      ],
+      "/OUT_A4": [
+        "BGA"
+      ],
+      "/OUT_B4": [
         "BGA"
       ],
       "/SAI1_FS_A": [
@@ -1168,6 +1222,48 @@
         "BGA"
       ],
       "unconnected-(J6-Pin_6-Pad6)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_10-Pad10)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_11-Pad11)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_12-Pad12)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_13-Pad13)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_14-Pad14)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_15-Pad15)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_16-Pad16)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_3-Pad3)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_4-Pad4)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_5-Pad5)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_6-Pad6)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_7-Pad7)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_8-Pad8)": [
+        "BGA"
+      ],
+      "unconnected-(J8-Pin_9-Pad9)": [
         "BGA"
       ],
       "unconnected-(U1-AD0{slash}CS-Pad10)": [
@@ -1860,6 +1956,12 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MFN",
+          "name": "MFN",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -1877,7 +1979,7 @@
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
-      "hop_over_size_choice": 0,
+      "hop_over_size_choice": 2,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": false,
@@ -1910,13 +2012,29 @@
         "uuid": "4a993d7c-875c-4b13-8f2e-6d83d2004e4e"
       }
     ],
-    "used_designators": "R1-20,C15-26,U3-4,#PWR14-19,J8-9",
+    "used_designators": "U5-8,R21-84,C18-19,C24,C30-74,#PWR24-47",
     "variants": []
   },
   "sheets": [
     [
       "4a993d7c-875c-4b13-8f2e-6d83d2004e4e",
       "Root"
+    ],
+    [
+      "e70e32e8-20e8-4e22-b4a3-d560ccab6e12",
+      "Codec Output Stage 4"
+    ],
+    [
+      "bdc047b3-d79f-4657-917b-a6a4338c7b21",
+      "Codec Output Stage 3"
+    ],
+    [
+      "f798ae4d-eb0b-4b8a-83fe-13ca4e6c71ed",
+      "Codec Output Stage 2"
+    ],
+    [
+      "f23fe63a-2931-4e46-985c-c6ea762888d9",
+      "Codec Output Stage 1"
     ]
   ],
   "text_variables": {},
