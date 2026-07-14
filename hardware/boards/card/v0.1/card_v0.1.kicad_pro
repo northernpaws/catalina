@@ -960,6 +960,9 @@
       "Net-(C19-Pad1)": [
         "BGA"
       ],
+      "Net-(C79-Pad1)": [
+        "BGA"
+      ],
       "Net-(J8-Pin_1)": [
         "BGA"
       ],
@@ -1006,6 +1009,21 @@
         "BGA"
       ],
       "Net-(J8-Pin_9)": [
+        "BGA"
+      ],
+      "Net-(U1-AD0{slash}CS)": [
+        "BGA"
+      ],
+      "Net-(U1-AD1{slash}CDIN)": [
+        "BGA"
+      ],
+      "Net-(U1-FILT+)": [
+        "BGA"
+      ],
+      "Net-(U1-LPFLT)": [
+        "BGA"
+      ],
+      "Net-(U1-VQ)": [
         "BGA"
       ],
       "Net-(U2-PC14)": [
@@ -2012,7 +2030,7 @@
         "uuid": "4a993d7c-875c-4b13-8f2e-6d83d2004e4e"
       }
     ],
-    "used_designators": "U5-8,R21-84,C18-19,C24,C30-74,#PWR24-47",
+    "used_designators": "R85-87,C75-84,#PWR48-57",
     "variants": []
   },
   "sheets": [
@@ -2035,6 +2053,10 @@
     [
       "f23fe63a-2931-4e46-985c-c6ea762888d9",
       "Codec Output Stage 1"
+    ],
+    [
+      "bbb5c366-1b24-47df-94ea-b04dd8d4f2b7",
+      "Audio Codec"
     ]
   ],
   "text_variables": {},
