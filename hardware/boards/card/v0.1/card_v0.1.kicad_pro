@@ -960,9 +960,6 @@
       "Net-(C19-Pad1)": [
         "BGA"
       ],
-      "Net-(C79-Pad1)": [
-        "BGA"
-      ],
       "Net-(J8-Pin_1)": [
         "BGA"
       ],
@@ -1009,21 +1006,6 @@
         "BGA"
       ],
       "Net-(J8-Pin_9)": [
-        "BGA"
-      ],
-      "Net-(U1-AD0{slash}CS)": [
-        "BGA"
-      ],
-      "Net-(U1-AD1{slash}CDIN)": [
-        "BGA"
-      ],
-      "Net-(U1-FILT+)": [
-        "BGA"
-      ],
-      "Net-(U1-LPFLT)": [
-        "BGA"
-      ],
-      "Net-(U1-VQ)": [
         "BGA"
       ],
       "Net-(U2-PC14)": [
@@ -2030,7 +2012,7 @@
         "uuid": "4a993d7c-875c-4b13-8f2e-6d83d2004e4e"
       }
     ],
-    "used_designators": "R85-87,C75-84,#PWR48-57",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
@@ -2039,20 +2021,20 @@
       "Root"
     ],
     [
-      "e70e32e8-20e8-4e22-b4a3-d560ccab6e12",
-      "Codec Output Stage 4"
+      "453a2183-cff9-4dd1-ba75-c72022b8b3c9",
+      "Codec Output Stage 1"
     ],
     [
-      "bdc047b3-d79f-4657-917b-a6a4338c7b21",
-      "Codec Output Stage 3"
-    ],
-    [
-      "f798ae4d-eb0b-4b8a-83fe-13ca4e6c71ed",
+      "435e5fc1-bc59-4b59-8e76-fde0c7940109",
       "Codec Output Stage 2"
     ],
     [
-      "f23fe63a-2931-4e46-985c-c6ea762888d9",
-      "Codec Output Stage 1"
+      "cbff6b2e-2048-4c6f-ac18-eaedbe082780",
+      "Codec Output Stage 3"
+    ],
+    [
+      "182df47a-b9a8-465b-b54e-1760c5fb713b",
+      "Codec Output Stage 4"
     ],
     [
       "bbb5c366-1b24-47df-94ea-b04dd8d4f2b7",
